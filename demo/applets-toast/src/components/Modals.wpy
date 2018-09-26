@@ -30,7 +30,7 @@
 			 	this.__modalHidden__();
 			},
 			__modalOk__(res={}){
-				let {Ok,Cancel} = this.options;
+				let {Ok} = this.options;
 				Ok&&Ok(res);
 				this.__modalHidden__();
 			}
