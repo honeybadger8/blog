@@ -1,0 +1,218 @@
+<template lang="wxml">
+	<view class="ui-modal  {{ className }}" hidden="{{ !visible }}">
+		<view class="ui-modal_dialog">
+			<view class="ui-modal_body">
+				<view class="ui-modal_text">{{ options.text }}</view>
+			</view>
+			<view class="ui-modal_footer">
+				<view class="ui-footer_button" wx:if="{{options.type==='confirm'}}" @tap="__modalClose__()">{{options.cancelTxt}}</view>
+				<view class="ui-footer_button ui-confirm-footer-button-ok" >
+					<button wx:if="{{options.openType=='openSetting'}}" open-type="{{options.openType}}" bindopensetting="__modalOk__"  >{{options.okTxt}}</button>
+					<button wx:elif="{{options.openType=='getUserInfo'}}" open-type="{{options.openType}}" bindgetuserinfo="__modalOk__" >{{options.okTxt}}</button>
+					<button wx:else @tap="__modalOk__()" >{{options.okTxt}}</button>
+				</view>
+			</view>
+		</view>
+		
+	</view>
+</template>
+
+
+<script>
+	import wepy from 'wepy';
+	//方法以 ： __XX__ 命名，因并入其他组件中后，可能引起方法名重复
+	class Modals extends wepy.component {
+		 methods={
+		 	//点击关闭
+		 	__modalClose__(res){
+		 		let {Cancel} = this.options;
+		 		Cancel&&Cancel();
+			 	this.__modalHidden__();
+			},
+			__modalOk__(res={}){
+				let {Ok,Cancel} = this.options;
+				Ok&&Ok(res);
+				this.__modalHidden__();
+			}
+		}
+		data={
+			 list:[
+				{
+					type: `alert`,
+					openType:'',
+					Ok:()=>{},
+					className: `ui-modal-alert`,
+				},
+				{
+					type: `confirm`,
+					openType:'',
+					Cancel:()=>{},
+					Ok:()=>{},
+					className: `ui-modal-confirm`,
+				}
+			],
+			scope: `$ui.toast`, 
+			animateCss:'animateCss',
+			className:'',
+			visible:!1,
+			options:{
+				type: ``, 
+				text: `已完成`, 
+			}
+		}
+		/**
+		 * 默认参数
+		 */
+		__setDefaults__() {
+			//openSetting
+			return {
+				type: `alert`, 
+				openType:'',
+				text: `已完成`,
+				cancelTxt:'取消',
+				okTxt:'确定', 
+				Ok() {this.__modalHidden__()}, 
+			}
+		}
+		/**
+		 * 设置元素显示
+		 */
+		__setVisible__(className = `ui-animate-fade-in`) {
+			this.className = `${this.animateCss} ${className}`;
+			this.visible = !0;
+			this.$apply();
+		}
+		/**
+-		 * 设置元素隐藏
+-		 */
+		__modalHidden__(className = `ui-animate-fade-out`, timer = 300) {
+			this.className = `${this.animateCss} ${className}`;
+			this.$apply();
+
+		}
+		/**
+		 * 显示Modal组件
+		 * @param {Object} opts 配置项
+		 * @param {String} opts.type 提示类型 [alert\confirm]
+		 * @param {Number} opts.openType 特殊的操作类型如：获取用户信息、授权信息 [getUserInfo、openSetting]
+		 * @param {String} opts.text 提示文本
+		 * @param {Function} opts.Ok 确定后的回调函数
+		 * @param {Function} opts.cancel 取消后的回调函数
+		 */
+		__modalShow__(opts = {}) {
+			let options = Object.assign({}, this.__setDefaults__(), opts)
+			const TOAST_TYPES = this.list[options.type]||{};
+			this.options = {...TOAST_TYPES,...options};
+			this.__setVisible__();
+		}
+		__modalAlert__(args=[]){
+			let [ message,openType='', Ok ]  = args;
+			this.__modalShow__({
+				type: 'alert',
+				text: message,
+				openType,
+				Ok
+			});
+		}
+		__modalConfirm__(args=[]){
+			let [ message,openType='', Ok,Cancel ]  = args;
+			this.__modalShow__({
+				type: 'confirm',
+				text: message,
+				openType,
+				Ok,
+				Cancel,
+			});
+		}
+		onLoad(){
+			this.$apply()
+		}
+	}
+	export default Modals;
+
+</script>
+
+<style lang="less">
+		.ui-modal {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 9010;
+		background-color:rgba(0,0,0,.6);
+		display: none; 
+	}
+	.ui-modal.ui-animate-fade-in {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center; 
+	}
+	.ui-modal.ui-animate-fade-out {
+		display: none; 
+	}
+	.ui-modal_dialog {
+		max-width: 80%;
+		min-width: 520rpx;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7rpx 21rpx;
+    z-index: 1401;
+    margin: 60rpx auto;
+    background: rgb(255, 255, 255);
+		border-radius: 12rpx;
+		color: #fff;
+		text-align: center;
+		font-size: 30rpx; 
+		.ui-modal_body{
+	    font-size: 30rpx;
+	    color: #333;
+	    padding: 50rpx 30rpx 30rpx;
+	    overflow: auto;
+		}
+	}
+	.ui-modal_footer {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+    width: 100%;
+    border-top: 1rpx solid #ddd;
+	}
+	.ui-footer_button{
+    box-flex: 1;
+    flex: 1;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 32rpx;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    color: #333;
+		&+.ui-footer_button{
+			border-left: 1rpx solid #ddd;
+		}
+		&.ui-confirm-footer-button-ok{
+			button{color:#12c287;}
+		}
+		button{
+			height: 88rpx;
+    	line-height: 88rpx;
+			border:0;
+			font-size: 32rpx;
+			background:none;
+			&:after,&:before{
+				display:none;
+			}
+		}
+	}
+	.ui-modal_text {
+		font-size: 30rpx;
+	}
+</style>

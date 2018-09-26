@@ -1,0 +1,164 @@
+<style lang="less">
+
+    page{
+        padding-top: 0;
+        background-color:#fff;
+        button{
+            margin:30rpx 15rpx
+        }
+    }
+    .parse-list{
+        padding:40rpx 30rpx;
+        line-height:42rpx;
+        font-size:24rpx;
+        text,.parse-text{
+            font-size:24rpx;
+            color:#666;
+        }
+        .parse-link{
+            color:#12c287;
+        }
+    }
+    button-toast{
+      button{
+        padding:0 20rpx;
+        margin:0 10rpx;
+      }
+    }
+     
+</style>
+<template>
+    <view class="test-page">
+        <view class="button-toast flex flex-x">
+          <button class="flex-grow" @tap="goToTap('提交成功')">成功提示</button>
+          <button class="flex-grow" @tap="infoTap('请输入你的三围尺寸')">普通信息</button>
+        </view>
+        <view class="button-toast flex flex-x">
+          <button class="flex-grow" @tap="errorTap('网络异常，请稍后再试')">错误提示</button>
+          <button class="flex-grow" @tap="warningTap('别惹我，你-我惹不起')">警告提示</button>
+        </view>
+        <button @tap="cutting">点击解析html</button>
+
+        <view wx:if="{{result.length>0}}" class="parse-list">
+            <view  class="parse-view" wx:for="{{result}}" wx:key="unique" wx:for-index="index" wx:for-item="items">
+                <block wx:if="{{items.children && items.children.length}}">
+                    <block wx:for="{{items.children}}" wx:for-item="child" >
+                        <text wx:if="{{child.type == 'link'}}" class="parse-link" @tap="goToTap({{child.link}})">{{child.value}}</text>
+                        <text class="parse-text" wx:else>{{child.value}}</text>
+                    </block>
+                </block>
+                <text class="parse-text" wx:else>{{items.value}}</text>
+            </view>
+        </view>
+        <Toast />
+        <Modals />
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy'
+
+    import { connect } from 'wepy-redux'
+    import moduleA from 'module-a' // aliasFields ignore module example
+    import Toast from '../components/Toast'
+    import Modals from '../components/Modals'
+    // import {fetchJson} from '../utils/fetch';
+    // import Storage from "../utils/storage";
+    // import format from '../utils/format'
+
+    function wxHtmlParse(htmlStr=''){
+        
+        if(!htmlStr){
+            return []
+        };
+        const httpExp  =/(http:\/\/|https:\/\/)((\w|=|\?|\.|\/|\&|-)+)/g;//提取网址正则
+        const aExp=/<a.[^>]*?>([(^<a|\s\S)]*?)<\/a>/ig; //a标签分割正则
+        let cuttingArr = htmlStr.split(/[\n]/);
+        let result = [];
+        //有a标签的html处理
+        let itemParse = (itemHtml='')=>{
+            let itemCutting = itemHtml.split(aExp)||[];
+            let itemResult = [];
+            for(var i = 0;i<itemCutting.length;i++){
+                let _html = itemCutting[i];
+                if(_html!==''){
+                    let itemData = {
+                        value:_html,
+                        type:'text',
+                        class:"parse-text"
+                    };
+                    let matchTag = itemHtml.match(aExp)||[]; //再次匹配有 a 标签的
+                    if(matchTag.length){
+                        let itemIndex = matchTag.findIndex((k,v)=>(k.indexOf(_html)!==-1));
+                        if(itemIndex>=0){
+                            let link = matchTag[itemIndex].match(httpExp)[0];
+                            itemData.type = 'link';
+                            itemData.link = link;
+                            itemData.class = "parse-link";
+                        };
+                    };
+                    itemResult.push(itemData)
+                }
+            };
+            return itemResult;
+        };
+
+        cuttingArr.map((k,v)=>{
+            let itemData = {type : "view",class:"parse-view"};
+            let isATag = k.match(aExp);
+            if(isATag){
+                itemData.children = itemParse(k);
+            }else{
+                itemData.value = k;
+
+            };
+            result.push(itemData);
+            return k;
+        }) ;
+        return result;
+    };
+    export default class Index extends wepy.page {
+        config = {
+            navigationBarBackgroundColor: "#0ECE8D",
+            navigationBarTextStyle:"white",
+            navigationBarTitleText: '平头哥联盟文章demo'
+        }
+        components = {
+            Toast: Toast,
+            Modals: Modals
+        }
+        data = {
+            html:'大家好，我是苏南（South·Su），\n职业：前端攻城狮（俗称切图崽），\n身高：176cm，\n性别：男，\n性取向：女，\n公司：目前就职于由腾讯、阿里、平安三巨头合资的一家互联网金融公司深圳分公司某事业部、,\n简介：宝剑锋从磨砺出 梅花香自苦寒来，认真做自己！,gitHub：https://github.com/meibin08/，\n兴趣：跑步、羽毛球、爬山、音乐、看书、分享自己的微薄知识帮助他人……，\n其他：想了解更多吗？可以加入<a href="https://segmentfault.com/a/1190000010017486/">386485473交流群</a>，也可以给我电话<a href="https://github.com/meibin08/">134XX852xx5</a> ，开玩笑啦',
+            result:[]
+        }
+        methods = {
+            goToTap(msg){
+                this.$invoke("Toast","__success__",[msg]);
+            },
+            errorTap(msg){
+                this.$invoke("Toast","__error__",[msg]);
+            },
+             infoTap(msg){
+                this.$invoke("Toast","__info__",[msg]);
+            },
+            warningTap(msg){
+                this.$invoke("Toast","__warning__",[msg]);
+            },
+            
+            cutting(e){
+                /*let array = this.html.split(/[\s\n]/);
+                this.item()
+                let listData =array.map((k,v)=>{
+                    let item = k;
+                    return k
+                }) */
+
+                this.result = wxHtmlParse(this.html);
+                console.log(`result`,this.result);
+                this.$apply();
+            },
+            
+        }
+        
+    }
+</script>
