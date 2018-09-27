@@ -2,7 +2,7 @@
 
 # 该如何以正确的姿势插入SVG Sprites？
 
-![本文由本文由平头哥联盟-首席填坑官∙苏南分享 分享](../_images/06.png)
+![本文由平头哥联盟-首席填坑官∙苏南 分享](../_banner/banner03.png)
 
 ## 前言
 
@@ -16,7 +16,7 @@
 
 #### 1.1 回顾 Css Sprites 
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](../_images/svg-sprites02.png)
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites02.png)
 ```html
 <div class="icon-sprite"></div>
 ```
@@ -35,11 +35,11 @@
 
 　　在以前我们为了性能优化，多图标合在一张图上面，然后再使用css的 `background-position`来定位， 好处是减少了页面的加载，要命的问题是定位遇到兼容问题，1px、.5px偏差时，搞的你死去活来，后来移动端更是不清晰，被人骂了又骂。
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](../_images/svg-sprites03.png)
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites03.png)
 
-![img](../_images/svg-sprites04.png){: width="100px" height="100px" 其它需要的属性}
+![img](./_images/svg-sprites04.png){: width="100px" height="100px" 其它需要的属性}
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](../_images/svg-sprites04.png)
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites04.png)
 
 
 
@@ -84,12 +84,12 @@
 
 ```
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](../_images/svg-sprites045.png)
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites045.png)
 
 + 那么该如何摆正姿势(`你随意就好`)，正确的使用它呢？热爱学习的你，是不是已经有些饥渴难耐了呢？马上为你送上高潮部分：
-![本文由平头哥联盟-首席填坑官∙苏南分享](../_images/svg-sprites05.png)
-![本文由平头哥联盟-首席填坑官∙苏南分享](../_images/svg-sprites06.png)
-![本文由平头哥联盟-首席填坑官∙苏南分享](../_images/svg-sprites07.png)
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites05.png)
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites06.png)
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites07.png)
 
 ```
 <body>
@@ -136,7 +136,7 @@ Svg Sprites相比Css Sprites，不管是在维护和开发的过程中，还是�
 + 无法修改小图颜色，要UI设计师调整后替换，过程漫长效率低;
 + 在移动端的大屏手机图标会模糊，影响体验。
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](../_images/svg-sprites08.png)
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites08.png)
 
 　　以上就是今天的分享，写了蛮久，最近才在开始尝试写博客，新手上路中，如果文章中有不对之处，烦请各位大神斧正。如果你觉得这篇文章对你有所帮助，请记得点赞哦～，想了解更多？[请猛戳这里！](https://github.com/meibin08/)
 
