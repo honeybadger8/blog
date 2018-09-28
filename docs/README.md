@@ -22,6 +22,7 @@
 | [segmentfault主页](https://segmentfault.com/u/susouth/articles "segmentfault主页") |                  |
 | [CSDN技术社区](https://blog.csdn.net/weixin_43254766 "CSDN技术社区") |                  |
 | [博客园](https://www.cnblogs.com/susouth/ "平头哥联盟-博客园") | 整理中，敬请期待 |
+| [平头哥联盟-知乎专栏](https://zhuanlan.zhihu.com/honeybadger"平头哥联盟-知乎专栏") |                  |
 
 
 
