@@ -7,7 +7,7 @@
 * QQ群：38648547[web] 、260282062[test]
 * 世上本无路 走的人多了，也就成了路，欢迎加入我们^_^～
 
-[GitHub](https://github.com/meibin08/)
+[GitHub](https://honeybadger8.github.io/blog/)
 [Get Started](#平头哥联盟)
 
 <!-- ![color](#ffffff) -->

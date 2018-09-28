@@ -8,6 +8,6 @@
 
 * 测试
 
-  * [待整理中～](frontends/applets/salary-increase.md)
+  * [测试领域老司机带你上车，你准备好了吗？](testing/theory/test-started.md)
 
 * 其他
