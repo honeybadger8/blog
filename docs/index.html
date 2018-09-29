@@ -41,13 +41,13 @@
 		var gitalk = new Gitalk({
 		clientID: '97d67593d9c08f2256bb',
 		clientSecret: '692926d2f730c871ed4da43a9f733a7470d8da89',
-		repo: 'meibin08',
+		repo: 'honeybadger8.github.io',
 		owner: 'meibin08',
 		admin: ['meibin08','vicent0326'],
 		// facebook-like distraction free mode
-		distractionFreeMode: false
-		})
-
+		distractionFreeMode: true
+		});
+		gitalk.render('gitalk-container');
   if (typeof navigator.serviceWorker !== 'undefined') {
     navigator.serviceWorker.register('sw.js')
   }
