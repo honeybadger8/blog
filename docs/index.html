@@ -17,21 +17,37 @@
 			name: '平头哥联盟',
 			loadSidebar: true,
 			subMaxLevel: 2,
+			auto2top: true,
 	    alias: {
 	      '/.*/_sidebar.md': '/_sidebar.md'
 	    },
+	    // themeColor:"#117d90",
 			coverpage: true,
 			ga:"UA-126615527-1",
 			repo: 'https://github.com/meibin08/',
-
+			formatUpdated: '{MM}/{DD} {HH}:{mm}',
 		}
 	</script>
+	<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+
 	<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 	<script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 	<script>
+		var gitalk = new Gitalk({
+		clientID: '97d67593d9c08f2256bb',
+		clientSecret: '692926d2f730c871ed4da43a9f733a7470d8da89',
+		repo: 'meibin08',
+		owner: 'meibin08',
+		admin: ['meibin08','vicent0326'],
+		// facebook-like distraction free mode
+		distractionFreeMode: false
+		})
+
   if (typeof navigator.serviceWorker !== 'undefined') {
     navigator.serviceWorker.register('sw.js')
   }
