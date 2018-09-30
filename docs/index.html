@@ -43,14 +43,14 @@
 		clientSecret: '692926d2f730c871ed4da43a9f733a7470d8da89',
 		repo: 'blog',
 		owner: 'honeybadger8',
-		admin: ['meibin08','vicent0326'],
-		// facebook-like distraction free mode
+		admin: ['meibin08'],
 		distractionFreeMode: true,
 		number:1,
 		title:"平头哥联盟留言区",
 		});
-		if (typeof navigator.serviceWorker !== 'undefined') {
+		if (typeof navigator.serviceWorker !== 'undefined' && location.origin.match(/honeybadger8.github/g)) {
 		  navigator.serviceWorker.register('sw.js')
+		  console.log(11111)
 		};
 
 		/*var frame = document.createElement('iframe');
