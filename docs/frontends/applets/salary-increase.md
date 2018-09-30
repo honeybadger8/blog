@@ -21,7 +21,7 @@
 + **toast**组件，大家都知道，官方的api **wx.showToast** 是满足不了我们的需求的，因为它只支持 "success", "loading"两种状态，同时“ title 文本最多显示 7 个汉字长度”，这是官方原话，有图有真相哦，样式巨丑～
 
 ![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase03.jpg)
-```
+```html
 wx.showToast({
   title: '成功',
   icon: 'success',
@@ -29,10 +29,10 @@ wx.showToast({
 })
 wx.showModal({
   title: '提示',
-  content: '这是一个模态弹窗',
+  content: '首席填坑官∙苏南帅不帅？',
   success: function(res) {
     if (res.confirm) {
-      console.log('用户点击确定')
+      console.log('用户点击确定，表示很帅')
     } else if (res.cancel) {
       console.log('用户点击取消')
     }
@@ -246,7 +246,7 @@ wx.showModal({
         }
         methods = {
             tapToast(){
-                this.$invoke("Toast","__success__",[`您已提交成功，感谢您的支持与配合`]);
+                this.$invoke("Toast","__success__",[`本文由平头哥联盟-首席填坑官∙苏南分享`]);
             }   
         }
     }
@@ -438,7 +438,7 @@ fetchJson({
 
 ## 填坑时间了
 
-**填坑时间了**，`wepy`框架中每个组件内的生命周期回调 onload,只要是引入了组件，不管你视图有没有渲染，他都会执行，导致某些业务逻辑用不上它的时候也执行了产生异常（当然为个锅< 小程序 >肯定说我不背～^～ ），详细看链接：[https://github.com/Tencent/wepy/issues/975](https://github.com/Tencent/wepy/issues/975) ，[https://honeybadger8.github.io/blog/](https://github.com/Tencent/wepy/issues/1386)  ，不知道后面有没有人解决。
+**填坑时间了**，`wepy`框架中每个组件内的生命周期回调 onload,只要是引入了组件，不管你视图有没有渲染，他都会执行，导致某些业务逻辑用不上它的时候也执行了产生异常（当然为个锅< 小程序 >肯定说我不背～^～ ），详细看链接：[https://github.com/Tencent/wepy/issues/975](https://github.com/Tencent/wepy/issues/975) ，[https://github.com/Tencent/wepy/issues/1386](https://honeybadger8.github.io/blog/)  ，不知道后面有没有人解决。
 
 ## rich-text组件
 
@@ -448,7 +448,7 @@ fetchJson({
 
 ![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase09.jpg)
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase10.jpg)
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase10.jpeg)
 
 ```javascript
 
@@ -559,7 +559,7 @@ fetchJson({
 
 **PS**：[完整示例源码](https://github.com/honeybadger8/blog/tree/master/demo/applets-toast) 来啦～，觉得不错记得 Star、`Star`、`Watch` 哦，感谢！
 
-今天的分享就到这里，写了蛮久，最近才在开始尝试写博客，新手上路中，如果文章中有不对之处，烦请各位大神斧正。如果你觉得这篇文章对你有所帮助，请记得点赞哦～，想了解更多？[请猛戳这里！](https://github.com/meibin08/)
+今天的分享就到这里，写了蛮久，最近才在开始尝试写博客，新手上路中，文章中有不对之处，烦请各位大神斧正。如果你觉得这篇文章对你有所帮助，请记得点赞哦～，想了解更多？[请猛戳这里！](https://github.com/meibin08/)
 
 
 

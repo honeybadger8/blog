@@ -48,8 +48,9 @@
 		number:1,
 		title:"平头哥联盟留言区",
 		});
-		if (typeof navigator.serviceWorker !== 'undefined') {
+		if (typeof navigator.serviceWorker !== 'undefined' && location.origin.match(/honeybadger8.github/g)) {
 		  navigator.serviceWorker.register('sw.js')
+		  console.log(11111)
 		};
 
 		/*var frame = document.createElement('iframe');
