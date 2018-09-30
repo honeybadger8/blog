@@ -427,7 +427,7 @@ fetchJson({
 		name:"苏南"
 	},
 	success:res=>{
-		console.log("大家好，我是苏南",res)
+		console.log("大家好，我是平头哥联盟-首席填坑官∙苏南",res)
 	}
 })
 ```
@@ -438,7 +438,7 @@ fetchJson({
 
 ## 填坑时间了
 
-**填坑时间了**，`wepy`框架中每个组件内的生命周期回调 onload,只要是引入了组件，不管你视图有没有渲染，他都会执行，导致某些业务逻辑用不上它的时候也执行了产生异常（当然为个锅< 小程序 >肯定说我不背～^～ ），详细看链接：[github.com/Tencent/wep…](https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2FTencent%2Fwepy%2Fissues%2F975) ， https://github.com/Tencent/wepy/issues/1386   ，不知道后面有没有人解决。
+**填坑时间了**，`wepy`框架中每个组件内的生命周期回调 onload,只要是引入了组件，不管你视图有没有渲染，他都会执行，导致某些业务逻辑用不上它的时候也执行了产生异常（当然为个锅< 小程序 >肯定说我不背～^～ ），详细看链接：[https://github.com/Tencent/wepy/issues/975](https://github.com/Tencent/wepy/issues/975) ，[https://honeybadger8.github.io/blog/](https://github.com/Tencent/wepy/issues/1386)  ，不知道后面有没有人解决。
 
 ## rich-text组件
 
@@ -563,7 +563,7 @@ fetchJson({
 
 
 
-> 作者：苏南 - 首席填坑官
+> 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "首席填坑官")
 >
 > 来源：[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")
 >

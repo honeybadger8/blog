@@ -13,6 +13,7 @@
 ## 热门推荐
 
 + [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase "做完小程序项目、老板给我加了6k薪资～") ——曾被[掘金](https://juejin.im/post/5ba57b7c5188255c971fda3a)推荐在首页 ​(`阅读量突破1.8w+`)👍
++ [那些年你踩过的坑，都在这里了～](frontends/js/questions "那些年你踩过的坑，都在这里了～") 面试题，欢迎补充
 + [该如何以正确的姿势插入SVG Sprites？](frontends/css/svg-sprites.md "该如何以正确的姿势插入SVG Sprites？")
 + [测试领域老司机带你上车，你准备好了吗？](frontends/applets/salary-increase "测试领域,小白问题大集合(适合未入门和入门初级者)")
 
