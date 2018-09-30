@@ -558,6 +558,7 @@ function SouthSu(){
 </script>
 
 ```
+![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/q03.gif)
 
 ##### 11、如何设置http缓存？
 
