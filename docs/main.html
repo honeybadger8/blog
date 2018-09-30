@@ -71,7 +71,7 @@
 		<script>
 			var pathname = location.pathname;
 			var isHash = location.hash.match(/#/g) ? true:false;
-			var redirect = pathname.match(/blog/g) ? location.href : 'https://honeybadger8.github.io/blog/#/?source=0001';
+			var redirect = pathname.match(/blog\/main.html/g) ? : '/blog/#/?source=0001': location.href;
 			if(!isHash){
 				location.replace(redirect);
 			}

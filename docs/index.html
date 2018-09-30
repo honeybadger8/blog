@@ -18,10 +18,10 @@
 			loadSidebar: true,
 			subMaxLevel: 2,
 			auto2top: true,
-	    alias: {
-	      '/.*/_sidebar.md': '/_sidebar.md'
-	    },
-	    // themeColor:"#117d90",
+			alias: {
+				'/.*/_sidebar.md': '/_sidebar.md'
+			},
+			// themeColor:"#117d90",
 			coverpage: true,
 			ga:"UA-126615527-1",
 			repo: 'https://github.com/meibin08/',
@@ -32,10 +32,10 @@
 
 	<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 	<script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+	<script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+	<script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
+	<script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
+	<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 	<script>
 		var gitalk = new Gitalk({
@@ -49,20 +49,20 @@
 		title:"平头哥联盟留言区",
 		});
 		if (typeof navigator.serviceWorker !== 'undefined' && location.origin.match(/honeybadger8.github/g)) {
-		  navigator.serviceWorker.register('sw.js')
-		  console.log(11111)
+			navigator.serviceWorker.register('sw.js');
+			var frame = document.createElement('iframe');
+			frame.src = '/blog/main.html?source=seo';
+			frame.style.display = 'none';
+			document.body.appendChild(frame);
+			frame.onload = function(){
+				setTimeout(function(){
+					frame&&document.body.removeChild(frame);
+					frame&&frame.remove();
+				}, 100);
+			};
 		};
 
-		/*var frame = document.createElement('iframe');
-    frame.src = '//honeybadger8.github.io/blog/main.html?source=seo';
-    frame.style.display = 'none';
-    document.body.appendChild(frame);
-    frame.onload = function(){
-      setTimeout(function(){
-        frame&&document.body.removeChild(frame);
-        frame&&frame.remove();
-      }, 100);
-    };*/
+		
 </script>
 <noscript>
 	<section class="cover show" style="background: linear-gradient(to left bottom, hsl(13, 100%, 85%) 0%,hsl(195, 100%, 85%) 100%)">

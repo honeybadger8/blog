@@ -36,9 +36,6 @@
 　　在以前我们为了性能优化，多图标合在一张图上面，然后再使用css的 `background-position`来定位， 好处是减少了页面的加载，要命的问题是定位遇到兼容问题，1px、.5px偏差时，搞的你死去活来，后来移动端更是不清晰，被人骂了又骂。
 
 ![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites03.png)
-
-![img](./_images/svg-sprites04.png){: width="100px" height="100px" 其它需要的属性}
-
 ![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites04.png)
 
 
