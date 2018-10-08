@@ -11,7 +11,7 @@
 !> 主要分三部分：`html`、`css`、`js`；react/vue等都归类于js,内容来源于`面试过程中遇到的`、在复习过程中看到认为值得`加深巩固`、`群友交流分享`的；如有理解的错误或不足之处，欢迎留言纠错、斧正，这里是[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")，我是`首席填坑官`∙[苏南](https://github.com/meibin08 "首席填坑官")(South·Su) ^_^～
 
 ![本文由平头哥联盟-首席填坑官∙苏南 分享,君自故乡来，应知故乡事。来日绮窗前，寒梅着花未？——唐·王维](./_images/desc01.png)
-　
+
 
 ## HTML
 
@@ -265,9 +265,19 @@ input:-webkit-autofill {
 }
 ```
 
-##### display:none与visibility:hidden两者的区别？
+##### 8、display:none与visibility:hidden两者的区别？
 + display:none在页面中是不占位置的，而visibility:hidden保留原来的位置后;
 + display：none显示/隐藏 页面会产生回流和重绘的问题，visibility则不会 ——`重绘/回流请看JS部分第七题`;
+
+##### 9、CSS样式优先级排序如何计算的？
+
++ 同权重: 内联样式表（标签内部）> 嵌入样式表（当前文件中）> 外部样式表（外部文件中）。
++ !important >  id > class > tag
++ important 比 内联优先级高
+
+##### 10、li与li之间有看不见的空白间隔是什么原因引起的？你是怎么解决的？
++ 行框的排列会受到中间空白（回车\空格）等的影响，因为空格也属于字符,这些空白也会被应用样式，占据空间，所以会有间隔，把字符大小设为0，就没有空格了。
+
 
 ## Javascript
 ##### 1、请将下列b函数进行修改，保证每次调用a都能+1（考闭包）:
