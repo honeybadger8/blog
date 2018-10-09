@@ -6,7 +6,7 @@
   * [这些性能优化，你都做了吗？](frontends/js/optimization.md)
   * [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase.md)
   * [该如何以正确的姿势插入SVG Sprites？](frontends/css/svg-sprites.md)
-
+  * [做过很多抽奖h5，依然过不好这一生](frontends/css/draw-prize.md)
 
 * 测试
 
