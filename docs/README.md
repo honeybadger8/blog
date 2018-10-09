@@ -29,7 +29,7 @@
 | [平头哥联盟-头条号](https://mp.toutiao.com/profile_v3/index "平头哥联盟-头条号") |
 | [平头哥联盟-知乎专栏](https://zhuanlan.zhihu.com/honeybadger "平头哥联盟-知乎专栏") |
 | [掘金主页](https://juejin.im/user/597de6e0f265da3e3c5f6d7d/posts "掘金的主页") |
-| [segmentfault主页](https://segmentfault.com/u/susouth/articles "segmentfault主页") |
+| [IT平头哥-segmentfault专栏](https://segmentfault.com/blog/honeybadger "segmentfault主页") |
 | [CSDN技术社区](https://blog.csdn.net/weixin_43254766 "CSDN技术社区") |
 | [博客园](https://www.cnblogs.com/susouth/ "平头哥联盟-博客园") |
 |                                                              |
