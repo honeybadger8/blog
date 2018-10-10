@@ -2,17 +2,17 @@
 
 # 做过很多抽奖h5，依然过不好这一生
 
-![本文由平头哥联盟-大家的小老弟∙粉刷酱分享](../_banner/banner11.png)
+![本文由平头哥联盟-团宠闪光少女∙粉刷酱分享](../_banner/banner11.jpg)
 
 ## 前言
 
-　　大家好，这里是[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")，我是`大家的小老弟`——[粉刷酱](https://github.com/cchah "大家的小老弟")(粉刷酱)，今天要给大家分享的是工作中做的抽奖h5（都是在react框架下做的）的一些总结，愿你我都能中大奖～
+　　大家好，这里是[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")，我是`团宠闪光少女`——[粉刷酱](https://github.com/cchah "团宠闪光少女")(粉刷酱)，其实我现在还不是团宠，我是觉得这样说的多了，也许团队的人就信了，就真的能成为团宠了。好了，今天要给大家分享的是工作中做的抽奖h5（都是在react框架下做的）的一些总结，愿你我都能中大奖～
 
 
 ## 正式开讲
 
    最近这段时间做了三种效果的抽奖，为了让大家有个直观印象，作为灵魂画手的我自然要大展身手～
-   ![本文由平头哥联盟-大家的小老弟∙粉刷酱分享](./_images/draw-demos.jpg)
+   ![本文由平头哥联盟-团宠闪光少女∙粉刷酱分享](./_images/draw-demos.jpg)
 
 #### 1.1 转盘抽奖
 
@@ -185,7 +185,7 @@ this.timer = setInterval(()=>{
 
    peace&love
 
-> 作者：粉刷酱 - [大家的小老弟](https://github.com/cchah "大家的小老弟")
+> 作者：粉刷酱 - [团宠闪光少女](https://github.com/cchah "团宠闪光少女")
 >
 > 来源：[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")
 >
