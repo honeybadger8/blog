@@ -146,14 +146,14 @@
 				config = {
 						navigationBarBackgroundColor: "#0ECE8D",
 						navigationBarTextStyle:"white",
-						navigationBarTitleText: '平头哥联盟文章demo'
+						navigationBarTitleText: '@IT·平头哥联盟文章demo'
 				}
 				components = {
 						Toast: Toast,
 						Modals: Modals
 				}
 				data = {
-						html:'大家好，我是苏南（South·Su），\n职业：平头哥联盟-首席填坑官，\n身高：176cm，\n性别：男，\n性取向：女，\n公司：目前就职于由腾讯、阿里、平安三巨头合资的一家互联网金融公司深圳分公司某事业部、,\n简介：宝剑锋从磨砺出 梅花香自苦寒来，认真做自己,乐于分享，希望能尽绵薄之力 助其他同学少走一些弯路！,gitHub：https://github.com/meibin08/，\n兴趣：跑步、羽毛球、爬山、音乐、看书、分享自己的微薄知识帮助他人……，\n其他：想了解更多吗？可以加入<a href="https://honeybadger8.github.io/blog/#/">386485473交流群</a>，也可以给我电话<a href="https://github.com/meibin08/">134XX852xx5</a> ，开玩笑啦',
+						html:'大家好，我是苏南（South·Su），\n职业：@IT·平头哥联盟-首席填坑官，\n身高：176cm，\n性别：男，\n性取向：女，\n公司：目前就职于由腾讯、阿里、平安三巨头合资的一家互联网金融公司深圳分公司某事业部、,\n简介：宝剑锋从磨砺出 梅花香自苦寒来，认真做自己,乐于分享，希望能尽绵薄之力 助其他同学少走一些弯路！,gitHub：https://github.com/meibin08/，\n兴趣：跑步、羽毛球、爬山、音乐、看书、分享自己的微薄知识帮助他人……，\n其他：想了解更多吗？可以加入<a href="https://honeybadger8.github.io/blog/#/">386485473交流群</a>，也可以给我电话<a href="https://github.com/meibin08/">134XX852xx5</a> ，开玩笑啦',
 						result:[]
 				}
 				methods = {
@@ -176,7 +176,7 @@
 							
 						},
 						modalAlert(){
-							this.$invoke("Modals","__modalAlert__",['平头哥联盟欢迎你','getUserInfo',
+							this.$invoke("Modals","__modalAlert__",['@IT·平头哥联盟欢迎你','getUserInfo',
 								//确认
 								(res)=>{
 									this.$invoke("Toast","__info__",[`您点击了[ 确定 ]`]);
@@ -200,14 +200,14 @@
 								type:"post",
 								url:"/mockApi/honey/badger",
 								data:{
-									name:"我们是平头哥联盟"
+									name:"我们是@IT·平头哥联盟"
 								}
 							}).then((res)=>{
 								this.$invoke("Toast","__info__",[res.message]);
 							});
 						},
 						setStorage(time=5){
-							Storage.set(`name`,`我们是平头哥联盟`,time);
+							Storage.set(`name`,`我们是@IT·平头哥联盟`,time);
 							this.$invoke("Toast","__info__",[`设置有效期为${time}分钟,可在控制台查看`]);
 						},
 						cutting(e){

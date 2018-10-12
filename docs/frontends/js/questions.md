@@ -2,15 +2,15 @@
 
 # 那些年你踩过的坑，都在这里了～
 
-![本文由平头哥联盟-首席填坑官∙苏南 分享](../_banner/banner07.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享](../_banner/banner07.png)
 
 ## 前言
 
 　　前段时间面试(包括[阿里巴巴](https://segmentfault.com/u/susouth/articles "阿里巴巴")的电话面试)，遇到过一些面试题，且面试中出现机率较高的提问/笔试，有些答的不是很好挂掉了，今天终于有时间整理出来分享给大家，希望对大家面试有所帮助，都能轻松拿offer。
 
-!> 主要分三部分：`html`、`css`、`js`；react/vue等都归类于js,内容来源于`面试过程中遇到的`、在复习过程中看到认为值得`加深巩固`、`群友交流分享`的；如有理解的错误或不足之处，欢迎留言纠错、斧正，这里是[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")，我是`首席填坑官`∙[苏南](https://github.com/meibin08 "首席填坑官")(South·Su) ^_^～
+!> 主要分三部分：`html`、`css`、`js`；react/vue等都归类于js,内容来源于`面试过程中遇到的`、在复习过程中看到认为值得`加深巩固`、`群友交流分享`的；如有理解的错误或不足之处，欢迎留言纠错、斧正，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`∙[苏南](https://github.com/meibin08 "首席填坑官")(South·Su) ^_^～
 
-![本文由平头哥联盟-首席填坑官∙苏南 分享,君自故乡来，应知故乡事。来日绮窗前，寒梅着花未？——唐·王维](./_images/desc01.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,君自故乡来，应知故乡事。来日绮窗前，寒梅着花未？——唐·王维](./_images/desc01.png)
 
 
 ## HTML
@@ -18,7 +18,7 @@
 ##### 1、什么是盒子模型？
 　　有些面试官会问你对盒子模型的理解，在我们平时看到的网页中，内部的每一个标签元素它都是有几个部分构成的：内容(content)、外边距(margin)、内边距(padding)、边框(border)，四个部分组成，当你说完这些面试官是不会满意这个答案的，因为还有一个重点（[IE盒模型和标准盒模型](https://juejin.im/user/597de6e0f265da3e3c5f6d7d/posts "IE盒模型和标准盒模型")的区别）———IE盒模型的content包括border、padding
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/q01.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/q01.png)
 
 ##### 2、页面导入样式时有几种方法，它们之间有区别？
 + `link`标签引入，也是当下用的最多的一种方式，它属于XHTML标签，除了能加载css外，还能定义rel、type、[media](https://segmentfault.com/u/susouth/articles "media")等属性;
@@ -177,7 +177,7 @@
 
 ```
 
-![本文由平头哥联盟-首席填坑官∙苏南 分享](./_images/q02.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享](./_images/q02.png)
 
 ##### 4、什么是外边距合并,项目中是否有遇到过?
 + 有，外边距合并指的是，当两个垂直元素的都设置有margin外边距相遇时，它们将形成一个外边距。 合并后的外边距的高度等于两个发生合并的外边距的值中的较大那个。
@@ -215,7 +215,7 @@ input:-webkit-autofill {
 >贴上3、5两方案代码，也是目前公司一直在用的([预处理SCSS](https://segmentfault.com/u/susouth/articles "预处理SCSS"))：
 
 ```css
-//3、css3的background-image 本文由平头哥联盟-首席填坑官∙苏南分享
+//3、css3的background-image 本文由@IT·平头哥联盟-首席填坑官∙苏南分享
 @mixin border($top:1, $right:1, $bottom:1, $left:1, $color:#ebebf0) {
   background-image:linear-gradient(180deg, $color, $color 50%, transparent 50%), 
                   linear-gradient(90deg, $color, $color 50%, transparent 50%), 
@@ -242,7 +242,7 @@ input:-webkit-autofill {
   @include border(1, 1, 1, 1, $color);
 }
 
-//5、css3的transform:scale  本文由平头哥联盟-首席填坑官∙苏南分享
+//5、css3的transform:scale  本文由@IT·平头哥联盟-首席填坑官∙苏南分享
 @mixin borderRadius($width:1,$style:solid,$color:#ebebf0,$radius:2px) {
   position:relative;
     &:after{
@@ -283,7 +283,7 @@ input:-webkit-autofill {
 ##### 1、请将下列b函数进行修改，保证每次调用a都能+1（考闭包）:
 
 ```javascript
-//本文由平头哥联盟-首席填坑官∙苏南分享,如有错误，欢迎留言
+//本文由@IT·平头哥联盟-首席填坑官∙苏南分享,如有错误，欢迎留言
 function b(){
 	var a=1;
 };
@@ -344,10 +344,10 @@ for(var i=0;i<southSu.length;i++){
 	console.log(typeof i); //number
 	console.log(southSu[i]);// 苏南 , 深圳 , 18 , 男
 }
-var arr = ['苏南','深圳','18','男','帅气',"平头哥联盟-首席填坑官"];
+var arr = ['苏南','深圳','18','男','帅气',"@IT·平头哥联盟-首席填坑官"];
 for(var k in arr){
 	console.log(typeof k);//string
-	console.log(arr[k]);// 苏南 , 深圳 , 18 , 男 , 帅气,平头哥联盟-首席填坑官
+	console.log(arr[k]);// 苏南 , 深圳 , 18 , 男 , 帅气,@IT·平头哥联盟-首席填坑官
 }
 
 ```
@@ -355,7 +355,7 @@ for(var k in arr){
 + 遍历对象时的异同：`for`循环 无法用于循环对象，获取不到obj.length; for in 循环遍历对象的属性时，原型链上的所有属性都将被访问，解决方案：使用`hasOwnProperty`方法过滤或Object.keys会返回自身可枚举属性组成的数组 
 
 ```javascript 
-Object.prototype.test = '原型链上的属性,本文由平头哥联盟-首席填坑官∙苏南分享';
+Object.prototype.test = '原型链上的属性,本文由@IT·平头哥联盟-首席填坑官∙苏南分享';
 var southSu = {name:'苏南',address:'深圳',age:18,sex:'男',height:176};
 for(var i=0;i<southSu.length;i++){
 	console.log(typeof i); //空
@@ -365,7 +365,7 @@ for(var i=0;i<southSu.length;i++){
 
 for(var k in southSu){
 	console.log(typeof k);//string
-	console.log(southSu[k]);// 苏南 , 深圳 , 18 , 男 , 176 ,本文由平头哥联盟-首席填坑官∙苏南分享
+	console.log(southSu[k]);// 苏南 , 深圳 , 18 , 男 , 176 ,本文由@IT·平头哥联盟-首席填坑官∙苏南分享
 }
 
 ```
@@ -375,9 +375,9 @@ for(var k in southSu){
 ```html
 <body class="container">
 	<table id="table">
-		<tr><td>我们是平头哥联盟</td><td>，我是首席填坑官</td><td>苏南</td><td>前端开发</td><td>优秀</td></tr>
-		<tr><td>我们是平头哥联盟</td><td>，我是首席填坑官</td><td>苏南</td><td>前端开发</td><td>优秀</td></tr>
-		<tr><td>我们是平头哥联盟</td><td>，我是首席填坑官</td><td>苏南</td><td>前端开发</td><td>优秀</td></tr>
+		<tr><td>我们是@IT·平头哥联盟</td><td>，我是首席填坑官</td><td>苏南</td><td>前端开发</td><td>优秀</td></tr>
+		<tr><td>我们是@IT·平头哥联盟</td><td>，我是首席填坑官</td><td>苏南</td><td>前端开发</td><td>优秀</td></tr>
+		<tr><td>我们是@IT·平头哥联盟</td><td>，我是首席填坑官</td><td>苏南</td><td>前端开发</td><td>优秀</td></tr>
 		…………
 	</table>
 <script>
@@ -398,20 +398,20 @@ for(var k in southSu){
 
 ```javascript
 <script>
-	let str = "12qwe345671dsfa233dsf9876ds243dsaljhkjfzxcxzvdsf本文由平头哥联盟-首席填坑官∙苏南分享";
+	let str = "12qwe345671dsfa233dsf9876ds243dsaljhkjfzxcxzvdsf本文由@IT·平头哥联盟-首席填坑官∙苏南分享";
 	let array = str.split("");
 
 	//方案一：
 	array = [...new Set(array)].join("");
 	array = ((a)=>[...new Set(a)])(array).join("");
-	console.log(array);//12qwe34567dsfa98ljhkzxcv本文由平头哥联盟-首席填坑官∙苏南分享  只能过滤，不会统计
+	console.log(array);//12qwe34567dsfa98ljhkzxcv本文由@IT·平头哥联盟-首席填坑官∙苏南分享  只能过滤，不会统计
 
 	//方案二：
 	function unique (arr) {
 		const seen = new Map()
 		return (arr.filter((a) => !seen.has(a) && seen.set(a, 1))).join("");
 	}
-	console.log(unique(array)) // 12qwe34567dsfa98ljhkzxcv本文由平头哥联盟-首席填坑官∙苏南分享
+	console.log(unique(array)) // 12qwe34567dsfa98ljhkzxcv本文由@IT·平头哥联盟-首席填坑官∙苏南分享
 
 	//方案三：
 	function unique (arr) {
@@ -425,7 +425,7 @@ for(var k in southSu){
 		};
 		return arrs.join("");
 	}
-	console.log(unique(array)) // 12qwe34567dsfa98ljhkzxcv本文由平头哥联盟-首席填坑官∙苏南分享
+	console.log(unique(array)) // 12qwe34567dsfa98ljhkzxcv本文由@IT·平头哥联盟-首席填坑官∙苏南分享
 
 	//方案四：
 	function unique (arr) {
@@ -552,7 +552,7 @@ function SouthSu(){
 	let timer = null;
 	let Deg = 0;
 	let distance = 360;
-	var _requestAnimationFrame_ = window.requestAnimationFrame || window.webkitRequestAnimationFrame;//本文由平头哥联盟-首席填坑官∙苏南分享
+	var _requestAnimationFrame_ = window.requestAnimationFrame || window.webkitRequestAnimationFrame;//本文由@IT·平头哥联盟-首席填坑官∙苏南分享
 	let angleDiv = document.querySelector(".angle-div");
 	cancelAnimationFrame(timer);
 	let fn = ()=>{
@@ -569,7 +569,7 @@ function SouthSu(){
 </script>
 
 ```
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/q03.gif)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/q03.gif)
 
 ##### 11、如何设置http缓存？
 
@@ -590,12 +590,12 @@ function SouthSu(){
 >**总结:——几者之间的关系**
 >* 当`Cache-Control`设置为`max-age=xx`并且同事设置`Expires`时，`Cache-Control`的优先级更高
 >* 当`ETag`和`Last-Modified`同时存在时，服务器先会检查`ETag`，然后再检查`Last-Modified`，最终决定返回304还是200
->* 该题由 本文由平头哥联盟-成员(`ZodiacSyndicate` )补充
+>* 该题由 本文由@IT·平头哥联盟-成员(`ZodiacSyndicate` )补充
 
 ##### 12、随机打乱一个数组
 * 思路：从数组的最后一项开始，随机选择前面的一个元素进行交换，然后一步步往前交换
 ```js
-//该题由 本文由平头哥联盟-成员(ZodiacSyndicate )补充
+//该题由 本文由@IT·平头哥联盟-成员(ZodiacSyndicate )补充
 const shuffle = arr => {
   let end = arr.length - 1
   while(end) { // 当end为0时不需要交换
@@ -609,7 +609,7 @@ const shuffle = arr => {
 
 ##### 13、用React实现一个显示鼠标位置的高阶组件
 ```jsx
-//该题由 本文由平头哥联盟-成员(ZodiacSyndicate )补充
+//该题由 本文由@IT·平头哥联盟-成员(ZodiacSyndicate )补充
 const mousePosition = Component => class extends React.Component {
   state = {
     x: 0,
@@ -642,13 +642,13 @@ const mousePosition = Component => class extends React.Component {
 
 > 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "首席填坑官")
 >
-> 来源：[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")
 > 
 > 链接：https://honeybadger8.github.io/blog/
 > 
 > 交流群：912594095[`资源获取/交流群`]、386485473(前端) 、260282062(测试)
 >
-> 本文原创，著作权归作者所有。商业转载请联系`平头哥联盟`获得授权，非商业转载请注明原链接及出处。 
+> 本文原创，著作权归作者所有。商业转载请联系`@IT·平头哥联盟`获得授权，非商业转载请注明原链接及出处。 
 
 
 

@@ -1,16 +1,16 @@
 # 做完小程序项目、老板给我加了6k薪资～
 
-![本文由平头哥联盟-首席填坑官(苏南)分享](../_banner/banner06.png)
+![本文由@IT·平头哥联盟-首席填坑官(苏南)分享](../_banner/banner06.png)
 
 
 
-　　大家好，这里是[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")，我是`首席填坑官`——[苏南](https://github.com/meibin08)(South·Su)，今天要给大家分享的是最近公司做的一个小程序项目，过程中的一些好的总结和遇到的坑，希望能给其他攻城狮带来些许便利，更希望能像标题所说，做完老板给你加薪～
+　　大家好，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`——[苏南](https://github.com/meibin08)(South·Su)，今天要给大家分享的是最近公司做的一个小程序项目，过程中的一些好的总结和遇到的坑，希望能给其他攻城狮带来些许便利，更希望能像标题所说，做完老板给你加薪～
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase01.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase01.png)
 
 　　今天是中秋节的第一天，假日的清晨莫名的醒的特别早，不知道为什么，也许是因为，昨晚公司上线的项目回来的路上，发现了个小bug，心里有些忐忑吧，一会偷偷先改了，让领导发现这个月绩效就没了～～～～
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase02.jpg)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase02.jpg)
 
 ​　　以上纯为扯淡，现在开始一本正经的装逼，请系好安全带，中间过程有可能会开车，请注意安全！！！！！
 
@@ -20,7 +20,7 @@
 
 + **toast**组件，大家都知道，官方的api **wx.showToast** 是满足不了我们的需求的，因为它只支持 "success", "loading"两种状态，同时“ title 文本最多显示 7 个汉字长度”，这是官方原话，有图有真相哦，样式巨丑～
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase03.jpg)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase03.jpg)
 ```html
 wx.showToast({
   title: '成功',
@@ -246,20 +246,20 @@ wx.showModal({
         }
         methods = {
             tapToast(){
-                this.$invoke("Toast","__success__",[`本文由平头哥联盟-首席填坑官∙苏南分享`]);
+                this.$invoke("Toast","__success__",[`本文由@IT·平头哥联盟-首席填坑官∙苏南分享`]);
             }   
         }
     }
 </script>
 ```
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase04.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase04.png)
 
 ## Storage (数据存储)
 
 **Storage** （存储）在前端我们存储的方式，`cookie`、`localStorage`、`sessionStorage`等这些，特性就不一一说明了，小程序里大家都知道，数据存储只能调用 wx.setStorage、wx.setStorageSync，相当于h5的`localStorage`，而 `localStorage`是不会过期的，这个大家都知道，而且在很多的面试中，面试官都会问到这个问题，怎么让localStorage像`cookie`一样，只存两小时、两天、甚至只存两分钟呢？今天带你解惑，让你在职场面试中又减少一个难题，这也是我们项目中一直在用的方式，小程序中也同样实用：
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase05.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase05.png)
 
 ```javascript
 class storage {
@@ -306,7 +306,7 @@ module.exports = new storage();
 ```
 　　其实很简单，大家看了之后就都 “哦，原来还可以这样”  懂了，只是一时没想到而已，就是个小技巧，每次在存储的时候同时也存入一个时效时间戳，而在获取数据前，先与当前时间比较，如果小于当前时间则过期了，直接返回空的数据。
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase06.jpeg)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase06.jpeg)
 
 ## 接口API维护
 
@@ -427,12 +427,12 @@ fetchJson({
 		name:"苏南"
 	},
 	success:res=>{
-		console.log("大家好，我是平头哥联盟-首席填坑官∙苏南",res)
+		console.log("大家好，我是@IT·平头哥联盟-首席填坑官∙苏南",res)
 	}
 })
 ```
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase07.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase07.png)
 
 
 
@@ -444,11 +444,11 @@ fetchJson({
 
 + **rich-text,**小程序的一个组件，虽然有那么一点点用处，但又不得不说到底要它何用啊？其它的我就忍了，`a`标签，`a`标签啊，属性没有，那还要它何用啊？？你都不要我跳转，我还要用你吗？b、i、span、em……哪个我不能用？不知道设计这个组件的人是不是脑被驴踢了(愿老天保佑，我在这骂他，可千万别被看到了，哈哈～)，又是业务需求后台配置的内容有链接，没办法，来吧，搞吧，往死里搞吧，一切的推脱都是你技术low的借口(你看，你看，别人的怎么可以跳转啊，别人怎么做到的？给我一刀，我能把产品砍成渣)，所以有了后面的填坑：
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase08.jpg)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase08.jpg)
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase09.jpg)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase09.jpg)
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase10.jpeg)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase10.jpeg)
 
 ```javascript
 
@@ -539,7 +539,7 @@ fetchJson({
 			Modals: Modals
 		}
 		data = {
-			html:'大家好，我是苏南（South·Su），\n职业：平头哥联盟-首席填坑官，\n身高：176cm，\n性别：男，\n性取向：女，\n公司：目前就职于由腾讯、阿里、平安三巨头合资的一家互联网金融公司深圳分公司某事业部、,\n简介：宝剑锋从磨砺出 梅花香自苦寒来，认真做自己,乐于分享，希望能尽绵薄之力 助其他同学少走一些弯路！,gitHub：https://github.com/meibin08/，\n兴趣：跑步、羽毛球、爬山、音乐、看书、分享自己的微薄知识帮助他人……，\n其他：想了解更多吗？可以加入<a href="https://honeybadger8.github.io/blog/#/">386485473交流群</a>，也可以给我电话<a href="https://github.com/meibin08/">134XX852xx5</a> ，开玩笑啦',
+			html:'大家好，我是苏南（South·Su），\n职业：@IT·平头哥联盟-首席填坑官，\n身高：176cm，\n性别：男，\n性取向：女，\n公司：目前就职于由腾讯、阿里、平安三巨头合资的一家互联网金融公司深圳分公司某事业部、,\n简介：宝剑锋从磨砺出 梅花香自苦寒来，认真做自己,乐于分享，希望能尽绵薄之力 助其他同学少走一些弯路！,gitHub：https://github.com/meibin08/，\n兴趣：跑步、羽毛球、爬山、音乐、看书、分享自己的微薄知识帮助他人……，\n其他：想了解更多吗？可以加入<a href="https://honeybadger8.github.io/blog/#/">386485473交流群</a>，也可以给我电话<a href="https://github.com/meibin08/">134XX852xx5</a> ，开玩笑啦',
 			result:[]
 		}
 		methods = {
@@ -565,13 +565,13 @@ fetchJson({
 
 > 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "首席填坑官")
 >
-> 来源：[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")
 > 
 > 链接：https://honeybadger8.github.io/blog/
 > 
 > 交流群：912594095[`资源获取/交流群`]、386485473(前端) 、260282062(测试)
 >
-> 本文原创，著作权归作者所有。商业转载请联系`平头哥联盟`获得授权，非商业转载请注明链接及出处。 
+> 本文原创，著作权归作者所有。商业转载请联系`@IT·平头哥联盟`获得授权，非商业转载请注明链接及出处。 
 
 
 

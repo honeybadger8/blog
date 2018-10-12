@@ -2,11 +2,11 @@
 
 # 该如何以正确的姿势插入SVG Sprites？
 
-![本文由平头哥联盟-首席填坑官∙苏南 分享](../_banner/banner03.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享](../_banner/banner03.png)
 
 ## 前言
 
-　　大家好，这里是[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")，我是`首席填坑官`——[苏南](https://github.com/meibin08 "首席填坑官")(South·Su)，今天要给大家分享的是`SVG  Sprites`(也叫雪碧图)，所谓雪碧图，当然就不是我们常喝的雪碧饮料（Sprites）哦，哈哈～
+　　大家好，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`——[苏南](https://github.com/meibin08 "首席填坑官")(South·Su)，今天要给大家分享的是`SVG  Sprites`(也叫雪碧图)，所谓雪碧图，当然就不是我们常喝的雪碧饮料（Sprites）哦，哈哈～
 
 　　当下流程的移动端，手机型号太多太多，今天工作项目中突然发现还有同事在使用以前大家 曾经包括现在还很熟悉的`CSS` 图片精灵，被我们的测试MM找来说图片在iphone6、iphone plus、iphone x等大屏的手机全糊了，当时我就懵逼了，我说怎么会呢，后面一看，果然如此啊，看了下代码，原来是用的图片，我说为什么不用svg呢？？然后同事说一个一个的图标好麻烦，我说可以用svg sprite啊，～～＞﹏＜，这个时候轮到同事一脸懵逼了……，所以想着可能是不是同样还有很多同学也不知道`SVG symbols`呢，那么这就给大家分享一下：
 
@@ -16,7 +16,7 @@
 
 #### 1.1 回顾 Css Sprites 
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites02.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites02.png)
 ```html
 <div class="icon-sprite"></div>
 ```
@@ -35,8 +35,8 @@
 
 　　在以前我们为了性能优化，多图标合在一张图上面，然后再使用css的 `background-position`来定位， 好处是减少了页面的加载，要命的问题是定位遇到兼容问题，1px、.5px偏差时，搞的你死去活来，后来移动端更是不清晰，被人骂了又骂。
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites03.png)
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites04.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites03.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites04.png)
 
 
 
@@ -81,12 +81,12 @@
 
 ```
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites045.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites045.png)
 
 + 那么该如何摆正姿势(`你随意就好`)，正确的使用它呢？热爱学习的你，是不是已经有些饥渴难耐了呢？马上为你送上高潮部分：
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites05.png)
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites06.png)
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites07.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites05.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites06.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites07.png)
 
 ```
 <body>
@@ -133,20 +133,20 @@ Svg Sprites相比Css Sprites，不管是在维护和开发的过程中，还是�
 + 无法修改小图颜色，要UI设计师调整后替换，过程漫长效率低;
 + 在移动端的大屏手机图标会模糊，影响体验。
 
-![本文由平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites08.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/svg-sprites08.png)
 
 　　以上就是今天的分享，写了蛮久，最近才在开始尝试写博客，新手上路中，文章中有不对之处，烦请各位大神斧正。如果你觉得这篇文章对你有所帮助，请记得点赞哦～，想了解更多？[请猛戳这里！](https://github.com/meibin08/)
 
 
 > 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "首席填坑官")
 >
-> 来源：[平头哥联盟](https://honeybadger8.github.io/blog/ "平头哥联盟")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")
 > 
 > 链接：https://honeybadger8.github.io/blog/
 > 
 > 交流群：912594095[`资源获取/交流群`]、386485473(前端) 、260282062(测试)
 >
-> 本文原创，著作权归作者所有。商业转载请联系`平头哥联盟`获得授权，非商业转载请注明链接及出处。 
+> 本文原创，著作权归作者所有。商业转载请联系`@IT·平头哥联盟`获得授权，非商业转载请注明链接及出处。 
 
 
 

@@ -1,7 +1,7 @@
 /*
-* @authors :平头哥联盟-首席填坑官(苏南)
+* @authors :@IT·平头哥联盟-首席填坑官(苏南)
 * @date    :2018-09-26
-* @description：平头哥联盟项目示例源码,欢迎投稿讲出你的故事
+* @description：@IT·平头哥联盟项目示例源码,欢迎投稿讲出你的故事
 * @github：https://honeybadger8.github.io/blog/
 */
 

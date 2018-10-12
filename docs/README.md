@@ -1,10 +1,10 @@
-## 平头哥联盟 {docsify-ignore-all}
+## @IT·平头哥联盟 {docsify-ignore-all}
 
 > + **前端**：html、css、javascript、canvas、小程序、react/vue等系列;
 > + **测试**：自动化、性能、接口系列;
 > + **资源**：912594095[`资源获取/交流群`]，文章对应示例源码的获取、小白入门前端/测试疑惑等;
 >
-> 平头哥联盟主要分享`前端、测试` 等领域的积累，文章来源于(自己/群友)工作中积累的经验、填过的坑，希望能尽绵薄之力 助其他同学少走一些弯路;<br/>
+> @IT·平头哥联盟主要分享`前端、测试` 等领域的积累，文章来源于(自己/群友)工作中积累的经验、填过的坑，希望能尽绵薄之力 助其他同学少走一些弯路;<br/>
 > -如果您有故事 我必备好小酒扫塌相迎，投稿请 [[查看规则](other/rule.md  "查看规则")]！<br/>
 > -如果您是`前端/测试`小白、新人、或想了解这个领域，同样也欢迎加入我们，我们将倾尽全力，为您释疑解惑！
 
@@ -26,13 +26,14 @@
 
 | 前端/测试                                                    |
 | ------------------------------------------------------------ |
-| [平头哥联盟-头条号](https://mp.toutiao.com/profile_v3/index "平头哥联盟-头条号") |
-| [平头哥联盟-知乎专栏](https://zhuanlan.zhihu.com/honeybadger "平头哥联盟-知乎专栏") |
+| [@IT·平头哥联盟-segmentfault专栏](https://segmentfault.com/blog/honeybadger "@IT·平头哥联盟") |
+| [@IT·平头哥联盟-知乎专栏](https://zhuanlan.zhihu.com/honeybadger "@IT·平头哥联盟-知乎专栏") |
+| [@IT·平头哥联盟-头条号](https://mp.toutiao.com/profile_v3/index "@IT·平头哥联盟-头条号") |
+| [@IT·平头哥联盟-简书](https://www.jianshu.com/c/01e09375afc9 "@IT·平头哥联盟-简书") |
 | [掘金主页](https://juejin.im/user/597de6e0f265da3e3c5f6d7d/posts "掘金的主页") |
-| [IT平头哥-segmentfault专栏](https://segmentfault.com/blog/honeybadger "segmentfault主页") |
 | [CSDN技术社区](https://blog.csdn.net/weixin_43254766 "CSDN技术社区") |
-| [博客园](https://www.cnblogs.com/susouth/ "平头哥联盟-博客园") |
-|                                                              |
+| [开源中国](https://my.oschina.net/susouth "开源中国")        |
+| [博客园](https://www.cnblogs.com/susouth/ "@IT·平头哥联盟-博客园") |
 
 
 
