@@ -241,6 +241,7 @@
     + 分析车架的结构，我们可以看为是一个菱形，也可以看着是两个三角形，这里以三角为例，菱形可以看 carBracket2方法;
     + 首先算出三角形的起点、再算出三角形的角度、高度，请看下面示图;
     + 最后在后轮的中心点盖上一个圆点 用于遮挡三角的部分
+  + 菱形 就要简单些的，但看起来逼格没有这么高端，就是用`lineTo`点对点的划线，
   + 以上就是车架的绘制过程，其实感觉菱形是是要简单、代码量也少些的，有兴趣的同学可以自己尝试一下，大家可以看下面的主要代码，新手上路，如果有更好的方式，欢迎老司机指点：
 
 > **结论** ：使用`moveTo`把画布坐标从`O`移动到`A`点 x/y，`lineTo`从`A`开始画到`B`结束,再从`B`到`C`点，闭合，即一个三角完成
@@ -248,11 +249,12 @@
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike010.png "每周动画一点点之canvas自行车的车架分解图")
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike011.png "每周动画一点点之canvas自行车的车架分解图")
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike012.png "每周动画一点点之canvas自行车的车架分解图")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike020.png "每周动画一点点之canvas自行车的车架菱形分解图")
 
 
 ```javascript
 
-//方法一：三角形
+//方法二：三角形
   …………此处省略N行代码
   [
   {
@@ -284,16 +286,18 @@
   });
   ……
 
-//方法二：菱形
+//方法一：菱形
   
   …………此处省略N行代码
   this.ctx.beginPath();
-  var height = (lever1Y)+120*Math.sin(Math.PI/3);//计算等边三角形的高
-  this.ctx.moveTo(lever1X,lever1Y);
+  this.ctx.strokeStyle = this.gearColor;
+  this.ctx.lineWidth=coordinateW;
+  this.ctx.moveTo(polygon1X,polygon1Y);
   this.ctx.lineTo(coordinateX,height);
   this.ctx.lineTo(discX,discY); 
-  this.ctx.lineTo(lever2X,lever1Y);
-  this.ctx.lineTo(lever1X,lever1Y);
+  this.ctx.lineTo(polygon2X,polygon1Y+5);
+  this.ctx.lineTo(polygon2X-5,polygon1Y);
+  this.ctx.lineTo(polygon1X,polygon1Y);
   this.ctx.closePath();
   this.ctx.stroke();
   ……
@@ -436,9 +440,38 @@
 ```
 
 + **绘制车的链条** ：
-  + 还在编写中……
+  + 链条用的是 `bezierCurveTo` ，cp1x,cp1y,cp2x,cp2y,x,y等参数画出来的，具体看下面代码吧，其实就是两个半椭圆的拼接……
+
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike021.png "每周动画一点点之canvas自行车绘制车的链条")
+
+```javascript
+  //链条
+
+  let chainW = ( coordinateX+discRadius - this.wheelPos[0].x) / 2;
+  let chainX = this.wheelPos[0].x +chainW-5 ;
+  let chainY = coordinateY;
+  this.ctx.save();
+  this.ctx.translate(chainX,chainY+4.8);
+  this.ctx.rotate(-2*(Math.PI/180));
+  let r = chainW+chainW*.06,h = discRadius/2;
+  this.ctx.beginPath();
+  this.ctx.moveTo(-r, -1);
+  this.ctx.lineWidth=3;
+  this.ctx.strokeStyle = "#1e0c1a";
+  this.ctx.bezierCurveTo(-r,h*1.5,r,h*4,r,0);
+  this.ctx.bezierCurveTo(r,-h*4,-r,-h*1.5,-r,0);
+  this.ctx.closePath();
+  this.ctx.stroke();
+  this.ctx.restore();
+
+```
+
+## 尾声
+
+　　以上就是今天[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")-`首席填坑官`∙[苏南](https://github.com/meibin08 "首席填坑官")给你带来的分享，整个车的绘制过程，感觉车架部分应该还有更好的做法，如果您有更好的建议及想法，欢迎斧正，最后送上完整的示例图！
 
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike019.gif "每周动画一点点之canvas自行车脚踏板的展示")
+
 
 > 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "首席填坑官")
 >
@@ -450,6 +483,7 @@
 >
 > 本文原创，著作权归作者所有。商业转载请联系`@IT·平头哥联盟`获得授权，非商业转载请注明原链接及出处。
 
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享,@IT·平头哥联盟 主要分享前端、测试 等领域的积累，文章来源于(自己/群友)工作中积累的经验、填过的坑，希望能尽绵薄之力 助其他同学少走一些弯路](./_images/footer.png "每周动画一点点之canvas自行车,@IT·平头哥联盟 主要分享前端、测试 等领域的积累，文章来源于(自己/群友)工作中积累的经验、填过的坑，希望能尽绵薄之力 助其他同学少走一些弯路")
 
 
 
