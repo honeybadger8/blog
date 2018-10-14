@@ -4,7 +4,9 @@
 
 ## 前言
 
-　　前些天捡到钱了，就想着是时候给自己买辆车了，工作这么多年了应该对自己好一点，几年前买过一辆的，但是不到一个月就被人偷了，伤心了好久。这次一定锁好，上三把锁保证小偷再也偷不走了，于是我拿着钱去买了些[益力多](https://segmentfault.com/a/1190000016615237 "本文由@IT·平头哥联盟-首席填坑官∙苏南分享")，跟同事分享了，心情还是比较愉悦的。但想来作为一名程序（嗯，还是个菜鸟，专业首席填坑官哦），车基本是用不上的啦，为啥？因为有改不完的bug，记得刚毕业那时候最大的梦想是：“撩个妹子 携手仗剑天涯，惩奸除恶、劫富济贫，快意人生～”，无奈一入IT深似海，[从此BUG改不完啊](https://github.com/meibin08 "首席填坑官∙苏南")。所以还是想着学习吧，这不就学着画了个车满足一下自己的心里安慰，在这里把大家一起分享一下，唉，有点扯偏了～，大家先来看一下最终的效果图吧！
+　　灵感来源于前些天捡到钱了，就想着是时候给自己买辆车了，工作这么多年了应该对自己好一点，在网上搜索了一下看到这个车型。其实几年前是买过一辆的，但是不到一个月就被人偷了，伤心了好久。这次一定锁好，上三把锁保证小偷再也偷不走了，于是我拿着钱去买了些[益力多](https://segmentfault.com/a/1190000016615237 "本文由@IT·平头哥联盟-首席填坑官∙苏南分享")，跟同事分享了，心情还是比较愉悦的。—— [@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`∙[苏南](https://github.com/meibin08 "首席填坑官")(South·Su) ^_^～
+
+　　但想来作为一名程序（嗯，还是个菜鸟，专业首席填坑官哦），车基本是用不上的啦，为啥？因为有改不完的bug，记得刚毕业那时候最大的梦想是：“撩个妹子 携手仗剑天涯，惩奸除恶、劫富济贫，快意人生～”，无奈一入IT深似海，[从此BUG改不完啊](https://github.com/meibin08 "首席填坑官∙苏南")。所以还是多学习吧，这不就学着画了个车满足一下自己的心里安慰，在这里把大家一起分享一下，唉，有点扯偏了～，大家先来看一下最终的效果图吧！
 
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike001.gif "每周动画一点点之canvas自行车的绘制,图片来源于Google搜索")
 　　
@@ -29,9 +31,6 @@
       * 轮子的底部，也称地平线：
       1.清除画布
       2.画一条直线，且高度6px
-      3.画5个断点，用于动画滑动视差
-      4.同时也记录两个车轮的 X ，Y中心点
-      5.两车轮之间的距离大概为整个画布宽度的.49;
       本文@IT·平头哥联盟-首席填坑官∙苏南分享，非商业转载请注明原链接及出处
        */
 
@@ -67,11 +66,6 @@
   shuttle(){
       /**
       * 画几根横线，有点视差，感觉骑车在飞速穿梭的感觉：
-      1.清除画布
-      2.画一条直线，且高度6px
-      3.画5个断点，用于动画滑动视差
-      4.同时也记录两个车轮的 X ，Y中心点
-      5.两车轮之间的距离大概为整个画布宽度的.49;
       本文@IT·平头哥联盟-首席填坑官∙苏南分享，非商业转载请注明原链接及出处
        */
       let shuttleX = this.canvasW+100,
@@ -106,6 +100,7 @@
   + 知识点：`arc`、`fill`
 
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike004.png "每周动画一点点之canvas自行车的车轮")
+
 ```javascript
   console.log(this.wheelPos);
   this.wheelPos = this.wheelPos.slice(1,3); //这里取1-3
@@ -246,19 +241,18 @@
     + 分析车架的结构，我们可以看为是一个菱形，也可以看着是两个三角形，这里以三角为例，菱形可以看 carBracket2方法;
     + 首先算出三角形的起点、再算出三角形的角度、高度，请看下面示图;
     + 最后在后轮的中心点盖上一个圆点 用于遮挡三角的部分
+  + 以上就是车架的绘制过程，其实感觉菱形是是要简单、代码量也少些的，有兴趣的同学可以自己尝试一下，大家可以看下面的主要代码，新手上路，如果有更好的方式，欢迎老司机指点：
+
 > **结论** ：使用`moveTo`把画布坐标从`O`移动到`A`点 x/y，`lineTo`从`A`开始画到`B`结束,再从`B`到`C`点，闭合，即一个三角完成
 
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike010.png "每周动画一点点之canvas自行车的车架分解图")
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike011.png "每周动画一点点之canvas自行车的车架分解图")
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike012.png "每周动画一点点之canvas自行车的车架分解图")
 
-  + 以上为三角形的方法，另一种菱形的就不截图了，大家可以看下面的主要代码，新手上路，如果有更好的方式，欢迎老司机指点：
-  + 
-
 
 ```javascript
 
-//三角形
+//方法一：三角形
   …………此处省略N行代码
   [
   {
@@ -290,7 +284,7 @@
   });
   ……
 
-//菱形
+//方法二：菱形
   
   …………此处省略N行代码
   this.ctx.beginPath();
@@ -305,10 +299,146 @@
   ……
 ```
 
-测试一下
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike013.png "每周动画一点点之canvas自行车的车架分解图")
 
++ **绘制车的豪华宝坐、扶手** ：
+  + 坐位一开始是比较懵逼的，不知道如何下手，圆也不圆、方也不方，后面又去复习一下canvas的API，发现了`quadraticCurveTo`能满足这个需求，—— **二次贝塞尔曲线**
+  + 画完之后，思考了很久，也没有发现什么技巧，或者规律，可能数学学的不好，没办法只能这样慢慢描了
+  + 扶手也是一样的，开始尝试`quadraticCurveTo`，半天也没画成功，后面尝试去找了它邻居`bezierCurveTo`，—— **三次贝塞尔曲线**
+  + **提示**：三次贝塞尔曲线需要三个点。前两个点是用于三次贝塞尔计算中的控制点，第三个点是曲线的结束点。曲线的开始点是当前路径中最后一个点
+  + 知识点：`quadraticCurveTo`、`bezierCurveTo`、`createLinearGradient`
 
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike015.png "每周动画一点点之canvas自行车的坐位分解图，quadraticCurveTo")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike014.png "每周动画一点点之canvas自行车的坐位分解图，quadraticCurveTo")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike016.png "每周动画一点点之canvas自行车的坐位分解图，quadraticCurveTo")
 
+```js
+  //坐位
+  this.ctx.restore();
+  let seatX = (discX-85),seatY=discY-140;
+  let curve1Cpx = [seatX-5,seatY+30,seatX+75,seatY+8];
+  let curve2Cpx =[seatX+85,seatY-5,seatX,seatY]; 
+  this.ctx.beginPath();
+  // this.ctx.fillStyle = this.gearColor;
+  let grd=this.ctx.createLinearGradient(seatX,seatY,seatX+10,seatY+60); //渐变的角度 
+  grd.addColorStop(0,"#712450");
+  grd.addColorStop(1,"#11090d");
+  this.ctx.fillStyle = grd;
+  this.ctx.moveTo(seatX,seatY);
+  this.ctx.quadraticCurveTo(...curve1Cpx);
+  this.ctx.quadraticCurveTo(...curve2Cpx);
+  this.ctx.fill();
+
+  //车前轴上的手柄
+  let steeringX = lever1X-20,steeringY = lever1Y-45;
+  let steeringStep1 = [steeringX+40,steeringY-10,steeringX+40,steeringY-10,steeringX+35,steeringY+15]
+  let steeringStep2 = [steeringX+30,steeringY+25,steeringX+25,steeringY+23,steeringX+18,steeringY+23]
+  this.ctx.beginPath();
+  this.ctx.lineCap="round";
+  this.ctx.strokeStyle = "#712450";
+  this.ctx.lineWidth=coordinateW;
+  this.ctx.moveTo(steeringX,steeringY); //40 60;
+  this.ctx.bezierCurveTo(...steeringStep1);
+  this.ctx.bezierCurveTo(...steeringStep2);
+  this.ctx.stroke();
+  this.ctx.closePath();
+
+```
+
++ **绘制车的发动机、脚踏板** ：
+  + 到了这里，也快接近本文的尾声了，接下来要讲的是是车辆中最重要的部分，车中间齿轮盘，一辆车没有它，你做的再好也是白搭了;
+  + 前面多次讲到齿轮的中心点，包括两个三角都是以它的中心计算的三角角度，知道了位置那就容易了，一样的先画几个圆，每个按一定的比例缩小;
+  + 然后外围再画一圈锯齿，这样齿轮大概就画好了，齿轮的技巧在于以圆盘为中心点，画一圈线，它跟[时钟的刻度](https://segmentfault.com/blog/honeybadger "@IT·平头哥联盟-首席填坑官")原理是一样的;
+  + 脚踏板，这个好理解，就是用`lineTo`画两跟线，其中一根进行一个90度的旋转就ok了，但重点是它在动画过程中的一个过程呢，我的分析过程是这样：
+    + 竖着的这根轴是，以圆盘齿轮的中点为基点 `N* (Math.PI / 180)`转动;
+    + 横着的这根轴，也就是脚踏板，它是以竖着的轴底部为Y轴中心点，以自身宽度的二分之一为X轴为中心点，同样以 `N* (Math.PI / 180)`的 `rotate`角度旋转。
+  + 说了这么多，我们来看几张[动态图](https://juejin.im/user/597de6e0f265da3e3c5f6d7d/posts "@IT·平头哥联盟-首席填坑官")吧，顺便贴上代码：
+
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike017.gif "每周动画一点点之canvas自行车的齿轮展示")
+
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike018.gif "每周动画一点点之canvas自行车脚踏板的展示")
+
+```javascript
+
+  discGear(coordinateX,coordinateY,coordinateW){
+    //车中间齿轮盘 disc
+    let discX = coordinateX,discY = coordinateY;
+    let discRadius = this.wheelRadius*.36;//车轮的3.6;
+
+    let discDotX = discX+discRadius+8,discDotY = discRadius/.98;
+    this.ctx.restore();
+    this.ctx.save();
+    this.ctx.translate(discX,discY);
+    // this.ctx.rotate(-(Math.PI/2));
+
+    Array.from({length:30}).map((v,index)=>{
+      let radian = (Math.PI / 15) ;
+      this.ctx.beginPath();
+      this.ctx.lineCap="round";
+      this.ctx.strokeStyle = this.color;
+      this.ctx.rotate(radian);
+      this.ctx.lineWidth=3;
+      this.ctx.moveTo(0,discDotY);
+      this.ctx.lineTo(1.5,discDotY);
+      // ctx.arc(discDotX,discDotY,6,0,Math.PI*2,false);
+      this.ctx.closePath();
+      this.ctx.stroke();
+
+    });
+    this.pedal(discX,discY,discRadius);
+    this.pedal(discX,discY,discRadius,1);
+    
+    this.ctx.restore();
+  }
+  pedal(coordinateX,coordinateY,discRadius,turnAngle=0){
+
+    //脚踏板，分两次初始化，一次在中心齿轮绘制之前，一次在之后，
+
+    let pedalX = coordinateX, pedalY = coordinateY - discRadius*.7;
+    let pedalW = 6,
+        pedalH =  discRadius*1.9;
+    let radian = (this.animateNum)*(Math.PI / 180) ;
+    let radianHor = (this.animateNum)*(Math.PI / 180) ;
+    let turnAngleNum = 1;
+    let moveY = 28;
+    if(turnAngle !== 0){
+      this.ctx.rotate(-180*(Math.PI/180));
+      turnAngleNum = (Math.PI/180);
+    };
+    this.ctx.beginPath();
+    this.ctx.rotate(radian*turnAngleNum);
+    this.ctx.lineCap="round";
+    this.ctx.strokeStyle = this.gearColor;
+    this.ctx.lineWidth=pedalW;
+    this.ctx.moveTo(-1,moveY);
+    this.ctx.lineTo(0,pedalH);
+    this.ctx.closePath();
+    this.ctx.stroke();
+    
+    this.ctx.save();
+    let pedalHorW = pedalH/1.5,pedalHorH=pedalW;
+    this.ctx.translate(0,pedalH);
+    this.ctx.beginPath();
+    this.ctx.rotate(-radianHor);
+
+    this.ctx.lineCap="round";
+    this.ctx.fillStyle = "#fff";
+    this.ctx.strokeStyle = this.gearColor;
+    this.ctx.lineWidth =2;
+    this.ctx.roundRect(-pedalHorW/2,-2,pedalHorW,pedalHorH,5);
+    this.ctx.closePath();
+    this.ctx.fill();
+    this.ctx.stroke();
+
+    this.ctx.restore();
+  }
+
+```
+
++ **绘制车的链条** ：
+  + 还在编写中……
+
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike019.gif "每周动画一点点之canvas自行车脚踏板的展示")
 
 > 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "首席填坑官")
 >
