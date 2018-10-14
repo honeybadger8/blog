@@ -14,3 +14,4 @@
   * [测试领域老司机带你上车，你准备好了吗？](testing/theory/test-started.md)
 
 * 其他
+  * [文章源码获取👈](https://github.com/honeybadger8/blog-resource "@IT·平头哥联盟 文章源码合集")
