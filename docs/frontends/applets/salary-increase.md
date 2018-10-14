@@ -557,13 +557,13 @@ fetchJson({
 
 
 
-**PS**：[完整示例源码](https://github.com/honeybadger8/blog/tree/master/demo/applets-toast) 来啦～，觉得不错记得 Star、`Star`、`Watch` 哦，感谢！
+**PS**：[完整示例源码](https://github.com/honeybadger8/blog-resource "@IT·平头哥联盟-首席填坑官") 来啦～，觉得不错记得 Star、`Star`、`Watch` 哦，感谢！
 
-今天的分享就到这里，写了蛮久，最近才在开始尝试写博客，新手上路中，文章中有不对之处，烦请各位大神斧正。如果你觉得这篇文章对你有所帮助，请记得点赞哦～，想了解更多？[请猛戳这里！](https://github.com/meibin08/)
+今天的分享就到这里，写了蛮久，最近才在开始尝试写博客，新手上路中，文章中有不对之处，烦请各位大神斧正。如果你觉得这篇文章对你有所帮助，请记得点赞哦～，想了解更多？[请猛戳这里！](https://github.com/meibin08/ "@IT·平头哥联盟-首席填坑官")
 
 
 
-> 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "首席填坑官")
+> 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "@IT·平头哥联盟-首席填坑官")
 >
 > 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")
 > 
