@@ -594,7 +594,9 @@ function SouthSu(){
 
 ##### 12、随机打乱一个数组
 * 思路：从数组的最后一项开始，随机选择前面的一个元素进行交换，然后一步步往前交换
-```js
+
+```javascript
+
 //该题由 本文由@IT·平头哥联盟-成员(ZodiacSyndicate )补充
 const shuffle = arr => {
   let end = arr.length - 1
@@ -605,10 +607,12 @@ const shuffle = arr => {
   }
   return arr
 }
-//方法二：
+	//方法二：
 	arr.sort(()=>Math.random() > 0.5)
 
 ```
+
+
 
 ##### 13、用React实现一个显示鼠标位置的高阶组件
 ```jsx
