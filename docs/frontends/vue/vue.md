@@ -1,6 +1,6 @@
 # 这些vue技巧你肯定不知道
 
-![timg](./_images/timg.png)
+![timg](./_images/timg.jpeg)
 
 ## 前言
 
