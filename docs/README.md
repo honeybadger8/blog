@@ -19,6 +19,7 @@
 ## 最新内容
 
   * [每周动画一点点之跑车的绘制](frontends/series/canvas-bike.md)
+  * [那些vue中你可能不知道技巧](frontends/vue/vue.md)
   * [做过很多抽奖h5，依然过不好这一生](frontends/css/draw-prize.md)
 
 

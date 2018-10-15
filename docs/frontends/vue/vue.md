@@ -1,12 +1,12 @@
 # 这些vue技巧你肯定不知道
 
-![timg](/Users/hejinze/blog/docs/frontends/vue/_images/timg.jpeg)
+![timg](./_images/timg.jpeg)
 
 ## 前言
 
 　　大家好，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席甩锅官`——[老金](https://github.com/hejinze789)，今天给大家分享的，一些日常中神秘而又简单的vue的实用小技巧，以及我在我司项目中实用vue的总结和坑，跟大家一起分享，希望能给其他攻城狮带来些许便利，如有理解错误，请纠正。
 
-## 正式开讲
+## 技巧/坑点
 
 #### 1.setTimeout/ setInterval this指向改变无法用this访问vue实例
 
@@ -130,7 +130,7 @@ this.$refs.progress.$el //组件 对象的最外层dom元素
 
 在样式中设置完scoped在浏览器解析为如下图这样，a是个div，a div里面包含一个组件里面解析完了div的样式名字为b，想在父组件影响到子组件的默认样式。
 
-![B6BFDEAC-486A-45F0-8DA1-E9192260EA2A](/Users/hejinze/blog/docs/frontends/vue/_images/B6BFDEAC-486A-45F0-8DA1-E9192260EA2A.png)
+![B6BFDEAC-486A-45F0-8DA1-E9192260EA2A](./_images/B6BFDEAC-486A-45F0-8DA1-E9192260EA2A.png)
 
 解决方法:
 
@@ -175,7 +175,7 @@ console.log(obj);  // {b:2,c:'OBKoro1'}
 
 2.数组原生方法触发视图更新（ [vue官网可查](https://cn.vuejs.org/v2/guide/list.html#%E5%8F%98%E5%BC%82%E6%96%B9%E6%B3%95)）:
 
-![B92E13FD-8DFA-4238-96C9-0B4128EDE446](/Users/hejinze/blog/docs/frontends/vue/_images/B92E13FD-8DFA-4238-96C9-0B4128EDE446.png)
+![B92E13FD-8DFA-4238-96C9-0B4128EDE446](./_images/B92E13FD-8DFA-4238-96C9-0B4128EDE446.png)
 
 3.整体替换数组/对象
 
@@ -234,12 +234,12 @@ watch: {
 
 欢迎大家一起探讨 ～～
 
-作者：老金 - [首席甩锅官](https://github.com/hejinze789)
-
-来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")
-
-链接：https://honeybadger8.github.io/blog/
-
-交流群：912594095[`资源获取/交流群`]、386485473(前端) 、260282062(测试)
-
-本文原创，著作权归作者所有。商业转载请联系`@IT·平头哥联盟`获得授权，非商业转载请注明原链接及出处。 
+> 作者：老金 - [首席甩锅官](https://github.com/hejinze789)
+>
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")
+> 
+> 链接：https://honeybadger8.github.io/blog/
+> 
+> 交流群：912594095[`资源获取/交流群`]、386485473(前端) 、260282062(测试)
+>
+> 本文原创，著作权归作者所有。商业转载请联系`@IT·平头哥联盟`获得授权，非商业转载请注明链接及出处。 
