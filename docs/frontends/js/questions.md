@@ -605,6 +605,9 @@ const shuffle = arr => {
   }
   return arr
 }
+//方法二：
+	arr.sort(()=>Math.random() > 0.5)
+
 ```
 
 ##### 13、用React实现一个显示鼠标位置的高阶组件
