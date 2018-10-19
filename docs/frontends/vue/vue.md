@@ -1,4 +1,4 @@
-# 这些vue技巧你肯定不知道
+# 初学者可能不知道的vue技巧
 
 ![timg](./_images/timg.jpeg)
 
