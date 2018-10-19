@@ -2,6 +2,10 @@
 
 ![timg](./_images/timg.jpeg)
 
+> 作者：[首席甩锅官∙老金](https://github.com/meibin08/ "首席甩锅官∙老金")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟") 
+> 交流群：[912594095](https://shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟QQ交流群")
+
 ## 前言
 
 　　大家好，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席甩锅官`——[老金](https://github.com/hejinze789)，今天给大家分享的，一些日常中神秘而又简单的vue的实用小技巧，以及我在我司项目中实用vue的总结和坑，跟大家一起分享，希望能给其他攻城狮带来些许便利，如有理解错误，请纠正。

@@ -4,6 +4,10 @@
 
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享](../_banner/banner08.png)
 
+> 作者：[首席填坑官∙苏南](https://github.com/meibin08/ "首席填坑官∙苏南")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟") 
+> 交流群：[912594095](https://shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟QQ交流群")
+
 ## 引言
 
 ​	大家好，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`——[苏南](https://github.com/meibin08 "首席填坑官∙苏南")(South·Su)，今天是国庆节的第二天，这个假期没有外出(不要问我为什么，自己脑补～😭)，前些天分享了一篇[前端面试汇总](frontends/js/questions.md "那些年你踩过的坑，都在这里了～")的文章，有些同学在群里问了其中的一些细节，其中大家最关心的性能优化这块，今天整理了公司项目中的一些认为不错的点，跟大家一起分享，如有理解错误，请纠正。

@@ -2,6 +2,10 @@
 
 ![本文由@IT·平头哥联盟-首席填坑官(苏南)分享](../_banner/banner06.png)
 
+> 作者：[首席填坑官∙苏南](https://github.com/meibin08/ "首席填坑官∙苏南")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟") 
+> 交流群：[912594095](https://shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟QQ交流群")
+
 
 
 　　大家好，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`——[苏南](https://github.com/meibin08)(South·Su)，今天要给大家分享的是最近公司做的一个小程序项目，过程中的一些好的总结和遇到的坑，希望能给其他攻城狮带来些许便利，更希望能像标题所说，做完老板给你加薪～

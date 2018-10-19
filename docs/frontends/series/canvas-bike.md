@@ -2,6 +2,10 @@
 
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](../_banner/banner12.png)
 
+> 作者：[首席填坑官∙苏南](https://github.com/meibin08/ "首席填坑官∙苏南")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟") 
+> 交流群：[912594095](https://shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟QQ交流群")
+
 ## 前言
 
 　　灵感来源于前些天捡到钱了，就想着是时候给自己买辆车了，工作这么多年了应该对自己好一点，在网上搜索了一下看到这个车型。其实几年前是买过一辆的，但是不到一个月就被人偷了，伤心了好久。这次一定锁好，上三把锁保证小偷再也偷不走了，于是我拿着钱去买了些[益力多](https://segmentfault.com/a/1190000016615237 "本文由@IT·平头哥联盟-首席填坑官∙苏南分享")，跟同事分享了，心情还是比较愉悦的。—— [@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`∙[苏南](https://github.com/meibin08 "首席填坑官")(South·Su) ^_^～

@@ -4,6 +4,10 @@
 
 ![本文由@IT·平头哥联盟-团宠闪光少女∙粉刷酱分享](../_banner/banner11.jpg)
 
+> 作者：[团宠闪光少女∙粉刷酱](https://github.com/meibin08/ "团宠闪光少女∙粉刷酱")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟") 
+> 交流群：[912594095](https://shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟QQ交流群")
+
 ## 前言
 
 　　大家好，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`团宠闪光少女`——[粉刷酱](https://github.com/cchah "团宠闪光少女")(粉刷酱)，其实我现在还不是团宠，我是觉得这样说的多了，也许团队的人就信了，就真的能成为团宠了。好了，今天要给大家分享的是工作中做的抽奖h5（都是在react框架下做的）的一些总结，愿你我都能中大奖～

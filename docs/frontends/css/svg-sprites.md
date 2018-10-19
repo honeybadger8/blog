@@ -4,6 +4,10 @@
 
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享](../_banner/banner03.png)
 
+> 作者：[首席填坑官∙苏南](https://github.com/meibin08/ "首席填坑官∙苏南")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟") 
+> 交流群：[912594095](https://shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟QQ交流群")
+
 ## 前言
 
 　　大家好，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`——[苏南](https://github.com/meibin08 "首席填坑官")(South·Su)，今天要给大家分享的是`SVG  Sprites`(也叫雪碧图)，所谓雪碧图，当然就不是我们常喝的雪碧饮料（Sprites）哦，哈哈～

@@ -4,6 +4,10 @@
 
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享](../_banner/banner07.png)
 
+> 作者：[首席填坑官∙苏南](https://github.com/meibin08/ "首席填坑官∙苏南")
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟") 
+> 交流群：[912594095](https://shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟QQ交流群")
+
 ## 前言
 
 　　前段时间面试(包括[阿里巴巴](https://segmentfault.com/u/susouth/articles "阿里巴巴")的电话面试)，遇到过一些面试题，且面试中出现机率较高的提问/笔试，有些答的不是很好挂掉了，今天终于有时间整理出来分享给大家，希望对大家面试有所帮助，都能轻松拿offer。
