@@ -2,10 +2,8 @@
 
 ![timg](./_images/timg.jpeg)
 
-> 作者：[首席甩锅官∙老金](https://github.com/meibin08/ "首席甩锅官∙老金")
-> 
-> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟") 
-> 
+> 作者：[首席甩锅官∙老金](https://github.com/hejinze789/ "首席甩锅官∙老金")<br/>
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")<br/>
 > 交流群：[912594095](https://shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟QQ交流群")，本文原创，著作权归作者所有，转载请注明原链接及出处。
 
 ## 前言
