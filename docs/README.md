@@ -17,7 +17,8 @@
 - 重点：**[文章源码获取 👈 👈](https://github.com/honeybadger8/blog-resource "@IT·平头哥联盟 文章源码合集")**
 
 ## 最新内容
-
+  * [跳坑一百次之解决视频自动全屏播放问题](frontends/vue/relsove_video_fullscreenPlay.md)
+  * [vue视频播放组件使用](frontends/vue/vue_video_player.md)
   * [每周动画一点点之跑车的绘制](frontends/series/canvas-bike.md)
   * [那些vue中你可能不知道技巧](frontends/vue/vue.md)
   * [做过很多抽奖h5，依然过不好这一生](frontends/css/draw-prize.md)
