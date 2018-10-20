@@ -2,7 +2,7 @@
 
 ![banner](./images/timg.png)
 
-> 作者：[首席跳坑官∙皮得](https://github.com/P3T3R-Z "首席跳坑官∙皮得")<br/>
+> 作者：[首席跳坑官∙皮得](https://blog.peterzhu.club/ "首席跳坑官∙皮得")<br/>
 > 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")<br/>
 > 交流群：[912594095](https://shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟QQ交流群")，本文原创，著作权归作者所有，转载请注明原链接及出处。
 
@@ -84,3 +84,15 @@ onPlayerCanplay(player) {
 ## 总结
 1. 以区分两个端内核的不同,按需添加所需的Attribute
 2. ":playsinline"组件中自定义属性,按内核不同按需传值, x5内核为false,反之为true然后来渲染组件(具体原理有待挖掘)
+
+欢迎大家一起探讨 ～～
+
+> 作者：皮得 - [首席跳坑官](https://blog.peterzhu.club/)
+>
+> 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")
+> 
+> 链接：https://honeybadger8.github.io/blog/
+> 
+> 交流群：912594095[`资源获取/交流群`]、386485473(前端) 、260282062(测试)
+>
+> 本文原创，著作权归作者所有。商业转载请联系`@IT·平头哥联盟`获得授权，非商业转载请注明链接及出处。 
