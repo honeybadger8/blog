@@ -8,7 +8,7 @@
 
 ## 前言
 
-接着之前的[《vue视频播放组件使用》](frontends/vue/vue_video_player使用.md),
+接着之前的[《vue视频播放组件使用》](frontends/vue/vue_video_player.md),
 此文主要讲的是:video在微信浏览器中自动全屏播放的解决办法,笔主google了很多解决方案都是用不了的(哔了狗了)
 
 ## 属性熟悉
