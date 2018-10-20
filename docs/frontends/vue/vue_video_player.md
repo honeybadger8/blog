@@ -1,6 +1,6 @@
-# vue-video-player 组件的基本使用
+# vue视频播放组件使用
 
-![banner](./images/timg.png)
+![banner](./_images/timg.jpeg)
 
 > 作者：[首席跳坑官∙皮得](https://blog.peterzhu.club/ "首席跳坑官∙皮得")<br/>
 > 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")<br/>

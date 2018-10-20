@@ -1,6 +1,6 @@
-# 解决video在微信浏览器中点击自动全屏的问题(vue-video-player使用后续)
+# 跳坑一百次之解决视频自动全屏播放问题
 
-![banner](./images/timg.png)
+![banner](./_images/timg.jpeg)
 
 > 作者：[首席跳坑官∙皮得](https://blog.peterzhu.club/ "首席跳坑官∙皮得")<br/>
 > 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")<br/>
@@ -8,8 +8,8 @@
 
 ## 前言
 
-接着之前的[《vue-video-player 插件使用》](frontends/vue-video-player/vue-video-player使用.md),
-此文主要讲的是video标签播放在微信浏览器中自动全屏的解决办法,笔主google了很多解决方案都是用不了的(哔了狗了)
+接着之前的[《vue视频播放组件使用》](frontends/vue/vue_video_player使用.md),
+此文主要讲的是:video在微信浏览器中自动全屏播放的解决办法,笔主google了很多解决方案都是用不了的(哔了狗了)
 
 ## 属性熟悉
 下面是video中几个特殊Attribute的作用
