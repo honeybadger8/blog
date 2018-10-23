@@ -10,7 +10,7 @@
 
 　　大家好，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`——[苏南](https://github.com/meibin08)(South·Su)，今天要给大家分享的是最近公司做的一个小程序项目，过程中的一些好的总结和遇到的坑，希望能给其他攻城狮带来些许便利，更希望能像标题所说，做完老板给你加薪～
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase01.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase01.png "宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮")
 
 　　今天是中秋节的第一天，假日的清晨莫名的醒的特别早，不知道为什么，也许是因为，昨晚公司上线的项目回来的路上，发现了个小bug，心里有些忐忑吧，一会偷偷先改了，让领导发现这个月绩效就没了～～～～
 
@@ -25,7 +25,7 @@
 + **toast**组件，大家都知道，官方的api **wx.showToast** 是满足不了我们的需求的，因为它只支持 "success", "loading"两种状态，同时“ title 文本最多显示 7 个汉字长度”，这是官方原话，有图有真相哦，样式巨丑～
 
 ![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/salary-increase03.jpg)
-```html
+```js
 wx.showToast({
   title: '成功',
   icon: 'success',
@@ -222,9 +222,11 @@ wx.showModal({
 </script>
 ```
 
+
 > 调用示例：
 
-```
+```javascript
+
 <template>
     <view class="demo-page">
         <Toast />
@@ -565,6 +567,8 @@ fetchJson({
 
 今天的分享就到这里，写了蛮久，最近才在开始尝试写博客，新手上路中，文章中有不对之处，烦请各位大神斧正。如果你觉得这篇文章对你有所帮助，请记得点赞哦～，想了解更多？[请猛戳这里！](https://github.com/meibin08/ "@IT·平头哥联盟-首席填坑官")
 
+
+![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!](../_banner/card.png)
 
 
 > 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "@IT·平头哥联盟-首席填坑官")

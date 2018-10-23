@@ -189,6 +189,9 @@ this.timer = setInterval(()=>{
 
    peace&love
 
+![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!](../_banner/card.png)
+
+
 > 作者：粉刷酱 - [团宠闪光少女](https://github.com/cchah "团宠闪光少女")
 >
 > 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")
