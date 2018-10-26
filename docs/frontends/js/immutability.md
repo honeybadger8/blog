@@ -18,7 +18,7 @@
 + `$.extend()` - jQuery时代的引领潮流时尚前沿的API;
 + 最后想到的才是自己递归实现一个;
 
-　　但是通常我们使用的`Object.assign`属于浅拷贝，当数据嵌套层级较深时，就……呵呵了；而`JSON.parse、stringify`它应该是创建一个临时可能很大的字符串，然后又访问解析器，性能是比较慢的。于是后来发现了 `immutable`「不可变数据」，曾经我也一度特别喜欢它，但时间久了，慢慢发现，它过于有个性了些、凡事都都没有任何商量的余地，所有的数据，从创建、变更、插入、删除等操作，都要按它的套路来，对于我这种一生放荡不羁爱自由的人来说，长时间的约束，是不能忍的；都说两人如果三观不合，是无法长久下去的，可能也是缘份吧，在后来的某一天偶然的闲逛中邂逅了新欢 ————[Immutability Helpers](https://reactjs.org/docs/update.html)。
+　　但是通常我们使用的`Object.assign`属于浅拷贝，当数据嵌套层级较深时，就……呵呵了；而`JSON.parse、stringify`它应该是创建一个临时可能很大的字符串，然后又访问解析器，性能是比较慢的。于是后来发现了 `immutable`「不可变数据」，曾经我也一度特别喜欢它，但时间久了，慢慢发现，它过于有个性了些、凡事都都没有任何商量的余地，所有的数据，从创建、变更、插入、删除等操作，都要按它的套路来（<u>当然并不是说它不好、功能不够强大，只是自己有些不喜欢它类似JQuery选择器一样的语法,get、getIn、set、List等的使用方式</u>），对于我这种一生放荡不羁爱自由的人来说，长时间的约束，是不能忍的；都说两人如果三观不合，是无法长久下去的，可能也是缘份吧，在后来的某一天偶然的闲逛中邂逅了新欢 ————[Immutability Helpers](https://reactjs.org/docs/update.html)。
 　　嗯，今天的主题就是给大家分享一下，`Immutability Helpers`的一些用法，会介绍一些官方API没有讲到的一些场景的操作和小技巧：
 　　
 > 太兴奋了，差点忘了，补充一下,一个简单的拷贝：
@@ -74,8 +74,36 @@
 ## immutable 最后的一次回顾
 
 　　都说有了新欢，忘了旧爱，但我不是那种无情无义的人，最后正式介绍一下 `immutable`，为我俩的……画上一个圆满的句号：
+　　再此强调，并不是觉得`immutable`不好，不够强大，只是自己个人观点，有些不喜欢而已，想了解更多的同学可以[点击这里](http://facebook.github.io/immutable-js/)
 
 !> Immutable data encourages pure functions (data-in, data-out) and lends itself to much simpler application development and enabling techniques from functional programming such as lazy evaluation.
+
+## 使用示例：
+```js
+  
+  import { List,merge,Map,Set,get,getIn,fromJS } from 'immutable';
+  const list1 = List([ 1, 2, 3 ]);
+  const list2 = List([ 4, 5, 6 ]);
+  const array = [ 7, 8, 9 ];
+  const list3 = list1.concat(list2, array);
+  console.log(list3) // List {size: 9, _origin: 0, _capacity: 9, _level: 5, _root: null, …} 是不能直接获取到数据的，须使用get,-- list3.get(0)
+
+  let data = Map({
+    a:1,
+    b:2,
+    children:{
+      name:"苏南",
+      organization:"@IT·平头哥联盟",
+      job:"首席填坑官",
+      age:18
+    }
+  });
+  let data2 = data.merge({'b': 50});
+  console.log("这里是由Map创建的数据：",data2);
+  console.log("这里是的子级对象用Map创建",data2.get('children'));
+
+```
+
 
 
 ## Immutability Helpers出场
