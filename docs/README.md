@@ -18,8 +18,9 @@
 - 重点：**[文章源码获取 👈 👈](https://github.com/honeybadger8/blog-resource "@IT·平头哥联盟 文章源码合集")**
 
 ## 最新内容
-  * [做不完小程序项目可能要走人了～填坑小记](frontends/applets/applets-problem.md "做不完小程序项目可能要走人了～填坑小记")
+
   * [immutability-helper因React官方出镜，而被宠幸！](frontends/js/immutability.md "immutability-helper因React官方出镜，而被宠幸！")
+  * [做不完小程序项目可能要走人了～填坑小记](frontends/applets/applets-problem.md "做不完小程序项目可能要走人了～填坑小记")
   * [如何规范化测试流程，看这篇就够了～](testing/theory/test-flow.md)
   * [跳坑一百次之解决视频自动全屏播放问题](frontends/vue/relsove_video_fullscreenPlay.md)
   * [vue视频播放组件使用](frontends/vue/vue_video_player.md)
