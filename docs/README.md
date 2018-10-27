@@ -36,19 +36,22 @@
 + [该如何以正确的姿势插入SVG Sprites？](frontends/css/svg-sprites.md "该如何以正确的姿势插入SVG Sprites？")
 + [测试领域老司机带你上车，你准备好了吗？](frontends/applets/salary-increase.md "测试领域,小白问题大集合(适合未入门和入门初级者)")
 
+## 公众号 - 推荐👇
+![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!，公众号：honeyBadger8](./frontends/_banner/card.gif)
+
 ## 专栏
 
 | 前端/测试                                                    |
 | ------------------------------------------------------------ |
+| [CSDN技术社区](https://blog.csdn.net/weixin_43254766 "CSDN技术社区") |
 | [@IT·平头哥联盟-segmentfault专栏](https://segmentfault.com/blog/honeybadger "@IT·平头哥联盟") |
 | [@IT·平头哥联盟-知乎专栏](https://zhuanlan.zhihu.com/honeybadger "@IT·平头哥联盟-知乎专栏") |
-| [@IT·平头哥联盟-头条号](https://mp.toutiao.com/profile_v3/index "@IT·平头哥联盟-头条号") |
 | [@IT·平头哥联盟-简书](https://www.jianshu.com/c/01e09375afc9 "@IT·平头哥联盟-简书") |
+| [@IT·平头哥联盟-头条号](https://www.toutiao.com/c/user/104617354725/#mid=1612927304691725 "@IT·平头哥联盟-头条号") |
 | [掘金主页](https://juejin.im/user/597de6e0f265da3e3c5f6d7d/posts "掘金的主页") |
-| [CSDN技术社区](https://blog.csdn.net/weixin_43254766 "CSDN技术社区") |
 | [开源中国](https://my.oschina.net/susouth "开源中国")        |
 | [博客园](https://www.cnblogs.com/susouth/ "@IT·平头哥联盟-博客园") |
 
-![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!，公众号：honeyBadger8](./frontends/_banner/card.gif)
+
 
 >欢迎持续关注，拼命编写中～😂
