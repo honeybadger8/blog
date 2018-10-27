@@ -2,7 +2,7 @@
 
 > + **前端**：html、css、javascript、canvas、小程序、react/vue等系列;
 > + **测试**：自动化、性能、接口系列;
-> + **公众号**：`honeyBadger8`;
+> + **公众号**：`honeyBadger8`，[内推工作福利🔥](other/recommend.md "内推工作福利")；
 > + **资源**：[912594095](//shang.qq.com/wpa/qunwpa?idkey=265166274bca82709718a0ae1fa9c55d65dd3608ebc780f9e6ea41e2761f5ec2 "@IT·平头哥联盟")-[`资源获取/交流群`]，文章对应示例源码的获取、小白入门前端/测试疑惑等。[文章源码获取👈](https://github.com/honeybadger8/blog-resource "@IT·平头哥联盟 文章源码合集")
 >
 > **@IT·平头哥联盟**专注于分享`前端、测试` 等领域的积累，文章来源于(自己/群友)工作中积累的经验、填过的坑，希望能尽绵薄之力 助其他同学少走一些弯路;<br/>
@@ -31,7 +31,7 @@
 
 ## 热门推荐
 
-+ [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase.md "做完小程序项目、老板给我加了6k薪资～") ——曾被[掘金](https://juejin.im/post/5ba57b7c5188255c971fda3a)推荐在首页 ​(`阅读量突破2.5w+`)👍
++ [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase.md "做完小程序项目、老板给我加了6k薪资～") ——曾被[掘金](https://juejin.im/post/5ba57b7c5188255c971fda3a)推荐在首页 ​(`阅读量突破2.5w+`)👍🔥🔥
 + [动画一点点之手把手教你如何绘制一辆会跑车](frontends/series/canvas-bike.md)
 + [那些年你踩过的坑，都在这里了～](frontends/js/questions.md "那些年你踩过的坑，都在这里了～") 面试题，欢迎补充
 + [这些性能优化，你都做了吗？](frontends/js/optimization.md)
