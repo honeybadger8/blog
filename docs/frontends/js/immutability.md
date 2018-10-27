@@ -2,7 +2,7 @@
 
 # immutability-helper因官方出镜，而被宠幸！
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享](../_banner/banner15.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8](../_banner/banner15.png)
 
 > 作者：[首席填坑官∙苏南](https://github.com/meibin08/ "首席填坑官∙苏南")<br/>
 > 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")<br/>
@@ -47,7 +47,7 @@
 
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,展示Object.assign拷贝问题](./_images/imm11.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,展示Object.assign拷贝问题](./_images/imm11.png)
 
 * **补充一个** `Object.assign` 的坑 :
 
@@ -72,7 +72,7 @@
 
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,展示Object.assign拷贝问题](./_images/imm01.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,展示Object.assign拷贝问题](./_images/imm01.png)
 
 ## immutable 最后的一次回顾
 
@@ -111,7 +111,7 @@
   console.log("这里是由formJS创建的数据：",data2.getIn(['obj','children','name']));//
 
 ```
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,展示Object.assign拷贝问题](./_images/imm02.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,展示Object.assign拷贝问题](./_images/imm02.png)
 
 > 使用immutable后，所有数据都要类似选择器，一个一个往下选择，并不是说它不好、功能不够强大，只是自己有些不喜欢它类似JQuery选择器一样的语法,get、getIn、set、List等的使用方式，当然它也是可以使用 `toJS`方法转回来的。
 
@@ -189,8 +189,8 @@
 
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $splice的使用展示](./_images/imm03.png)
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $splice的使用展示，格式错误的警告](./_images/imm06.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $splice的使用展示](./_images/imm03.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $splice的使用展示，格式错误的警告](./_images/imm06.png)
 
 
 #### $set 的使用 :
@@ -222,7 +222,7 @@
   console.log("obj3",obj3); 
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $set的使用展示，1024请不要叫我程序园，我是有温度的攻城狮](./_images/imm04.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $set的使用展示，1024请不要叫我程序园，我是有温度的攻城狮](./_images/imm04.png)
 
 #### $toggle 的使用:
  + 听名字，应该就能猜出来，开关切换的意思;
@@ -244,7 +244,7 @@
 
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $toggle的使用展示，1024请不要叫我程序园，我是有温度的攻城狮](./_images/imm14.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $toggle的使用展示，1024请不要叫我程序园，我是有温度的攻城狮](./_images/imm14.png)
 
 #### $unset 的使用:
  + 它跟$set相反，有点remove的味道，但又貌似有不同的之处，当操作的对象为`object`时key是删除了；而数组`array`中它的值没有了，却保留了`下标`，不改变数组的长度,删除数组建议还是用`$splice`；请看下图：
@@ -274,7 +274,7 @@
 
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $unset的使用展示，我是有温度的攻城狮](./_images/imm05.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $unset的使用展示，我是有温度的攻城狮](./_images/imm05.png)
 
 #### $merge 的使用:
 + `$merge` 跟我们最爱的`Object.assign`一样，做合并操作的，但它比`assign`优秀很多，深层次拷贝，不会相互影响 ：
@@ -305,7 +305,7 @@
 
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $merge的使用展示，我是有温度的攻城狮](./_images/imm07.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $merge的使用展示，我是有温度的攻城狮](./_images/imm07.png)
 
 #### $apply 的使用:
 + `$apply` 基于当前值进行一个函数运算，从而得到新的值 ：
@@ -340,8 +340,8 @@
 
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $apply的使用展示，我是有温度的攻城狮](./_images/imm09.png)
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $apply的使用展示，必须是function](./_images/imm08.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $apply的使用展示，我是有温度的攻城狮](./_images/imm09.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $apply的使用展示，必须是function](./_images/imm08.png)
 
 #### $remove 的使用:
 + `$remove` **一定一定** 要是使用`Set`、`Map` 创建的数组：
@@ -367,8 +367,8 @@
   console.log("obj2:",obj2);
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $remove的使用展示，必须是 new Set Map创建](./_images/imm12.png)
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $remove的使用展示，必须是function](./_images/imm10.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $remove的使用展示，必须是 new Set Map创建](./_images/imm12.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $remove的使用展示，必须是function](./_images/imm10.png)
 
 #### $add 的使用:
 + `$add` 跟刚才的 $remove 一样要使用Map/Set，$add方法也跟 `es6` `Map/Set`的 add方法一致：
@@ -390,7 +390,7 @@
 
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper $add的使用展示，必须是 new Set Map创建](./_images/imm13.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper $add的使用展示，必须是 new Set Map创建](./_images/imm13.png)
 
 ### Immutability Helpers的高阶用法：
  + 还可以自定义方法，如 定义一个 `$trinocular` 方法，来判断数组中的值；
@@ -407,7 +407,7 @@
   console.log("array2:",array2);
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享,immutability-helper 高阶用法 ](./_images/imm15.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8,immutability-helper 高阶用法 ](./_images/imm15.png)
 
 **总结** ：以上就是基础 API 的用法 ，添加了一些官方示例，没有讲到的组合使用，以及使用过程中，可能出现的一些错误，需要留意的地方，更多定制高级用法，有兴趣的同学可以自行了解一下。
 
