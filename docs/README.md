@@ -18,16 +18,19 @@
 - 重点：**[文章源码获取 👈 👈](https://github.com/honeybadger8/blog-resource "@IT·平头哥联盟 文章源码合集")**
 
 ## 最新内容
+  * [immutability-helper因React官方出镜，而被宠幸！](frontends/js/immutability.md "immutability-helper因React官方出镜，而被宠幸！")
+  * [如何规范化测试流程，看这篇就够了～](testing/theory/test-flow.md)
   * [跳坑一百次之解决视频自动全屏播放问题](frontends/vue/relsove_video_fullscreenPlay.md)
   * [vue视频播放组件使用](frontends/vue/vue_video_player.md)
-  * [每周动画一点点之跑车的绘制](frontends/series/canvas-bike.md)
+  * [动画一点点之手把手教你如何绘制一辆会跑车](frontends/series/canvas-bike.md)
   * [那些vue中你可能不知道技巧](frontends/vue/vue.md)
   * [做过很多抽奖h5，依然过不好这一生](frontends/css/draw-prize.md)
 
 
 ## 热门推荐
 
-+ [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase.md "做完小程序项目、老板给我加了6k薪资～") ——曾被[掘金](https://juejin.im/post/5ba57b7c5188255c971fda3a)推荐在首页 ​(`阅读量突破1.8w+`)👍
++ [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase.md "做完小程序项目、老板给我加了6k薪资～") ——曾被[掘金](https://juejin.im/post/5ba57b7c5188255c971fda3a)推荐在首页 ​(`阅读量突破2.5w+`)👍
++ [动画一点点之手把手教你如何绘制一辆会跑车](frontends/series/canvas-bike.md)
 + [那些年你踩过的坑，都在这里了～](frontends/js/questions.md "那些年你踩过的坑，都在这里了～") 面试题，欢迎补充
 + [这些性能优化，你都做了吗？](frontends/js/optimization.md)
 + [该如何以正确的姿势插入SVG Sprites？](frontends/css/svg-sprites.md "该如何以正确的姿势插入SVG Sprites？")
