@@ -1,7 +1,9 @@
 
 
 * 前端
-  * [每周动画一点点系列 ** 重点更新中 ** ](frontends/series/animation-sequence.md "每周动画一点点系列，每周带你进步一点点")
+  * [immutability-helper因React官方出镜，而被宠幸！](frontends/js/immutability.md "immutability-helper因React官方出镜，而被宠幸！")
+  * [做不完小程序项目可能要走人了～填坑小记](frontends/applets/applets-problem.md "做不完小程序项目可能要走人了～填坑小记")
+  * [动画一点点系列 ** 重点更新中 ** ](frontends/series/animation-sequence.md "每周动画一点点系列，每周带你进步一点点")
   * [跳坑一百次之解决视频自动全屏播放问题](frontends/vue/relsove_video_fullscreenPlay.md)
   * [vue视频播放组件使用](frontends/vue/vue_video_player.md)
 
@@ -15,7 +17,9 @@
 
 * 测试
 
+  * [如何规范化测试流程，看这篇就够了～](testing/theory/test-flow.md)
   * [测试领域老司机带你上车，你准备好了吗？](testing/theory/test-started.md)
 
 * 其他
+  * [内推工作福利🔥](other/recommend.md "内推工作福利")
   * [文章源码获取👈](https://github.com/honeybadger8/blog-resource "@IT·平头哥联盟 文章源码合集")

@@ -1,6 +1,6 @@
 # 每周动画一点点——车的绘制
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](../_banner/banner12.png)
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](../_banner/banner12.png)
 
 > 作者：[首席填坑官∙苏南](https://github.com/meibin08/ "首席填坑官∙苏南")<br/>
 > 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")<br/>
@@ -8,11 +8,11 @@
 
 ## 前言
 
-　　灵感来源于前些天捡到钱了，就想着是时候给自己买辆车了，工作这么多年了应该对自己好一点，在网上搜索了一下看到这个车型。其实几年前是买过一辆的，但是不到一个月就被人偷了，伤心了好久。这次一定锁好，上三把锁保证小偷再也偷不走了，于是我拿着钱去买了些[益力多](https://segmentfault.com/a/1190000016615237 "本文由@IT·平头哥联盟-首席填坑官∙苏南分享")，跟同事分享了，心情还是比较愉悦的。—— [@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`∙[苏南](https://github.com/meibin08 "首席填坑官")(South·Su) ^_^～
+　　灵感来源于前些天捡到钱了，就想着是时候给自己买辆车了，工作这么多年了应该对自己好一点，在网上搜索了一下看到这个车型。其实几年前是买过一辆的，但是不到一个月就被人偷了，伤心了好久。这次一定锁好，上三把锁保证小偷再也偷不走了，于是我拿着钱去买了些[益力多](https://segmentfault.com/a/1190000016615237 "本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8")，跟同事分享了，心情还是比较愉悦的。—— [@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`∙[苏南](https://github.com/meibin08 "首席填坑官")(South·Su) ^_^～
 
 　　但想来作为一名程序（嗯，还是个菜鸟，专业首席填坑官哦😇），车基本是用不上的啦，为啥？因为有改不完的bug，记得刚毕业那时候最大的梦想是：“撩个妹子 携手仗剑天涯，惩奸除恶、劫富济贫，快意人生～”，无奈一入IT深似海，[从此BUG改不完啊](https://github.com/meibin08 "首席填坑官∙苏南")。所以还是多学习吧，这不就学着画了个车满足一下自己的心里安慰，在这里把大家一起分享一下，唉，有点扯偏了～，大家先来看一下最终的效果图吧！
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike001.gif "每周动画一点点之canvas自行车的绘制,图片来源于Google搜索")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike001.gif "每周动画一点点之canvas自行车的绘制,图片来源于Google搜索")
 　　
 ## 过程解析：
 
@@ -24,10 +24,10 @@
   + 从观察动画，它还有几个点，这个是用于视差滚动的时候，来欺骗我们的眼睛的，直接一条线肯定再怎么动也没有用，点的移动可以形成一个动画的效果;
   + 再加一点修饰，几个点移动有点太单调了，大家可以想像一下，当你骑车的时候，`车的速度`与周围的事物、建筑、人产生一个交差，那种感觉是很刺激的，那么我们也来加一点东西，让动画看起来更丰富一些，我选择了 三条线，线本身有个渐变过渡的效果，比纯色要灵动些动画看起来更逼真，而且初始它是不在画布范围内的，这个点要注意一下;
   + 下面的两张图，第二张是生成gif工具里截出来的，它就是动画的分解，其实`所谓的动画`，也是由一张张静态图组成，然后快速过渡，让视觉形成了视差，最后欺骗了大脑，我看见动画了……
-  + **知识点**：`lineTo`、`strokeStyle`、`stroke`、`restore`等，这里不一一讲解了，如有不了解可自行[查看 w3school API](http://www.w3school.com.cn/tags/html_ref_canvas.asp '本文由@IT·平头哥联盟-首席填坑官∙苏南分享 w3school API')，
+  + **知识点**：`lineTo`、`strokeStyle`、`stroke`、`restore`等，这里不一一讲解了，如有不了解可自行[查看 w3school API](http://www.w3school.com.cn/tags/html_ref_canvas.asp '本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8 w3school API')，
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike002.gif "Pure Canvas Bike - 平头哥联盟")
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike003.png "每周动画一点点之canvas自行车的绘制")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike002.gif "Pure Canvas Bike - 平头哥联盟")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike003.png "每周动画一点点之canvas自行车的绘制")
 
 ```javascript
   horizon(){
@@ -35,7 +35,7 @@
       * 轮子的底部，也称地平线：
       1.清除画布
       2.画一条直线，且高度6px
-      本文@IT·平头哥联盟-首席填坑官∙苏南分享，非商业转载请注明原链接及出处
+      本文@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8，非商业转载请注明原链接及出处
        */
 
       this.wheelPos = [];
@@ -70,7 +70,7 @@
   shuttle(){
       /**
       * 画几根横线，有点视差，感觉骑车在飞速穿梭的感觉：
-      本文@IT·平头哥联盟-首席填坑官∙苏南分享，非商业转载请注明原链接及出处
+      本文@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8，非商业转载请注明原链接及出处
        */
       let shuttleX = this.canvasW+100,
               shuttleY = this.canvasH/6;
@@ -103,7 +103,7 @@
   + 所以在刚才绘制点的时候，就记录了5个点的坐标，这样就省去了一次计算，中间有两次是我们需要的
   + **知识点**：`arc`、`fill`
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike004.png "每周动画一点点之canvas自行车的车轮")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike004.png "每周动画一点点之canvas自行车的车轮")
 
 ```javascript
   console.log(this.wheelPos);
@@ -138,9 +138,9 @@
   + 还加了两个半圆的描边修饰，让动画跑起来的时候，车轮有动起来的感觉，半圆 Math.PI 就是一个180,(Math.PI * degrees) / 180;  degrees 就是我们想要绘制的起始/结束角度;
   + 从下图可以看出，圆的填充用了 放射性渐变，`createRadialGradient`-创建放射状/环形的渐变（用在画布内容上）
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike005.png "每周动画一点点之canvas自行车的车轮")
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike006.gif "每周动画一点点之canvas自行车的车轮动画")
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike007.png "每周动画一点点之canvas自行车的车轮动画分解图")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike005.png "每周动画一点点之canvas自行车的车轮")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike006.gif "每周动画一点点之canvas自行车的车轮动画")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike007.png "每周动画一点点之canvas自行车的车轮动画分解图")
 
 ```js
   context.createRadialGradient(x0,y0,r0,x1,y1,r1);
@@ -198,8 +198,8 @@
   + ** 拉下来我们就拿前轮开刀** ：
   + 前轮也是画了几个半圆，大概就是以某个角度为起点，然后分别画几个半圆，整体是一个半径，中间有断开，如： eAngle = [0，135，270], sAngle = [-45，0，180];就能画出如下图的圆：
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike008.png "每周动画一点点之canvas自行车的车轮动画分解图")
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike009.png "每周动画一点点之canvas自行车的车轮动画分解图")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike008.png "每周动画一点点之canvas自行车的车轮动画分解图")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike009.png "每周动画一点点之canvas自行车的车轮动画分解图")
 
   + ** 具体实现请看下面代码 ** ：
 
@@ -250,10 +250,10 @@
 
 > **结论** ：使用`moveTo`把画布坐标从`O`移动到`A`点 x/y，`lineTo`从`A`开始画到`B`结束,再从`B`到`C`点，闭合，即一个三角完成
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike010.png "每周动画一点点之canvas自行车的车架分解图")
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike011.png "每周动画一点点之canvas自行车的车架分解图")
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike012.png "每周动画一点点之canvas自行车的车架分解图")
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike020.png "每周动画一点点之canvas自行车的车架菱形分解图")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike010.png "每周动画一点点之canvas自行车的车架分解图")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike011.png "每周动画一点点之canvas自行车的车架分解图")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike012.png "每周动画一点点之canvas自行车的车架分解图")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike020.png "每周动画一点点之canvas自行车的车架菱形分解图")
 
 
 ```javascript
@@ -307,7 +307,7 @@
   ……
 ```
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike013.png "每周动画一点点之canvas自行车的车架分解图")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike013.png "每周动画一点点之canvas自行车的车架分解图")
 
 + **绘制车的豪华宝坐、扶手** ：
   + 坐位一开始是比较懵逼的，不知道如何下手，圆也不圆、方也不方，后面又去复习一下canvas的API，发现了`quadraticCurveTo`能满足这个需求，—— **二次贝塞尔曲线**
@@ -316,9 +316,9 @@
   + **提示**：三次贝塞尔曲线需要三个点。前两个点是用于三次贝塞尔计算中的控制点，第三个点是曲线的结束点。曲线的开始点是当前路径中最后一个点
   + **知识点**：`quadraticCurveTo`、`bezierCurveTo`、`createLinearGradient`
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike015.png "每周动画一点点之canvas自行车的坐位分解图，quadraticCurveTo")
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike014.png "每周动画一点点之canvas自行车的坐位分解图，quadraticCurveTo")
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike016.png "每周动画一点点之canvas自行车的坐位分解图，quadraticCurveTo")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike015.png "每周动画一点点之canvas自行车的坐位分解图，quadraticCurveTo")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike014.png "每周动画一点点之canvas自行车的坐位分解图，quadraticCurveTo")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike016.png "每周动画一点点之canvas自行车的坐位分解图，quadraticCurveTo")
 
 ```js
   //坐位
@@ -362,9 +362,9 @@
     + 横着的这根轴，也就是脚踏板，它是以竖着的轴底部为Y轴中心点，以自身宽度的二分之一为X轴为中心点，同样以 `N* (Math.PI / 180)`的 `rotate`角度旋转。
   + 说了这么多，我们来看几张[动态图](https://juejin.im/user/597de6e0f265da3e3c5f6d7d/posts "@IT·平头哥联盟-首席填坑官")吧，顺便贴上代码：
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike017.gif "每周动画一点点之canvas自行车的齿轮展示")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike017.gif "每周动画一点点之canvas自行车的齿轮展示")
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike018.gif "每周动画一点点之canvas自行车脚踏板的展示")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike018.gif "每周动画一点点之canvas自行车脚踏板的展示")
 
 ```javascript
 
@@ -446,7 +446,7 @@
 + **绘制车的链条** ：
   + 链条用的是 `bezierCurveTo` ，cp1x,cp1y,cp2x,cp2y,x,y等参数画出来的，具体看下面代码吧，其实就是两个半椭圆的拼接……
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike021.png "每周动画一点点之canvas自行车绘制车的链条")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike021.png "每周动画一点点之canvas自行车绘制车的链条")
 
 ```javascript
   //链条
@@ -474,12 +474,12 @@
 
 　　以上就是今天[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")-`首席填坑官`∙[苏南](https://github.com/meibin08 "首席填坑官")给你带来的分享，整个车的绘制过程，感觉车架部分应该还有更好的做法，如果您有更好的建议及想法，欢迎斧正，最后送上完整的示例图！
 　　[文章源码获取-> blog-resource 👈](https://github.com/honeybadger8/ "@IT·平头哥联盟")
-　　[想直接在线预览 👈](https://codepen.io/meibin08/pen/xyXmNq "@IT·平头哥联盟-首席填坑官∙苏南分享")
+　　[想直接在线预览 👈](https://codepen.io/meibin08/pen/xyXmNq "@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8")
 
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南分享](./_images/bike019.gif "每周动画一点点之canvas自行车脚踏板的展示")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南分享，公众号：honeyBadger8](./_images/bike019.gif "每周动画一点点之canvas自行车脚踏板的展示")
 
-![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!](../_banner/card.png)
+![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!，公众号：honeyBadger8](../_banner/card.gif)
 
 > 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "首席填坑官")
 >
@@ -487,7 +487,7 @@
 > 
 > 链接：https://honeybadger8.github.io/blog/
 > 
-> 交流群：912594095[`资源获取/交流群`]、386485473(前端) 、260282062(测试)
+> 交流群：912594095[`资源获取/交流群`]、公众号：`honeyBadger8`
 >
 > 本文原创，著作权归作者所有。商业转载请联系`@IT·平头哥联盟`获得授权，非商业转载请注明原链接及出处。
 
