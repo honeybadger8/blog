@@ -22,6 +22,7 @@
 ![本文由@IT·平头哥联盟-首席填坑官(苏南)分享，公众号：honeyBadger8](./_images/hall005.jpeg)
 ![本文由@IT·平头哥联盟-首席填坑官(苏南)分享，公众号：honeyBadger8](./_images/hall003.jpeg)
 ![本文由@IT·平头哥联盟-首席填坑官(苏南)分享，公众号：honeyBadger8](./_images/hall004.jpeg)
+![本文由@IT·平头哥联盟-首席填坑官(苏南)分享，公众号：honeyBadger8](./_images/hall008.jpeg)
 
 这里是@IT·平头哥联盟，用心分享，立志不做程序员，只做有温度的攻城狮，如果觉得文章不错，欢迎关注下方`二维码`，为我们点赞哦！新手上路中，请多多指教
 
