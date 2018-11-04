@@ -13,6 +13,7 @@
   * [这些性能优化，你都做了吗？](frontends/js/optimization.md)
   * [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase.md)
   * [该如何以正确的姿势插入SVG Sprites？](frontends/css/svg-sprites.md)
+  * [在图书馆学习红宝书的一天（一）· 你看那个Function好简单哦～](frontends/js/redBaoBook1.md)
 
 
 * 测试
