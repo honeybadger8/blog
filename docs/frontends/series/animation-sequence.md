@@ -4,8 +4,9 @@
 
 !> 当前正在持续更新，** `每周动画一点点` ** 系列文章，主要分享 **Canvas/CSS3** 实例的实现，重点讲解编写过程中的难点、细节等，每周带你进步一点点。
 
-+ ** [CSS3·画出最懂你的3D魔方](frontends/series/css3-cube.md "每周动画一点点之CSS3画出懂你的3D魔方") **
-+ ** [Canvas·手把手教你如何绘制一辆会跑车](frontends/series/canvas-bike.md "每周动画一点点之手把手教你如何绘制一辆会跑车") ** 
++ **[玩转3D Swiper性感秀之思路分析总结](frontends/series/css3-swiper.md "玩转3D Swiper性感秀之思路分析总结- @IT·平头哥联盟-首席填坑官∙苏南")**
++ **[CSS3·画出最懂你的3D魔方](frontends/series/css3-cube.md "每周动画一点点之CSS3画出懂你的3D魔方")**
++ **[Canvas·手把手教你如何绘制一辆会跑车](frontends/series/canvas-bike.md "每周动画一点点之手把手教你如何绘制一辆会跑车")** 
 
 
 ![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!，公众号：honeyBadger8](../_banner/card.gif)

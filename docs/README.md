@@ -19,8 +19,9 @@
 
 ## 最新内容
 
-  * [immutability-helper因React官方出镜，而被宠幸！](frontends/js/immutability.md "immutability-helper因React官方出镜，而被宠幸！")
-  * [做不完小程序项目可能要走人了～填坑小记](frontends/applets/applets-problem.md "做不完小程序项目可能要走人了～填坑小记")
+  * [玩转3D Swiper性感秀之思路分析总结](frontends/series/css3-swiper.md "玩转3D Swiper性感秀之思路分析总结- @IT·平头哥联盟-首席填坑官∙苏南")
+  * [immutability因React官方出镜之使用总结！](frontends/js/immutability.md "immutability-helper因React官方出镜，而被宠幸！")
+  * [小程序项目之填坑小记](frontends/applets/applets-problem.md "小程序项目之填坑小记")
   * [如何规范化测试流程，看这篇就够了～](testing/theory/test-flow.md)
   * [跳坑一百次之解决视频自动全屏播放问题](frontends/vue/relsove_video_fullscreenPlay.md)
   * [vue视频播放组件使用](frontends/vue/vue_video_player.md)

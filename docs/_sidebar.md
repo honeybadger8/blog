@@ -2,8 +2,8 @@
 
 * 前端
   * [immutability-helper因React官方出镜，而被宠幸！](frontends/js/immutability.md "immutability-helper因React官方出镜，而被宠幸！")
-  * [做不完小程序项目可能要走人了～填坑小记](frontends/applets/applets-problem.md "做不完小程序项目可能要走人了～填坑小记")
-  * [动画一点点系列 ** 重点更新中 ** ](frontends/series/animation-sequence.md "每周动画一点点系列，每周带你进步一点点")
+  * [小程序项目之填坑小记](frontends/applets/applets-problem.md "小程序项目之填坑小记～填坑小记")
+  * [动画一点点系列 **重点更新中** ](frontends/series/animation-sequence.md "每周动画一点点系列，每周带你进步一点点")
   * [跳坑一百次之解决视频自动全屏播放问题](frontends/vue/relsove_video_fullscreenPlay.md)
   * [vue视频播放组件使用](frontends/vue/vue_video_player.md)
 
@@ -13,6 +13,7 @@
   * [这些性能优化，你都做了吗？](frontends/js/optimization.md)
   * [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase.md)
   * [该如何以正确的姿势插入SVG Sprites？](frontends/css/svg-sprites.md)
+  * [在图书馆学习红宝书的一天（一）· 你看那个Function好简单哦～](frontends/js/redBaoBook1.md)
 
 
 * 测试
