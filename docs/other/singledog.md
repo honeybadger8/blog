@@ -2,7 +2,7 @@
 
 # 听说程序猿不会撩妹，我笑了
 
-![本文由@IT·平头哥联盟-团宠闪光少女∙粉刷酱分享](../_banner/banner22.png)
+![本文由@IT·平头哥联盟-团宠闪光少女∙粉刷酱分享](./_banner/banner03.png)
 
 > 作者：[团宠闪光少女∙粉刷酱](https://github.com/cchah/ "团宠闪光少女∙粉刷酱")<br/>
 > 来源：[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")<br/>
