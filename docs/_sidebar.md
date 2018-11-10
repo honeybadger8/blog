@@ -1,6 +1,9 @@
 
 
 * 前端
+  * [webpack4配置详解之慢嚼细咽](frontends/webpack/config.md "webpack4配置详解之慢嚼细咽")
+  * [浅谈easy-mock之不可或缺的伙伴之一](frontends/js/easy-mock.md "浅谈easy-mock之不可或缺的伙伴之一")
+  * [巧妙给localStorage设置过期时间](frontends/js/locas-storage.md "巧妙给localStorage设置过期时间")
   * [immutability-helper因React官方出镜，而被宠幸！](frontends/js/immutability.md "immutability-helper因React官方出镜，而被宠幸！")
   * [小程序项目之填坑小记](frontends/applets/applets-problem.md "小程序项目之填坑小记～填坑小记")
   * [动画一点点系列 **重点更新中** ](frontends/series/animation-sequence.md "每周动画一点点系列，每周带你进步一点点")
