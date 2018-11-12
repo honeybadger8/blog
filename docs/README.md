@@ -18,7 +18,9 @@
 - 重点：**[文章源码获取 👈 👈](https://github.com/honeybadger8/blog-resource "@IT·平头哥联盟 文章源码合集")**
 
 ## 最新内容
-
+  * [webpack4配置详解之慢嚼细咽](frontends/webpack/config.md "webpack4配置详解之慢嚼细咽")
+  * [浅谈easy-mock之不可或缺的伙伴之一](frontends/js/easy-mock.md "浅谈easy-mock之不可或缺的伙伴之一")
+  * [巧妙给localStorage设置过期时间](frontends/js/locas-storage.md "巧妙给localStorage设置过期时间")
   * [玩转3D Swiper性感秀之思路分析总结](frontends/series/css3-swiper.md "玩转3D Swiper性感秀之思路分析总结- @IT·平头哥联盟-首席填坑官∙苏南")
   * [immutability因React官方出镜之使用总结！](frontends/js/immutability.md "immutability-helper因React官方出镜，而被宠幸！")
   * [小程序项目之填坑小记](frontends/applets/applets-problem.md "小程序项目之填坑小记")
@@ -31,7 +33,7 @@
 
 
 ## 热门推荐
-
++ [巧妙给localStorage设置过期时间](frontends/js/locas-storage.md "巧妙给localStorage设置过期时间")
 + [如何用CSS3·画出懂你的3D魔方？](frontends/series/css3-cube.md "每周动画一点点之CSS3画出懂你的3D魔方") —— 曾被[开源中国](https://my.oschina.net/susouth/blog/2253774)推荐在首页
 + [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase.md "做完小程序项目、老板给我加了6k薪资～") ——曾被[掘金](https://juejin.im/post/5ba57b7c5188255c971fda3a)推荐在首页 ​(`阅读量突破2.5w+`)👍🔥🔥
 + [动画一点点之手把手教你如何绘制一辆会跑车](frontends/series/canvas-bike.md)
