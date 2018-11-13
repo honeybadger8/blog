@@ -27,7 +27,7 @@
 + 如果你创建了多个`extract-text-webpack-plugin`实例，则会生成多个css的文件，
 + 而`mini-css-extract-plugin`，它默认就会对你的样式进行模块化拆分，嗯，有点跟`output`里的配置一个意思，异步按需加载，不再仅仅是js的特权;
 + 使用示例：
-
++ [插件地址](https://github.com/webpack-contrib/mini-css-extract-plugin "首席填坑官∙苏南的专栏分享")
 ![两者编译结果进行比较，公众号：honeyBadger8](./_images/plugins01.png "首席填坑官∙苏南的专栏")
 
 ```javascript
@@ -35,21 +35,21 @@
 config.module.rules.push({
   test: /\.(scss|css)$/,
   use: ExtractTextPlugin.extract({
-    use: [
-      "css-loader",
-      { //首席填坑官∙苏南的专栏 交流：912594095、公众号：honeyBadger8
-        loader: 'postcss-loader',
-        options: {
-          plugins: [
-            require('autoprefixer')({ //添加前缀
-              browsers: CSS_BROWSERS,
-            }),
-          ],
-          minimize: true
-        },
-      },
-      "sass-loader"
-    ]
+	use: [
+	  "css-loader",
+	  { //首席填坑官∙苏南的专栏 交流：912594095、公众号：honeyBadger8
+		loader: 'postcss-loader',
+		options: {
+		  plugins: [
+			require('autoprefixer')({ //添加前缀
+			  browsers: CSS_BROWSERS,
+			}),
+		  ],
+		  minimize: true
+		},
+	  },
+	  "sass-loader"
+	]
   })
 })
 config.plugins.push(new ExtractTextPlugin({
@@ -61,24 +61,29 @@ config.plugins.push(new ExtractTextPlugin({
 
 //mini-css-extract-plugin  编译打包
 config.module.rules.push({
-  test: /\.(scss|css)$/,
-    use: [
-      {
-        loader: MiniCssExtractPlugin.loader,
-      },
-      "css-loader",
-      {
-        loader: 'postcss-loader',
-        options: {
-          plugins: [
-            require('autoprefixer')({
-              browsers: CSS_BROWSERS,
-            }),
-          ],
-        },
-      },
-      "sass-loader"
-    ]
+  test: /\.(scss|css)$/,//同时处理css/scss
+	use: [
+	  {
+		loader: MiniCssExtractPlugin.loader,
+	  },
+	  "css-loader", //css处理器
+	  {
+		loader: 'postcss-loader',
+		/*
+			postcss 这个插件的作用在于，与已有的工具集成一起使用，很少有单独使用的情况，
+			通用我们用的最多的，是配合 autoprefixer 来添加各浏览器的前缀，以达到更好的兼容，
+			再深入一些就是 cssnext 就是允许开发者自定义属性和变量 ：     color:var(--theme-color,#42b983);
+		*/
+		options: {
+		  plugins: [
+			require('autoprefixer')({ 
+			  browsers: CSS_BROWSERS,
+			}),
+		  ],
+		},
+	  },
+	  "sass-loader" //sass处理器 、甚至还可以再加一个less的处理器
+	]
 })
 
 config.plugins.push(new MiniCssExtractPlugin({
@@ -89,7 +94,26 @@ config.plugins.push(new OptimizeCssAssetsPlugin({})); //压缩文件
 
 ```
 
+## optimize-css-assets-webpack-plugin
++ 上面的示例里已经用到了，它的作用在于压缩css文件，
++ `assetNameRegExp`：默认是全部的css都会压缩，该字段可以进行指定某些要处理的文件，
++ `cssProcessor`：指定一个优化css的处理器，默认`cssnano`，
++ `cssProcessorPluginOptions`：cssProcessor后面可以跟一个process方法，会返回一个promise对象，而cssProcessorPluginOptions就是一个options参数选项！
++ `canPrint`：布尔，是否要将编译的消息显示在控制台，没发现有什么用！
++ 以下为 [官方的示例配置](https://github.com/NMFR/optimize-css-assets-webpack-plugin "首席填坑官∙苏南的专栏分享")
++ *坑点* ：建议使用高版本的包，之前低版本有遇到样式丢失把各浏览器前缀干掉的问题，
 
+```
+new OptimizeCssAssetsPlugin({
+  assetNameRegExp: /\.optimize\.css$/g,
+  cssProcessor: require('cssnano'),
+  cssProcessorPluginOptions: {
+    preset: ['default', { discardComments: { removeAll: true } }],
+    //autoprefixer: { browsers: CSS_BROWSERS }, 也是可以指定前缀的
+  },
+  canPrint: true
+})
+```
 
 ## output - 输出
 + 它位于对象最顶级键(非常重要)，如果说`entry`是一扇门，`output`就是审判官，决定着你是上天堂还是入地狱；
@@ -171,15 +195,15 @@ splitChunks: {
   automaticNameDelimiter: '~',
   name: true,
   cacheGroups: {
-    vendors: {
-      test: /[\\/]node_modules[\\/]/,
-      priority: -10
-    },
-    default: {
-      minChunks: 2,
-      priority: -20,
-      reuseExistingChunk: true
-    }
+	vendors: {
+	  test: /[\\/]node_modules[\\/]/,
+	  priority: -10
+	},
+	default: {
+	  minChunks: 2,
+	  priority: -20,
+	  reuseExistingChunk: true
+	}
   }
 }
 ```
@@ -191,7 +215,7 @@ splitChunks: {
 optimization: {
 	runtimeChunk:true,//方式一
   runtimeChunk: {
-    name: entrypoint => `runtimechunk~${entrypoint.name}` //方式二
+	name: entrypoint => `runtimechunk~${entrypoint.name}` //方式二
   }
 }
 
@@ -219,9 +243,9 @@ import Modal from 'src/components/modal'
 resolve: {
   extensions: ['.js', '.jsx','.ts','.tsx', '.scss','.json','.css'],
   alias: {
-    src :path.resolve(__dirname, '../src'),
-    components :path.resolve(__dirname, '../src/components'),
-    utils :path.resolve(__dirname, '../src/utils'),
+	src :path.resolve(__dirname, '../src'),
+	components :path.resolve(__dirname, '../src/components'),
+	utils :path.resolve(__dirname, '../src/utils'),
   },
   modules: ['node_modules'],
 },
