@@ -112,7 +112,6 @@ config.plugins.push(new OptimizeCssAssetsPlugin({})); //压缩文件
 + `cssProcessor`：指定一个优化css的处理器，默认`cssnano`，
 + `cssProcessorPluginOptions`：cssProcessor后面可以跟一个process方法，会返回一个promise对象，而cssProcessorPluginOptions就是一个options参数选项！
 + `canPrint`：布尔，是否要将编译的消息显示在控制台，没发现有什么用！
-+ 以下为 [官方的示例配置](https://github.com/NMFR/optimize-css-assets-webpack-plugin "首席填坑官∙苏南的专栏分享")
 + **坑点** ：建议使用高版本的包，之前低版本有遇到样式丢失把各浏览器前缀干掉的问题，
 
 ```
@@ -201,6 +200,10 @@ if (module.hot) {
 + `removeComments`：移除HTML中的注释；
 + `collapseWhitespace`：删除空白符与换行符，整个文件会压成一行；
 + `inlineSource`：插入到html的css、js文件都要内联，即不是以link、script的形式引入；
++ `inject`：是否能注入内容到 输出 的页面去；
++ `chunks`：指定插入某些模块；
++ `hash`：每次会在插入的文件后面加上hash ，用于处理缓存，如：<link href="/css/index.css?v=a6fc12dd5002c">；
++ 其他：favicon、meta、title ……；
 
 ```js
 
@@ -211,15 +214,88 @@ new HtmlWebPackPlugin({
 　　removeComments:true, 
 　　collapseWhitespace:true 
 	},
-  inlineSource:  '.(js|css)',// 插入到html的css、js文件都要内联，即不是以link、script的形式引入
-  inject: false, //是否能注入内容到 输出 的页面去
-	chunks: ['vendors', 'index'], //指定插入某些文件
-	hash:true, //每次会在插入的文件后面加上hash ，用于处理缓存
+  inlineSource:  '.(js|css)',
+  inject: false,
+	chunks: ['vendors', 'index'], //首席填坑官∙苏南的专栏
+	hash:true, 
 	favicon、meta、title等都可以配置，页面内使用「<%= htmlWebpackPlugin.options.title %>」即可
 	……
 })
 
 ```
+
+## uglifyjs-webpack-plugin
++ js代码压缩,默认会使用 optimization.minimizer，
++ `cache`: Boolean/String ,字符串即是缓存文件存放的路径；
++ `test`：正则表达式、字符串、数组都可以，用于只匹配某些文件，如：/\.js(\?.*)?$/i;
++ `parallel` : 启用多线程并行运行来提高编译速度，经常编译的时候听到电脑跑的呼呼响，可能就是它干的，哈哈～；
++ `output.comments` ： 删除所有注释，
++ `compress.warnings` ：插件在进行删除一些无用代码的时候，不提示警告，
++ `compress.drop_console`：喜欢打console的同学，它能自动帮你过滤掉，再也不用担心线上还打印日志了；
++ 等等，还有更多配置，想深入的同学可移步官方；
+
+```js
+
+//默认：
+optimization:{
+	minimizer:true
+};
+
+//自定义
+minimizer: [
+  new UglifyJsPlugin({
+    cache: true,
+    // cache: "assets", 
+    parallel: true, //也可以指定 Number ,即最多并行运行数量
+    sourceMap: true,
+    uglifyOptions: {
+      output: {
+        comments: false,
+        …… //首席填坑官∙苏南的专栏，QQ:912594095
+      },
+      compress: {
+	      warnings: false,
+	      drop_console:true,
+	      …… 
+	    }
+    },
+  }),
+],
+
+```
+
+## BannerPlugin
++ 这个插件，它的作用在于某些时候，我们需要对文件添加一些说明，比如版本号，作者、日期等，
++ 它就可以帮到，每次编译，在头部插件一些注释；
++ 它可以直接是一个字符串，也可以是一个options;
++ 嗯，差点忘说了，它是webpack`自带`的一个插件，不用另外再安装依赖，
+
+```js
+
+//字符串：
+new webpack.BannerPlugin('给文件添加一些信息，打包日期：'+ new Date());
+
+//自定义
+plugins: [
+  new webpack.BannerPlugin({
+  	{
+		  banner: ' \n @item:苏南的项目 \n @author:suSouth \n @date:'+new Date()+' \n @description:苏南的项目 \n @version:'+package.version+'  \n', // 要输出的注释内容
+		  test:string/正则/数组，//可用于匹配某些文件才输出，
+		  entryOnly: boolean, // 即是否只在入口 模块 文件中添加注释；
+		  ……
+		}
+  })
+],
+
+```
+
+
+
+## 插件地址汇总：
++ [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin "css处理插件")
++ [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin "首席填坑官∙苏南的专栏分享")
++ [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin "html处理，苏南的专栏")
++ [uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin "js压缩")
 + `runtimeChunk`: 提取 webpack 运行时代码,它可以设置为：boolean、Object
 + 该配置开启时，会覆盖 入口指定的名称！！！
 
