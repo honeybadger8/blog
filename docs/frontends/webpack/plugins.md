@@ -6,16 +6,28 @@
 
 ## [前言](https://blog.csdn.net/weixin_43254766/article/details/83267838 "首席填坑官∙苏南的专栏,梅斌的专栏，webpack4，webpack：从入门到真实项目配置")
 
-　　继上一次的基础配置分享之后，本次将分享一些工作中项目常用的配置插件、也会包含一些自己了解过觉得不错的插件，如有分析不到位的，欢迎纠错。
+　　继上一次webpack的基础配置分享之后，本次将分享一些工作中项目常用的配置插件、也会包含一些自己了解过觉得不错的插件，如有分析不到位的，欢迎纠错，**嗯，这些东西文档都有，大佬可绕过**。
 
-　　Wepack4之后废弃了很多的插件，这里只会讲解webpack4支持的，已经废弃的交不再阐述。
+　　Wepack4之后废弃了很多的插件，这里只会讲解webpack4还支持的（`包含4之前插件`），已经废弃的交不再阐述。
+
+　　上一次的分享之后，有部分网友留言质疑：骗小白的赞、是否原创、是否是抄别人等等，当然也有很多的网友支持和鼓励，不管褒贬，苏南都非常的感谢，是你们让我认识到自己的不足与优劣。
+
+　　大家的留言，让我想起了自己刚入门前端初期的心酸，基本靠自己自学，没有人带，遇到问题像无头的苍蝇，到处乱撞网上一顿搜索，百度不曾欺我，在点了一个又一个的广告之后，翻过十页八页之后终于找到了问题的解决方案。
+
+　　执着于对前端的热爱，常常一个问题卡到深夜，初入前端的我曾一度感叹在编辑器写一些东西，在网页上就能跑，甚至感叹 `js` 写上一个 `alert` hello world，浏览器就会自动弹出一个窗口，感觉全世界都在向你招手，当时的兴奋是难以形容的，甚至幻想着未来有一天，可能有千万、亿万的用户，在用你写的东西。
+
+　　这几天一直在想，这篇插件的总结还是否要继续写下去？从写博客到今天，将近两个月吧，也算是一个新人，技术方面虽说工作了几年，但也不敢说多牛B，写博客的初衷是为了对自己工作中遇到的问题/心得等做一个总结，俗话说：好记性不如烂笔头；同时也希望能把自己遇到的问题、坑点分享给他人，让遇到同样问题的基友们能少走那么一点点弯路。
+
+　　终于最后在想了很久之后明白，人无完人，百人百性、千人千面，不管你做总会有不同的声音，同样不管你分享什么，总会有人需要。所以走自己的路，让别人打车吧，坚持自己所想 努力成为自己想成为的样子，就是对自己最大的肯定 ———— **至曾经初入前端的我们**。
 
 
-+ 人生若只如初见，何事秋风悲画扇； 
-+ 等闲变却故人心，却道故人心易变； 
-+ 骊山语罢清宵半，夜雨霖铃终不怨。
 
-!> 各位大佬早安，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是[首席填坑官∙苏南](https://github.com/meibin08 "首席填坑官∙苏南的专栏")，用心分享 做有温度的攻城狮。<br/>
++ 去做想做的事，去爱值得的人； 
++ 去成为自己喜欢的模样， 
++ 去让自己发光！浑身充满力量，
++ 充实的日子最美好！
+
+!> 各位早安，这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是[首席填坑官∙苏南](https://github.com/meibin08 "首席填坑官∙苏南的专栏")，用心分享 一起成长 做有温度的攻城狮。<br/>
 公众号：`honeyBadger8`，群：912594095
 
 ## mini-css-extract-plugin
@@ -101,7 +113,7 @@ config.plugins.push(new OptimizeCssAssetsPlugin({})); //压缩文件
 + `cssProcessorPluginOptions`：cssProcessor后面可以跟一个process方法，会返回一个promise对象，而cssProcessorPluginOptions就是一个options参数选项！
 + `canPrint`：布尔，是否要将编译的消息显示在控制台，没发现有什么用！
 + 以下为 [官方的示例配置](https://github.com/NMFR/optimize-css-assets-webpack-plugin "首席填坑官∙苏南的专栏分享")
-+ *坑点* ：建议使用高版本的包，之前低版本有遇到样式丢失把各浏览器前缀干掉的问题，
++ **坑点** ：建议使用高版本的包，之前低版本有遇到样式丢失把各浏览器前缀干掉的问题，
 
 ```
 new OptimizeCssAssetsPlugin({
@@ -115,97 +127,98 @@ new OptimizeCssAssetsPlugin({
 })
 ```
 
-## output - 输出
-+ 它位于对象最顶级键(非常重要)，如果说`entry`是一扇门，`output`就是审判官，决定着你是上天堂还是入地狱；
-+ 指示 webpack 如何去输出、以及在哪里输出、输出的格式等；
-+ `path`: 输出文件的目录，
-+ `filename`:输出的文件名，它一般跟你`entry`配置相对应，如：`js/[name].js` name在这里表示的是[`index`、`vendors`]，
-+ `chunkFilename`：块，配置了它，非入口`entry`的模块，会帮自动拆分文件，也就是大家常说的按需加载，与路由中的 `require.ensure`相互应
-+ `publicPath`：文件输出的公共路径，
-+ `pathinfo`：即保留相互依赖的包中的注释信息，这个基本不用主动设置它，它默认 `development` 模式时的默认值是 true，而在 `production` 模式时的默认值是 false，
-+ 主要的就是这些，还有一些其他的`library`、`libraryTarget`、`auxiliaryComment`等,感兴趣的可自行了解，
+
+
+## SplitChunksPlugin、RuntimeChunkPlugin
++ 它们跟上一篇的`optimization`配置下的的`splitChunks`、`runtimeChunk`基本是一致的，；
++ SplitChunksPlugin、RuntimeChunkPlugin，其实就是webpack4之前`CommonsChunkPlugin`的替代品，用于提取一些公共模块；
+
 ```js
-output: {
-	path: path.resolve(__dirname, '../assets'),
-	filename: 'js/[name].js',
-	chunkFilename: 'js/[name].[chunkhash:8].js',
-	publicPath: '/_static_/', //最终访问的路径就是：localhost:3000/_static_/js/*.js
-	//pathinfo:true,
-}
+new webpack.optimize.SplitChunksPlugin({
+		chunks: 'async', //要进行处理的类型，它有三个值：all,async,initial
+	  minSize: 30000, //最少大小
+	  maxSize: 0, //最大包的大小，超出生成新的包
+  	minChunks: 1,  //至少要引用N次的模块，
+	  maxAsyncRequests: 1,//最大的按需加载并行请求数量
+		maxInitialRequests:1, //最大的初始化加载请求次数
+    name: true, //可以指定
+    ……,
+    cacheGroups: { //配置缓存组，暂时项目没有配置过
+    },
+  }),
+  new webpack.optimize.RuntimeChunkPlugin({
+    name: 'manifest',
+    name: entrypoint => `runtimechunk~${entrypoint.name}`
+  })
+
 ```
 
-## hash
-+ 常用的有三种：
+## HotModuleReplacementPlugin
++ 热更新替换，在不刷新重载页面的情况下更换编辑修改后的代码：
++ 它只会更新改动过的内容，所以速度很快，几乎在自己刚改完，切到浏览器窗口内容就已经更新完了；
++ 使用 `HotModuleReplacementPlugin`插件后，它会暴露一个`module.hot`对象，它下面有很多的属性：
++ `accept`：它有两个参数，一个是授权模块(可以直接是单个文件路径、也可以是一个数组包含多个文件路径)，第二个参数，是回调函数，即更新后要做的逻辑处理。
++ `decline` 有点黑名单的意思，就是忽略一些模块，不更新它们，
++ `status` 当前更新的状态，idle、check、prepare、ready、dispose、apply、fail等；
++ 一般只用到 `accept` 最多，下面有个示例；
 
-| 模板     | 描述              |
-| -------- | ----------------- |
-| `hash`     | 模块标识符的hash,一般应用于`filename`：'[name].[hash].js'         |
-| `chunkhash` | 按需分块内容的 hash，它是根据`chunk`自身的内容计算而来 |
-| `contenthash` | 这个没有用过，看了下文档它是在提取css文件时根据内容计算而来的 hash ，结合`ExtractTextWebpackPlugin`插件使用 |
-| hash长度 | 默认20，可自定:[hash:8]、[chunkhash:16] |
-
-## mode 
-+ 这个属于webpack4才新增的，4之前大家一般用`DefinePlugin`插件设置
-+ mode：`development``，production`，`none`，
-+ development : 开发模式，打包的代码不会被压缩，开启代码调试，
-+ production : 生产模式，则正好反之。
+![以上为自定配置中使用频率较高的选项](./_images/plugins02.png "首席填坑官∙苏南的专栏")
 
 ```js 
 
-//方法一
-webpack --mode development/production
+//webpack config
+plugins:[
+	new webpack.HotModuleReplacementPlugin()
+]
 
-//方法二
+//路由入口页
 ……
-mode:'development/production'
+if (module.hot) {
+	module
+		.hot
+		.accept([
+			'./pages/routes'
+		], (err) => {
+			const NextRoute = require('./pages/routes')
+			// 从DOM 中移除已经挂载的 React 组件 然后重装
+			ReactDOM.unmountComponentAtNode(APP_DOM);
+			ReactDOM.render(
+				<Provider store={Store}>
+					<Router routes={NextRoute} history={browserHistory}/>
+				</Provider>, APP_DOM);
+		});
+}
 ……
 
 ```
 
-## devtool
-+ 控制是否生成，以及如何生成 source map文件，开发环境下更有利于定位问题，默认 false,
-+ 当然它的开启，也会影响编译的速度，所以**生产环境**一定一定记得关闭；
-+ 常用的值：`cheap-eval-source-map`、`eval-source-map`、`cheap-module-eval-source-map`、`inline-cheap-module-source-map`等等，更详细的可以去[官方查看](https://webpack.js.org/concepts/ "webpack官方网站")；
-+ 本人一般使用：`eval-source-map`较多，每个都有它不一样的特性，有兴趣的同学可以一一尝试，
 
-![以上为自定配置中使用频率较高的选项，公众号：honeyBadger8](./_images/webpack03.png "首席填坑官∙苏南的专栏")
-
-## optimization
-+ `optimization`是webpack4新增的，主要是用来让开发者根据需要自定义一些优化构建打包的策略配置，
-+  `minimize`：true/false,告诉webpack是否开启代码最小化压缩，
-+  `minimizer`：自定js优化配置，会覆盖默认的配置，结合`UglifyJsPlugin`插件使用，
-+  `removeEmptyChunks`: bool 值，它检测并删除空的块。将设置为false将禁用此优化，
-+  `removeEmptyChunks`: bool 值，它检测并删除空的块。将设置为false将禁用此优化，
-+  `nodeEnv`：它并不是node里的环境变量，设置后可以在代码里使用 process.env.NODE_ENV === 'development'来判断一些逻辑，生产环境UglifyJsPlugin会自动删除无用代码，
-+  `splitChunks` ：取代了`CommonsChunkPlugin`，自动分包拆分、代码拆分，详细默认配置：
-+ 默认配置，只会作用于异步加载的代码块 —— chunks: 'async'，它有三个值：all,async,initial
+## html-webpack-plugin
++ 这个插件相信大家都熟悉的不能再熟悉了,
++ 把编译后的文件（css/js）插入到入口文件中，可以只指定某些文件插入，可以对html进行压缩等
++ `filename`：输出文件名；
++ `template`：模板文件，不局限于html后缀哦；
++ `removeComments`：移除HTML中的注释；
++ `collapseWhitespace`：删除空白符与换行符，整个文件会压成一行；
++ `inlineSource`：插入到html的css、js文件都要内联，即不是以link、script的形式引入；
 
 ```js
-//环境变更也可以直接 在启动中设置
- //webpack --env.NODE_ENV=local --env.production --progress
 
-//splitChunks 默认配置
-splitChunks: {
-  chunks: 'async',
-  minSize: 30000,
-  maxSize: 0,
-  minChunks: 1,
-  maxAsyncRequests: 5,
-  maxInitialRequests: 3,
-  automaticNameDelimiter: '~',
-  name: true,
-  cacheGroups: {
-	vendors: {
-	  test: /[\\/]node_modules[\\/]/,
-	  priority: -10
+new HtmlWebPackPlugin({
+  filename: path.resolve(__dirname, '../assets/index.html'), 
+  template: path.resolve(__dirname,"../views/temp.html"),
+  minify:{ //压缩HTML文件　
+　　removeComments:true, 
+　　collapseWhitespace:true 
 	},
-	default: {
-	  minChunks: 2,
-	  priority: -20,
-	  reuseExistingChunk: true
-	}
-  }
-}
+  inlineSource:  '.(js|css)',// 插入到html的css、js文件都要内联，即不是以link、script的形式引入
+  inject: false, //是否能注入内容到 输出 的页面去
+	chunks: ['vendors', 'index'], //指定插入某些文件
+	hash:true, //每次会在插入的文件后面加上hash ，用于处理缓存
+	favicon、meta、title等都可以配置，页面内使用「<%= htmlWebpackPlugin.options.title %>」即可
+	……
+})
+
 ```
 + `runtimeChunk`: 提取 webpack 运行时代码,它可以设置为：boolean、Object
 + 该配置开启时，会覆盖 入口指定的名称！！！
