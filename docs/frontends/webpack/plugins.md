@@ -8,7 +8,7 @@
 
 　　继上一次webpack的基础配置分享之后，本次将分享一些工作中项目常用的配置插件、也会包含一些自己了解过觉得不错的插件，如有分析不到位的，欢迎纠错，**嗯，这些东西文档都有，大佬可绕过**。
 
-　　Wepack4之后废弃了很多的插件，这里只会讲解webpack4还支持的（`包含4之前插件`），已经废弃的交不再阐述。
+　　Wepack4之后废弃了很多的插件，这里只会讲解webpack4还支持的（`包含4之前插件`），已经废弃的将不再阐述。
 
 　　上一次的分享之后，有部分网友留言质疑：骗小白的赞、是否原创、是否是抄别人等等，当然也有很多的网友支持和鼓励，不管褒贬，苏南都非常的感谢，是你们让我认识到自己的不足与优劣。
 
@@ -38,8 +38,6 @@
 + 比如你配置了一个入口文件，最终所有的css都会提取在一个样式文件里，
 + 如果你创建了多个`extract-text-webpack-plugin`实例，则会生成多个css的文件，
 + 而`mini-css-extract-plugin`，它默认就会对你的样式进行模块化拆分，嗯，有点跟`output`里的配置一个意思，异步按需加载，不再仅仅是js的特权;
-+ 使用示例：
-+ [插件地址](https://github.com/webpack-contrib/mini-css-extract-plugin "首席填坑官∙苏南的专栏分享")
 ![两者编译结果进行比较，公众号：honeyBadger8](./_images/plugins01.png "首席填坑官∙苏南的专栏")
 
 ```javascript
@@ -131,23 +129,29 @@ new OptimizeCssAssetsPlugin({
 ## SplitChunksPlugin、RuntimeChunkPlugin
 + 它们跟上一篇的`optimization`配置下的的`splitChunks`、`runtimeChunk`基本是一致的，；
 + SplitChunksPlugin、RuntimeChunkPlugin，其实就是webpack4之前`CommonsChunkPlugin`的替代品，用于提取一些公共模块；
++ `chunks`：要进行处理的类型，它有三个值：all,async,initial
++ `minSize`：最少大小
++ `maxSize`：最大包的大小，超出生成新的包
++ `minChunks`：至少要引用N次的模块，
++ `maxAsyncRequests`：最大的按需加载并行请求数量
++ `maxInitialRequests`：最大的初始化加载请求次数
+
 
 ```js
 new webpack.optimize.SplitChunksPlugin({
-		chunks: 'async', //要进行处理的类型，它有三个值：all,async,initial
-	  minSize: 30000, //最少大小
-	  maxSize: 0, //最大包的大小，超出生成新的包
-  	minChunks: 1,  //至少要引用N次的模块，
-	  maxAsyncRequests: 1,//最大的按需加载并行请求数量
-		maxInitialRequests:1, //最大的初始化加载请求次数
+		chunks: 'async', 
+	  minSize: 30000, 
+	  maxSize: 0, 
+  	minChunks: 1,  
+	  maxAsyncRequests: 1,
+		maxInitialRequests:1, 
     name: true, //可以指定
     ……,
-    cacheGroups: { //配置缓存组，暂时项目没有配置过
-    },
+
   }),
   new webpack.optimize.RuntimeChunkPlugin({
     name: 'manifest',
-    name: entrypoint => `runtimechunk~${entrypoint.name}`
+    name: entrypoint => `runtimechunk~${entrypoint.name}` //动态文件名
   })
 
 ```
@@ -232,7 +236,7 @@ new HtmlWebPackPlugin({
 + `output.comments` ： 删除所有注释，
 + `compress.warnings` ：插件在进行删除一些无用代码的时候，不提示警告，
 + `compress.drop_console`：喜欢打console的同学，它能自动帮你过滤掉，再也不用担心线上还打印日志了；
-+ 等等，还有更多配置，想深入的同学可移步官方；
++ 等等还有一些如：定义压缩的程度、提出多次出现但没有变量的值的配置，想深入的同学可移步官方；
 
 ```js
 
@@ -270,6 +274,8 @@ minimizer: [
 + 它可以直接是一个字符串，也可以是一个options;
 + 嗯，差点忘说了，它是webpack`自带`的一个插件，不用另外再安装依赖，
 
+![以上为自定配置中使用频率较高的选项，公众号：honeyBadger8](./_images/plugins03.png "首席填坑官∙苏南的专栏")
+
 ```js
 
 //字符串：
@@ -288,217 +294,81 @@ plugins: [
 ],
 
 ```
-![以上为自定配置中使用频率较高的选项，公众号：honeyBadger8](./_images/plugins03.png "首席填坑官∙苏南的专栏")
 
+## preload-webpack-plugin
++ 在使用这个插件之前，我们需要先了解一下 `preload`、`prefetch`，从字面意思上讲：`预加载`，
++ 不难理解，就是提前加载资源(**匹配其他页面可能用到的资源进行预先，从而达到无loading ，用户无感知的跳转**)，它的使用也非常的简单，在你要进行预加载的资源上添加 rel="preload"标签即可；
++ 示例：<link rel="preload" href="index.css" as="style" />
++ 而`preload-webpack-plugin`它的作用就是在编译打包的时候，帮我们把以上的操作都做了，
++ 编译完成后，你可以（指定某些/全部）文件动态插入到 `HtmlWebPackPlugin` 配置输出的文件内，
++ `as`： 表示你预加载的资源类型；可以有有先多：script、font、image、style、video等等，更多详细请查看[API](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Preloading_content)，它还可以返回function；
++ `include`：要插入，进行预加载的文件，它有：allChunks、initial、asyncChunks、数组等选项，数组即表示指定插入某些文件
++ `fileBlacklist`:即文件黑名单，可以指定某个文件，也可以使用正则来匹配；
 
-## 插件地址汇总：
-+ [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin "css处理插件")
-+ [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin "首席填坑官∙苏南的专栏分享")
-+ [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin "html处理，苏南的专栏")
-+ [uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin "js压缩")
-+ `runtimeChunk`: 提取 webpack 运行时代码,它可以设置为：boolean、Object
-+ 该配置开启时，会覆盖 入口指定的名称！！！
-
-```javascript
-
-optimization: {
-	runtimeChunk:true,//方式一
-  runtimeChunk: {
-	name: entrypoint => `runtimechunk~${entrypoint.name}` //方式二
-  }
-}
-
-```
-
-![以上为自定配置中使用频率较高的选项，公众号：honeyBadger8](./_images/webpack01.png "首席填坑官∙苏南的专栏")
-
-## resolve - 配置模块如何解析
-+ `extensions`：自动解析确定的扩展,省去你引入组件时写后缀的麻烦，
-+ `alias`：非常重要的一个配置，它可以配置一些短路径，
-+ `modules`：webpack 解析模块时应该搜索的目录，
-+ 其他 `plugins`、`unsafeCache`、`enforceExtension`，基本没有怎么用到，
+![以上为自定配置中使用频率较高的选项，公众号：honeyBadger8](./_images/plugins04.png "首席填坑官∙苏南的专栏")
 
 ```javascript
 
-//extensions 后缀可以省略，
-import Toast from 'src/components/toast'; 
+//注意点1：请把配置一定写在HtmlWebPackPlugin插件之后，否则会报`HtmlWebpackPlugin.getHooks is not a function`错误，
+//注意点2：webpack4之后，请使用最新版本 npm install --save-dev preload-webpack-plugin@next，
 
-// alias ,短路径
-import Modal from '../../../components/modal' 
-//简写
-import Modal from 'src/components/modal' 
+new PreloadWebpackPlugin({
+  rel: 'prefetch',
+  as: 'script',
+  // as(entry) {
+  //   if (/\.css$/.test(entry)) return 'style';
+  //   return 'script';//首席填坑官∙苏南的专栏，QQ:912594095
+  // },
+  include: 'asyncChunks',
+  // fileBlacklist: ["index.css"]
+  fileBlacklist: [/\index.css|index.js|vendors.js/, /\.whatever/]
+})
 
-
-resolve: {
-  extensions: ['.js', '.jsx','.ts','.tsx', '.scss','.json','.css'],
-  alias: {
-	src :path.resolve(__dirname, '../src'),
-	components :path.resolve(__dirname, '../src/components'),
-	utils :path.resolve(__dirname, '../src/utils'),
-  },
-  modules: ['node_modules'],
-},
 
 ```
 
-## module.rules - 编译规则，
-+ `rules`：也就是之前的loaders，
-+ `test` ： 正则表达式，匹配编译的文件，
-+ `exclude`：排除特定条件，如通常会写`node_modules`，即把某些目录/文件过滤掉，
-+ `include`：它正好与exclude相反，
-+ use -`loader` ：必须要有它，它相当于是一个 `test` 匹配到的文件对应的解析器，`babel-loader`、`style-loader`、`sass-loader`、`url-loader`等等，
-+ use - `options`：它与loader配合使用，可以是一个字符串或对象，它的配置可以直接简写在loader内一起，它下面还有`presets`、`plugins`等属性；
-+ 具体来看一下示例：
+## webpack-bundle-analyzer
++ 这个插件还是蛮棒的，强烈推荐可以看看，也是本次分享的最后一个插件
++ 它的作用在于能帮我们很清晰直观的看到，你编译后的每一个、每一个文件哦，内容的分布组成，有利于我们快速查找包过大、内容是否重复、问题定位优化等；
++ 它会在编译完成后，自动启动一个服务、也可以自定义配置，打开一个可视化窗口，鼠标移动到对应的模块上，都可以显示出，该模块在某文件内占比的大小及stat、parsed、gzipped等的状态；
++ `analyzerHost`、`analyzerPort`：自定配置打开的地址、端口，默认使用：127.0.0.1:8888
++ `reportFilename`： 报告生成的路径，默认以项目的output.path输出；
++ `openAnalyzer`：是否要自动打开分析窗口，
++ 其他还有很多属性，官网也有，这里只是引导简介，请大佬们勿喷；
 
-```javascript
-
-module: {
-	rules: [
-		{
-			test: /\.(js|jsx)$/,
-			exclude: /node_modules/,
-			use: [
-				{
-					loader: 'babel-loader',
-					options: {
-						presets: [
-							['env',
-							{
-								targets: {
-								browsers: CSS_BROWSERS,
-							},
-						}],'react', 'es2015', 'stage-0'
-						],
-						plugins: [
-							'transform-runtime',
-							'add-module-exports',
-						],
-					},
-				},
-			],
-		},
-		{
-			test: /\.(scss|css)$/,
-			use: [
-				'style-loader',
-				{loader: 'css-loader',options:{plugins: [require('autoprefixer')({browsers: CSS_BROWSERS,}),],sourceMap: true}},
-				{loader: 'postcss-loader',options:{plugins: [require('autoprefixer')({browsers: CSS_BROWSERS,}),],sourceMap: true}},
-				{loader: 'sass-loader',options:{sourceMap: true}}
-			]
-		},
-		{
-			test: /\.(png|jpg|jpeg|gif)$/,
-			exclude: /node_modules/,
-			use: [
-				{
-					loader: 'url-loader?limit=12&name=images/[name].[hash:8].[ext]',
-				},
-			],
-		},
-		{
-			test: /\.(woff|woff2|ttf|eot|svg)$/,
-			exclude: /node_modules/,
-			use: [
-				{
-					loader: 'file-loader?name=fonts/[name].[hash:8].[ext]',
-				},
-			],
-		},
-	],
-},
-
-```
-## 项目中常用loader
-+ babel-loader、awesome-typescript-loader js*/ts编译，
-+ css-loader、postcss-loader、sass-loader、less-loader、style-loader 等css样式处理
-+ file-loader、url-loader、html-loader等图片/svg/html等的处理，
-
-
-## plugins - 插件
-+ UglifyJsPlugin
-+ HotModuleReplacementPlugin
-+ NoEmitOnErrorsPlugin
-+ HtmlWebPackPlugin
-+ ExtractTextPlugin
-+ PreloadWebpackPlugin
-+ 等等，很多很多，插件的详解会留在下一章节详细介绍，欢迎持续关注。
-
-## plugins/loader 区别
-+ 新入门的一些同学可能会有些疑惑，不是有`loader`了吗？为什么还`plugins`呢，还要它做什么？
-+ `loader`的作用在于解析文件，比如把`ES6`转换成`es5`,甚至`ES3`,毕竟还有万恶的`IE`嘛；把`Sass`、`Less`解析成`CSS`，给`CSS`自动加上兼容的前缀；对图片进行一个解析等等；
-+ `plugins`呢？它在干啥？它在吹水、喝茶、嗑瓜子聊天，当然这是`loader`在没有把项目做完之前，`loader`下班时间就是`plugins`苦难的开始，它要对`loader`干的事情进行优化分类、提取精华(公共代码提取)、做压缩处理(js/css/html压缩)、输出指定的目录等……，反正也是很苦逼！
-
-## webpack-dev-server
-+ 这个有些老生常谈了，新手上路一般都有用它，
-+ 公司因为现在是结合了 `微服务`，整套流程是结合：Dockerfile、nodejs、express等一起在线构建编译的，所以大部分项目都不会走`webpack-dev-server`；
-+ 我们开发环境就是使用 `express` + `webpack-dev-middleware` + `webpack-hot-middleware`+ '...';
-+ `contentBase` ：告诉服务(dev server)在哪里查找文件，默认不指定会在是当期项目根目录，
-+ `historyApiFallback`:可以是`boolean`、 `object`，默认响应的入口文件，包括404都会指向这里，object见下面示例：
-+ `compress`：启用 gzip 压缩，
-+ `publicPath`：它其实就是 output.publicPath，当你改变了它，即会覆盖了`output`的配置，
-+ `stats`： 可以自定控制要显示的编译细节信息，
-+ `proxy`：它其实就是`http-proxy-middleware`，可以进行处理一些代理的请求。
+![以上为自定配置中使用频率较高的选项，公众号：honeyBadger8](./_images/plugins05.png "首席填坑官∙苏南的专栏")
+![以上为自定配置中使用频率较高的选项，公众号：honeyBadger8](./_images/plugins06.gif "首席填坑官∙苏南的专栏")
 
 
 ```javascript
+plugins:[
+	new BundleAnalyzerPlugin({...}) //默认配置就很好了，能满足我们的要求
+]
 
-//方式一：不配置方式二的内容
- webpack-dev-server --config webpack/webpack.config.dev.js
-//指定 端口： --port=8080 
-//开启热更新：--hot
-//gzip： --compress
-
-//方式二
-devServer : 
-	contentBase:'./assets',
-	host: '0.0.0.0',
-	port: 9089,
-	publicPath: '/assets/',
-	historyApiFallback: {
-		index: '/views/index.html'
-	},
-	/*
-	匹配路径，进入不同的入口文件，
-	rewrites: [
-			{ from: /^\/$/, to: '/views/landing.html' },
-			{ from: /^\/subpage/, to: '/views/subpage.html' },
-			{ from: /./, to: '/views/404.html' }
-		]
-	}
-	*/
-	compress: true,
-	noInfo: true,
-	inline: true,
-	hot: true,
-	stats: {
-		colors: true,
-		chunks: false
-	},
-	proxy:{
-		'/mockApi': 'https://easy-mock.com/project/5a0aad39eace86040263d' ,//请求可直接写成  /mockApi/api/login...
-	}
-}
 
 ```
 
+## 常用的几个插件地址汇总：
++ [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin "css处理插件") 样式提取插件
++ [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin "首席填坑官∙苏南的专栏分享") 样式优化压缩/配合添加前缀等
++ [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin "html处理，苏南的专栏") 生成入口文件，并注入依赖
++ [uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin "js压缩") js压缩
++ [preload-webpack-plugin](https://github.com/GoogleChromeLabs/preload-webpack-plugin "资源预加载") 资源预加载
++ [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer "可视化分析工具") 可视化编译分析
++ [copy-webpack-plugin](https://github.com/webpack-contrib/webpack-bundle-analyzer "文件拷贝") 文件拷贝
++ [BannerPlugin](https://blog.csdn.net/weixin_43254766/article/details/83758660 "webpack自带的注释添加") 给文件开头处添加注释
++ [typings-for-css-modules-loader](https://github.com/Jimdo/typings-for-css-modules-loader)
++ [awesome-typescript-loader](https://github.com/Jimdo/typings-for-css-modules-loader)
 
 
+## 结尾：
++ [完整配置示例](https://github.com/honeybadger8/blog-resource "首席填坑官∙苏南的专栏")
 
-## webpack4删除的点：
-+ module.loaders
-+ NoErrorsPlugin
-+ CommonsChunkPlugin
-+ DefinePlugin
-+ OccurenceOrderPlugin
-+ 欢迎补充……，平时用到的大概就是这些
-
-## 尾声：
-
-　　以上就是工作中react自定脚手架的配置总结，希望能对您有所帮助，webpack4的改动蛮大的，功能比之前强大了少，也简便了开发者很多的麻烦，效率大大提高，但同时也意味着我们对于底层的东西，了解的更少了，下一章节将为大家分享一些常用的插件/以及用法的分析，欢迎持续关注，记得点个赞哦，当然您能动动手指关注下方**公众号**就更棒了，谢谢支持！
+　　以上就是今天为大家整理的几个项目中常用的插件，可能有些地方理解的不是特别到位，欢迎大家补充，同时我也给大家准备了一个整合后完整的webpack配置的示例，如有兴趣可自行测试，如果觉得不错记得点个赞哦，当然您能动动手指关注下方**公众号**就更棒了，谢谢支持！
 
 ![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!，公众号：honeyBadger8](https://honeybadger8.github.io/blog/frontends/_banner/card.gif)
 
-> 作者：苏南 - [首席填坑官](https://github.com/meibin08/ "@IT·平头哥联盟-首席填坑官")
+> 作者：[苏南 - 首席填坑官](https://github.com/meibin08/ "@IT·平头哥联盟-首席填坑官")
 >
 > 链接：https://blog.csdn.net/weixin_43254766/article/details/83758660
 > 
