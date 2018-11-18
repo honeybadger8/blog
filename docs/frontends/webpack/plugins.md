@@ -2,7 +2,7 @@
 
 # webpack4配置详解之常用插件分享
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8，webpack4，从0配置到项目搭建](../_banner/banner22.png "webpack：从入门到真实项目配置,首席填坑官∙苏南的专栏")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8，webpack4，从0配置到项目搭建](../_banner/banner23.png "webpack：从入门到真实项目配置,首席填坑官∙苏南的专栏")
 
 ## [前言](https://blog.csdn.net/weixin_43254766/article/details/83267838 "首席填坑官∙苏南的专栏,梅斌的专栏，webpack4，webpack：从入门到真实项目配置")
 

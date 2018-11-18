@@ -1,6 +1,7 @@
 
 
 * 前端
+  * [webpack4配置详解之常用插件分享](frontends/webpack/plugins.md "webpack4配置详解之常用插件分享")
   * [webpack4配置详解之慢嚼细咽](frontends/webpack/config.md "webpack4配置详解之慢嚼细咽")
   * [浅谈easy-mock之不可或缺的伙伴之一](frontends/js/easy-mock.md "浅谈easy-mock之不可或缺的伙伴之一")
   * [巧妙给localStorage设置过期时间](frontends/js/locas-storage.md "巧妙给localStorage设置过期时间")
