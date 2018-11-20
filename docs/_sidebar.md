@@ -18,6 +18,7 @@
   * [做完小程序项目、老板给我加了6k薪资～](frontends/applets/salary-increase.md)
   * [该如何以正确的姿势插入SVG Sprites？](frontends/css/svg-sprites.md)
   * [在图书馆学习红宝书的一天（一）· 你看那个Function好简单哦～](frontends/js/redBaoBook1.md)
+  * [在图书馆学习红宝书的一天（二）· 慢慢看原型、原型链就看懂了～](frontends/js/redBaoBook2.md)
 
 
 * 测试
