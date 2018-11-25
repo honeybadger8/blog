@@ -273,11 +273,11 @@ alert(person1.friends === person2.friends);  //true
 
 ```js 
 function Person(name, age, job){
-this.name = name; 3 this.age = age;
-this.job = job;
-this.friends = ["Shelby", "Court"];
- 2
-  }
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.friends = ["Shelby", "Court"];
+}
 Person.prototype = {
     constructor : Person,
     sayName : function(){
