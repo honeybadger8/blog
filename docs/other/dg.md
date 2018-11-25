@@ -64,5 +64,11 @@
 
 ![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!](https://honeybadger8.github.io/blog/frontends/_banner/card.gif)
 
-
+> 作者：[苏南 - 首席填坑官](https://github.com/meibin08/ "@IT·平头哥联盟-首席填坑官")
+>
+> 链接：https://blog.csdn.net/weixin_43254766/article/details/83758660
+> 
+> 交流：912594095、公众号：`honeyBadger8`
+>
+> 本文原创，著作权归作者所有。商业转载请联系`@IT·平头哥联盟`获得授权，非商业转载请注明原链接及出处。 
    
