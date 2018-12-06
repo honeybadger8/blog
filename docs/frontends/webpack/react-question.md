@@ -2,7 +2,7 @@
 
 # React16.7初探之定时器引发的问题
 
-![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8，webpack4，从0配置到项目搭建](../_banner/banner23.png "webpack：从入门到真实项目配置,首席填坑官∙苏南的专栏")
+![本文由@IT·平头哥联盟-首席填坑官∙苏南 分享，公众号：honeyBadger8，webpack4，从0配置到项目搭建](../_banner/banner23.png "Hooks are a new feature proposal that lets you use state and other React features without writing a class. They’re currently in React v16.7.0-alpha and being discussed in an open RFC.")
 
 ## [前言](https://blog.csdn.net/weixin_43254766/article/details/83267838 "首席填坑官∙苏南的专栏,梅斌的专栏，webpack4，webpack：从入门到真实项目配置，react组件封装")
 
@@ -14,7 +14,7 @@
 > Warning: Can't perform a React state update on an unmounted component. This is a no-op, but it indicates a memory leak in your application. To fix, cancel all subscriptions and asynchronous tasks in a useEffect cleanup function.in Notification
 
 大概意思是组件已经卸载了，但在卸载之后还执行了一个对组件更新的操作，这是一个无效的操作，但它表示应用程序中存在内存泄漏。要修复，请取消useEffect cleanup function.in Notification 中的所有订阅和异步任务
-
+![Can't perform a React state update on an unmounted component.,Read the Motivation to learn why we’re introducing Hooks to React](./_images/react07.png "React v16.7 "Hooks" - What to Expect,Read the Motivation to learn why we’re introducing Hooks to React. ")
 ### 组件核心代码如下：
 
 ```js
@@ -50,7 +50,7 @@ function Notification(props){
     <div className={`${prefixCls}-notice`} style={{display:`${visible?'':'none'}`}}>
       {!!theme&&<p className={`${prefixCls}-notice-icon`}><Svg iconId={`svg-${theme}`} /></p>}
       <div className={`${prefixCls}-notice-content`}>
-      ……
+      ……//首席填坑官∙苏南的专栏 交流：912594095、公众号：honeyBadger8
       </div>
       <p className={`${prefixCls}-notice-colse`} title="关闭" onClick={()=>leave("手动点击的关闭")}><Svg/></p>
     </div>
@@ -74,14 +74,14 @@ function Notification(props){
 + 其实就是在点击事件的时候，没有获取到 timer的id,导致了定时器没有清除掉；
 **！！看图说话：**
 
-![点击累加的计数器，公众号：honeyBadger8](./_images/rcqn1001.png)
+![React v16.7 "Hooks" - What to Expect -点击累加的计数器，公众号：honeyBadger8](./_images/rcqn1001.png "Hooks API Reference – React,Here, useState is a Hook we’ll talk about what this means in a moment. We call it inside a function component to add some local state to it. React will preserve this state between re-renders. useState returns a pair: the current state value and a function that lets you update it. You can call this function from an event handler or somewhere else. It’s similar to this.setState in a class")
 
 ##### 解决思路：
 + 当然是看官方文档，hooks对我来说也是个新玩意，不会～
 + 1、`useEffect`方法里return 一个方法，它是可以在组件卸载时执行的，
 + 2、清除定时器它有自己的方式，`const intervalRef = useRef()`;指定赋值后能同步更新，之前的timer手动执行没有拿到timer所以没有清除掉；
 
-![点击累加的计数器，公众号：honeyBadger8](./_images/rcqn1002.png)
+![React v16.7 "Hooks" - What to Expect - 知乎,点击累加的计数器，公众号：honeyBadger8](./_images/rcqn1002.png "首席填坑官∙苏南的专栏 交流：912594095、公众号：honeyBadger8")
 
 ##### 参考链接：
 [英文的没有找到](https://react.docschina.org/docs/hooks-faq.html#is-there-something-like-instance-variables "react hooks，苏南的专栏")
@@ -112,7 +112,7 @@ function Notification(props){
       let id = setTimeout(() => {
         console.log(`auto carried out`,intervalRef) //timer Number Id 
         leave(`Time to`);
-      }, duration*1000);
+      }, duration*1000);//首席填坑官∙苏南的专栏 交流：912594095、公众号：honeyBadger8
       intervalRef.current = id;
     }
   }
@@ -126,7 +126,7 @@ function Notification(props){
     <div className={`${prefixCls}-notice`} style={{display:`${visible?'':'none'}`}}>
       {!!theme&&<p className={`${prefixCls}-notice-icon`}><Svg iconId={`svg-${theme}`} /></p>}
       <div className={`${prefixCls}-notice-content`}>
-        ……
+        ……//首席填坑官∙苏南的专栏 交流：912594095、公众号：honeyBadger8
       </div>
       <p className={`${prefixCls}-notice-colse`} title="关闭" onClick={()=>leave("手动点击的关闭")}><Svg/></p>
     </div>
