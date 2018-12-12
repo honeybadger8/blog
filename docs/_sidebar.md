@@ -20,6 +20,7 @@
   * [在图书馆学习红宝书的一天（一）· 你看那个Function好简单哦～](frontends/js/redBaoBook1.md)
   * [在图书馆学习红宝书的一天（二）· 慢慢看原型、原型链就看懂了～](frontends/js/redBaoBook2.md)
   * [在图书馆学习红宝书的一天（三）· 没有对象面向也要学会继承～](frontends/js/redBaoBook3.md)
+  * [在图书馆学习红宝书的一天（四）· 闭包真的是一个让人费解的名词～](frontends/js/redBaoBook3.md)
 
 
 * 测试
