@@ -1,6 +1,6 @@
 ## 2018年终总结 请在2019对我好点～
 
-![小程序项目如何设置资源的防盗链？从入门到真实项目配置,首席填坑官∙苏南的专栏](https://honeybadger8.github.io/blog/other/_banner/banner08.png "小程序项目如何设置资源的防盗链？")
+![小程序项目如何设置资源的防盗链？从入门到真实项目配置,首席填坑官∙苏南的专栏](https://honeybadger8.github.io/blog/other/_banner/banner11.png "小程序项目如何设置资源的防盗链？")
 
 大家好，今天周五，明天就是周末，再过几天也就是2019，2018即将成为过去，昨晚抽时间对自己的2018做了个年终总结，今天跟大家汇报一下。
 
@@ -19,13 +19,13 @@
 
 ### 还有大家比较关心的我的睡眠质量
 
-![还有大家比较关心的我的睡眠质量](https://honeybadger8.github.io/blog/other/_images/sum04.webp)
+![还有大家比较关心的我的睡眠质量](https://honeybadger8.github.io/blog/other/_images/sum04.png)
 
 ### 啦啦～ 我的发量，
 
 默默问一句，你的有多少？
 
-![我的发量，](https://honeybadger8.github.io/blog/other/_images/sum05.webp)
+![我的发量，](https://honeybadger8.github.io/blog/other/_images/sum05.png)
 
 ### 我对生活的态度
 
@@ -65,29 +65,29 @@
 
 这才是我的夜生活～
 
-![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum11.webp)
+![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum11.png)
 
 ### 我的理想
 
-![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum12.webp)
-![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum13.webp)
-![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum14.webp)
+![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum12.png)
+![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum13.png)
+![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum14.png)
 
 ### 残酷的现实
 
-![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum15.webp)
+![我对知识的渴望……](https://honeybadger8.github.io/blog/other/_images/sum15.png)
 
 ### 我的养生理念
 
 人人都爱美，我也有自己的养生理念
 
-![人人都爱美，我也有自己的养生理念](https://honeybadger8.github.io/blog/other/_images/sum16.webp)
-![我的养生理念](https://honeybadger8.github.io/blog/other/_images/sum17.webp)
-![我的养生理念](https://honeybadger8.github.io/blog/other/_images/sum18.webp)
+![人人都爱美，我也有自己的养生理念](https://honeybadger8.github.io/blog/other/_images/sum16.png)
+![我的养生理念](https://honeybadger8.github.io/blog/other/_images/sum17.png)
+![我的养生理念](https://honeybadger8.github.io/blog/other/_images/sum18.png)
 
 ### 我的自信心
 
-![我的养生理念](https://honeybadger8.github.io/blog/other/_images/sum19.webp)
+![我的养生理念](https://honeybadger8.github.io/blog/other/_images/sum19.png)
 
 ### 我的上班状态
 
@@ -103,7 +103,7 @@
 
 ### 开会时的我
 
-![开会时的我](https://honeybadger8.github.io/blog/other/_images/sum22.webp)
+![开会时的我](https://honeybadger8.github.io/blog/other/_images/sum22.png)
 
 ### 听到八卦的我
 
@@ -111,43 +111,43 @@
 
 ### 我的朋友圈
 
-![我的朋友圈](https://honeybadger8.github.io/blog/other/_images/sum24.webp)
+![我的朋友圈](https://honeybadger8.github.io/blog/other/_images/sum24.png)
 
 ### 年初的我
 新的一年开始了，一定要大展身手
 
-![年初的我](https://honeybadger8.github.io/blog/other/_images/sum25.webp)
+![年初的我](https://honeybadger8.github.io/blog/other/_images/sum25.png)
 
 ### 年终的我
 
-![年初的我](https://honeybadger8.github.io/blog/other/_images/sum26.webp)
+![年初的我](https://honeybadger8.github.io/blog/other/_images/sum26.png)
 
 
 总的来说
 我的2018年大概是这样的
 
-![年初的我](https://honeybadger8.github.io/blog/other/_images/sum27.webp)
+![年初的我](https://honeybadger8.github.io/blog/other/_images/sum27.png)
 
 这样的
 
-![年初的我](https://honeybadger8.github.io/blog/other/_images/sum28.webp)
+![年初的我](https://honeybadger8.github.io/blog/other/_images/sum28.png)
 
 这样的
 
-![年初的我](https://honeybadger8.github.io/blog/other/_images/sum29.webp)
+![年初的我](https://honeybadger8.github.io/blog/other/_images/sum29.png)
 
 这样的
 
-![年初的我](https://honeybadger8.github.io/blog/other/_images/sum30.webp)
+![年初的我](https://honeybadger8.github.io/blog/other/_images/sum30.png)
 
 和这样的
 
-![年初的我](https://honeybadger8.github.io/blog/other/_images/sum31.webp)
+![年初的我](https://honeybadger8.github.io/blog/other/_images/sum31.png)
 
 真是丰富而又充实的一年呢！
 
-![年初的我](https://honeybadger8.github.io/blog/other/_images/sum32.webp)
-![年初的我](https://honeybadger8.github.io/blog/other/_images/sum33.webp)
+![年初的我](https://honeybadger8.github.io/blog/other/_images/sum32.png)
+![年初的我](https://honeybadger8.github.io/blog/other/_images/sum33.png)
 
 好啦，2018终于过完啦，大概就是这样，
 2019，请千万对我好一点啊～～
