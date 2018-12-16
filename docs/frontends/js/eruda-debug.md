@@ -100,7 +100,7 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 + 干的越多承担责任也越多、锅也越多，又大又平的那种哦～
 + 所以 **Network** 的必要性不言而喻，它能捕获请求，查看发送数据、返回头、返回内容等信息，它对于我们平时前后端联调出现的问题定位是有很大帮助的，比如：后端说你请求参数少了，前端你看了代码逻辑没有问题，但在手机上就是调不通，Network 能很直接明了的看到你请求带了什么。
 
-![vConsole便是这样一款很棒的移动端DevTools工具，由大厂企鹅出品。但本文把他定位为男二号，今天的主角男一号是：Eruda！vConsole的同类。,PC、eruda 数据请求对比](./_images/eruda07.png)
+![The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, ... HTTP is designed to permit intermediate network elements to improve or enable communications between clients and servers，vConsole便是这样一款很棒的移动端DevTools工具，由大厂企鹅出品。但本文把他定位为男二号，今天的主角男一号是：Eruda！vConsole的同类。,PC、eruda 数据请求对比](./_images/eruda07.png)
 
 #### Resources
 
@@ -108,7 +108,7 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 + Resources 它能查看 Cookie、localStorage、sessionStorage等信息，并且还能执行清除操作（Application）；
 + 它还查看当前页面加载脚本及样式文件；查看页面加载过的图片等资源（Source）；
 + 好吧，感觉说的再多，也不如上图直接：
-![Resources 功能分析](./_images/eruda08.png)
+![有哪些关于前端开发技术HTML、CSS、JavaScript 等值得推荐的书籍？ 从菜鸟到大 ... 锋利的jQuery第2版 【书籍】. Js知识点. JavaScript深入系列15篇正式完结！Resources 功能分析](./_images/eruda08.png)
 
 #### Sources/Info 
 + Sources：查看页面源码；格式化html，css，js代码及json数据。
@@ -123,7 +123,7 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 + 大概看了一下，都蛮强大，包括上面的`Dom tree`,插件这部分并没有都实际应用过，所以也就不`打肿脸充胖子`了，有兴趣的同学可以自己看看。
 + 如果觉得已经的插件都满足不了你的需求，它还支持自定义插件自己编写。
 
-![Resources 功能分析](./_images/eruda10.png)
+![These share data are from my usual work and learning，hoping to help you，If you like you can star. Javascript. Article, Article. Javascript深浅 ，Resources 功能分析](./_images/eruda10.png)
 
 
 
@@ -135,7 +135,7 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 
 　　线上问题我们一般的做法是喜欢给某个不起眼的元素，添加一个点击事件，要点它十次、八次以后才开启 debug 模式；
 
-　　上面二维码确实是真实的官方Dome，不用担心有套路,也有链接：[https://eruda.liriliri.io/](https://eruda.liriliri.io/ )
+　　上面二维码确实是真实的官方Demo，不用担心有套路,也有链接：[https://eruda.liriliri.io/](https://eruda.liriliri.io/ )
 
 ![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!，公众号：IT平头哥联盟](https://user-images.githubusercontent.com/18324563/50037312-da350b00-004a-11e9-8954-45d458c3991f.png)
 
