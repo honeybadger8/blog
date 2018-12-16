@@ -13,9 +13,9 @@
 
 　　俗话说预先善其事必先利其器，今天想给大家分享的是一个可能被人们忽略的小工具，为什么说被人们忽略呢？因为发现github上它才**4.6k** Star、**457 Fork**、**Watch 173**次，也就是说千万开发者中知道它的人可能不超过5w，于是决定分享一波，此文重在引导，希望能帮大家开发中带来一点点便利、**效率的提升**：
 
-![宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!，公众号：honeyBadger8](./_images/eruda01.png)
+![在日常的移动端开发时，一般都是试用chrome浏览器的移动端模式进行开发和调试，只有在chrome调试完成，没有问题了才会上到真机测试，移动端,宝剑锋从磨砺出，梅花香自苦寒来，做有温度的攻城狮!，公众号：honeyBadger8](./_images/eruda01.png)
 
-!> 这里是[@IT·平头哥联盟](https://honeybadger8.github.io/blog/ "@IT·平头哥联盟")，我是`首席填坑官`—[苏南](https://github.com/meibin08 "首席填坑官∙苏南"),用心分享 做有温度的攻城狮。
+!> 这里是[IT平头哥联盟](https://susouth.com/ "IT平头哥联盟")，我是`首席填坑官`—[苏南](https://github.com/meibin08 "首席填坑官∙苏南"),用心分享 做有温度的攻城狮。
 
 
 ## Eruda是什么？
@@ -46,7 +46,8 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 });//苏南的专栏 交流：912594095、公众号：honeyBadger8
 
 方式三 ，指定场景加载：
-//比如线上 给自己留一个后门
+//比如线上 给自己留一个后门，
+//我们一般的做法是喜欢给某个不起眼的元素，添加一个点击事件，要点它十次、八次以后才开启 debug 模式；
 ;(function () {
     var src = 'http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js';
     if (!/eruda=true/.test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
@@ -65,11 +66,11 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 ## 小而美
 
 + 这里小，不是指它的包小啊，知道它的同学都知道，其实它的包并不小（`约100kb gzip`）；
-+ 100kb不小了，用形容妹子的话来说就是：**丰富**，直接说它胖，你就死定了；
++ 100kb不小了，用形容妹子的话来说就是：**丰满**，直接说它胖，你就死定了；
 + 这里的**小而美**是指小巧功能也强大，界面也好看;
 + 说了这么多 来看看它到底长啥样吧：
 
-![，公众号：honeyBadger8](./_images/eruda03.png)
+![做移动端Web开发的一大痛点就是，在真机运行下无法查看console.log日志和其他信息如网络请求、显示本地存储等信息。如果网页是运行在手机浏览器中还算好，可以把网址在电脑上打开查看console信息，但是如果是做APP的内嵌H5页面，那就只能靠开发阶段在浏览器模拟环境中尽量没有Bug,公众号：honeyBadger8](./_images/eruda03.png)
 
 
 ## 功能清单 
@@ -81,7 +82,7 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 + **eruda** 能帮我们解决这个问题；所有的日志、错误都能帮我们捕获到
 + 甚至我们还能像`chrome`,直接在控制台执行js代码；
 
-![，公众号：honeyBadger8](./_images/eruda04.png)
+![微信开发必备】h5开发调试，利器Eruda ，公众号：honeyBadger8](./_images/eruda04.png)
 
 #### Elements
 
@@ -90,7 +91,7 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 + 查看标签内容及属性；查看Dom上的样式；支持页面元素高亮；支持屏幕直接点击选取；查看Dom上绑定的各类事件。
 + 甚至也能使用`Plugins` 插件，做到跟PC端一样，形成 dom tree；
 
-![，公众号：honeyBadger8](./_images/eruda05.png)
+![使用神器eruda 进行移动端调试-，公众号：honeyBadger8](./_images/eruda05.png)
 ![PC、Mobile调试节点对比](./_images/eruda06.png)
 
 #### Network
@@ -99,11 +100,11 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 + 干的越多承担责任也越多、锅也越多，又大又平的那种哦～
 + 所以 **Network** 的必要性不言而喻，它能捕获请求，查看发送数据、返回头、返回内容等信息，它对于我们平时前后端联调出现的问题定位是有很大帮助的，比如：后端说你请求参数少了，前端你看了代码逻辑没有问题，但在手机上就是调不通，Network 能很直接明了的看到你请求带了什么。
 
-![PC、eruda 数据请求对比](./_images/eruda07.png)
+![vConsole便是这样一款很棒的移动端DevTools工具，由大厂企鹅出品。但本文把他定位为男二号，今天的主角男一号是：Eruda！vConsole的同类。,PC、eruda 数据请求对比](./_images/eruda07.png)
 
 #### Resources
 
-+ 它跟 Cchrome Devtools 里的 `Application` + **Source**,两者的结合体；
++ 它跟 Chrome Devtools 里的 `Application` + **Source**,两者的结合体；
 + Resources 它能查看 Cookie、localStorage、sessionStorage等信息，并且还能执行清除操作（Application）；
 + 它还查看当前页面加载脚本及样式文件；查看页面加载过的图片等资源（Source）；
 + 好吧，感觉说的再多，也不如上图直接：
@@ -113,7 +114,7 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 + Sources：查看页面源码；格式化html，css，js代码及json数据。
 + Info：主要输出URL信息及User Agent；及其他的一些手机系统信息，同时也支持自定义输出内容哦。
 
-![Resources 功能分析](./_images/eruda09.png)
+![通常写前端页面都在Chrome浏览器的开发模式下进行调试，但是写放在移动端的H5页面时，有时候会遇到在Chrome上调试没有问题，但是在手机的浏览器上有问题的情况；也有的页面是需要放在微信公众号中的，调用了微信JSSDK的方法，必须得通过手机上的微信内置浏览器才能使用，这个时候如果遇到了报错，只能够通过alert一步一步地定位问题。今天发现了一个好用的可以在手机浏览器上直接定位问题的插件：eruda.js,Resources 功能分析](./_images/eruda09.png)
 
 ## 高阶用法
 
@@ -131,6 +132,8 @@ __DEBUG__ && loadJS('http://cdn.jsdelivr.net/eruda/1.0.5/eruda.min.js', ()=>{
 #### 结尾：
 
 　　以上就是今天给大家带来的分享，工作中用了蛮久，挺方便的，对于定位移动端的疑难杂症问题、甚至留下后门定位线上问题都有很大帮助，如文中有理解不到位之处，欢迎留言指出。
+
+　　线上问题我们一般的做法是喜欢给某个不起眼的元素，添加一个点击事件，要点它十次、八次以后才开启 debug 模式；
 
 　　上面二维码确实是真实的官方Dome，不用担心有套路,也有链接：[https://eruda.liriliri.io/](https://eruda.liriliri.io/ )
 
