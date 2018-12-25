@@ -17,7 +17,7 @@
 ### 浏览器的渲染过程
 　　本文先从浏览器的渲染过程来从头到尾的讲解一下回流重绘，如果大家想直接看如何减少回流和重绘，可以跳到后面。（这个渲染过程来自MDN）
   
-![](./_images/redraw01.png)
+![](https://www.susouth.com/assets/reprint/images/redraw01.png)
 
 从上面这个图上，我们可以看到，浏览器渲染过程如下：
 
@@ -31,7 +31,7 @@
 
 #### 生成渲染树
 
-![](./_images/redraw02.png)
+![](https://www.susouth.com/assets/reprint/images/redraw02.png)
 
 为了构建渲染树，浏览器主要完成了以下工作：
 
@@ -69,7 +69,7 @@
 
 我们可以看到，第一个div将节点的显示尺寸设置为视口宽度的50%，第二个div将其尺寸设置为父节点的50%。而在回流这个阶段，我们就需要根据视口具体的宽度，将其转为实际的像素值。（如下图）
 
-![](./_images/redraw03.png)
+![](https://www.susouth.com/assets/reprint/images/redraw03.png)
 
 #### 重绘
 
@@ -247,17 +247,17 @@ function initP() {
 ```
 
 同样，我也写了个demo来比较两者的性能差异。你可以自己点开这个demo体验下。这个对比差距就比较明显。
-demo:https://chenjigeng.github.io/example/share/%E9%81%BF%E5%85%8D%E5%9B%9E%E6%B5%81%E9%87%8D%E7%BB%98/%E9%81%BF%E5%85%8D%E5%BF%AB%E9%80%9F%E8%BF%9E%E7%BB%AD%E7%9A%84%E5%B8%83%E5%B1%80.html
+[Demo](http://t.cn/E4Dv0cB)
 
 **对于复杂动画效果,使用绝对定位让其脱离文档流**
 
 对于复杂动画效果，由于会经常的引起回流重绘，因此，我们可以使用绝对定位，让它脱离文档流。否则会引起父元素以及后续元素频繁的回流。这个我们就直接上个例子。
 
-示例地址：https://chenjigeng.github.io/example/share/%E9%81%BF%E5%85%8D%E5%9B%9E%E6%B5%81%E9%87%8D%E7%BB%98/%E5%B0%86%E5%A4%8D%E6%9D%82%E5%8A%A8%E7%94%BB%E6%B5%AE%E5%8A%A8%E5%8C%96.html
+[示例地址](http://t.cn/E4DP765)
 
 打开这个例子后，我们可以打开控制台，控制台上会输出当前的帧数(虽然不准)。
 
-![](https://segmentfault.com/img/remote/1460000017329986?w=1879&h=542)
+![](https://www.susouth.com/assets/reprint/images/redraw04.png)
 
 从上图中，我们可以看到，帧数一直都没到60。这个时候，只要我们点击一下那个按钮，把这个元素设置为绝对定位，帧数就可以稳定60。
 
@@ -282,7 +282,7 @@ demo:https://chenjigeng.github.io/example/share/%E9%81%BF%E5%85%8D%E5%9B%9E%E6%B
 
 我们可以先看个例子。我通过使用chrome的Performance捕获了一段时间的回流重绘情况，实际结果如下图：
 
-![](https://segmentfault.com/img/remote/1460000017329987?w=339&h=217)
+![](https://www.susouth.com/assets/reprint/images/redraw05.png)
 
 从图中我们可以看出，在动画进行的时候，没有发生任何的回流重绘。如果感兴趣你也可以自己做下实验。
 
