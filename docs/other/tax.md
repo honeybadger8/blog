@@ -137,7 +137,7 @@
  
 扣税容易，减税难啊，**专项附加扣除并不能直接减免个人所得税**，而是要代入所得税计算公式，最后得到的数才是个人需要缴纳的税额；应纳税所得额计算公式如下：
 
-![](./images/tax01.png)
+![](https://honeybadger8.github.io/blog/other/_images/tax01.png)
 
 **新法改个重点**：采用累积预扣预交方式申报个税
 
@@ -152,14 +152,14 @@
 假设屌丝**程序员**，赡养老人（60岁以上），有孩子（3岁以上）目前正在偿还首套房贷，月收入25000，每月社保公积金扣减4375，（接受继续学历教育）不考虑其他因素每月可享受各项专
 项附加抵扣总额4400，收入和个税计算如下：
 
-![](./images/tax02.png)
+![](https://honeybadger8.github.io/blog/other/_images/tax02.png)
 
 ### 专项附加抵扣和个税申报方式
 
 + 单位代扣
 + 个人申报
 
-![](./images/tax03.png)
+![](https://honeybadger8.github.io/blog/other/_images/tax03.png)
 
 ### 专项附加抵扣和个税申报方式
 
